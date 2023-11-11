@@ -1,6 +1,10 @@
 // Font Import
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+// Importing Files
+@import './navigation';
+
+// Resets
 *{
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
@@ -9,6 +13,20 @@
 body{
     background: rgba(41, 47, 53, 1);
     overflow-x: hidden;
+}
+
+button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+a{
+    text-decoration: none;
 }
 
 // Scroll Bar
