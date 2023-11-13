@@ -6,13 +6,12 @@
 
 // Resets
 *{
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
+    box-sizing: border-box;}
 
 body{
     background: rgba(41, 47, 53, 1);
     overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
 button{
@@ -27,6 +26,107 @@ button{
 
 a{
     text-decoration: none;
+}
+
+// Typography
+.hero{
+    font-size: 14rem;
+    font-weight: 700;
+}
+
+.large-title{
+    font-size: 10rem;
+    font-weight: 700;
+}
+
+.title-bold{
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.title-light{
+    font-size: 6rem;
+    font-weight: 400;
+}
+
+.subtitle-bold{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.subtitle-light{
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.body-bold{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.body-light{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.caption-bold{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.caption-light{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+// Text Color
+.text-strong-blue{
+    color: rgba(0, 240, 255, 1);
+}
+
+.text-primary-blue{
+    color: rgba(125, 247, 255, 1);
+}
+
+.text-accent-blue{
+    color: rgba(174, 250, 255, 1);
+}
+
+.text-dark-gray{
+    color: rgba(41, 47, 53, 1);
+}
+
+.text-light-gray{
+    color: rgba(124, 141, 159, 1);
+}
+
+.text-light{
+    color: rgba(246, 250, 255, 1);
+}
+
+// Background Color
+.strong-blue{
+    background-color: rgba(0, 240, 255, 1);
+}
+
+.primary-blue{
+    background-color: rgba(125, 247, 255, 1);
+}
+
+.accent-blue{
+    background-color: rgba(174, 250, 255, 1);
+}
+
+.dark-gray{
+    background-color: rgba(41, 47, 53, 1);
+}
+
+.light-gray{
+    background-color: rgba(124, 141, 159, 1);
+}
+
+.light{
+    background-color: rgba(246, 250, 255, 1);
 }
 
 // Scroll Bar
