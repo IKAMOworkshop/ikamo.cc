@@ -21,6 +21,21 @@ const routes =[
         name: 'contact',
         component: () => import('@/pages/Contact.vue')
     },
+    {
+        path: '/charm',
+        name: 'charm',
+        component: () => import('@/pages/Charm.vue')
+    },
+    {
+        path: '/bright',
+        name: 'bright',
+        component: () => import('@/pages/Bright.vue')
+    },
+    {
+        path: '/arcane',
+        name: 'arcane',
+        component: () => import('@/pages/Arcane.vue')
+    },
 ]
 
 const router = createRouter({

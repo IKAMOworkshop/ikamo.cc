@@ -60,10 +60,10 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: rgba(41, 47, 53, .5);
+    background-color: rgba(41, 47, 53, .8);
     backdrop-filter: blur(2vmax);
     padding: 60px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: end;
