@@ -1,15 +1,21 @@
+// Nav Bar
 .nav{
     width: 100%;
     padding: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
 }
 
 .right-container{
     width: 40%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav-menu-button{
@@ -18,6 +24,72 @@
     gap: 4px;
 }
 
+.nav-menu-button > .caption-bold{
+    transition: all .5s ease;
+}
+
+.nav-menu-button:hover > .caption-bold{
+    color: rgba(246, 250, 255, 1);
+}
+
+.nav-menu-button > svg > .icon{
+    transition: all .5s ease;
+}
+
+.nav-menu-button:hover svg > .icon{
+    fill: rgba(246, 250, 255, 1);
+}
+
 .nav-link{
     list-style-type: none;
+    opacity: .5;
+    mix-blend-mode: overlay;
+    transition: all .5s ease;
+}
+
+.nav-link:hover{
+    opacity: 1;
+    mix-blend-mode: normal;
+}
+
+// Nav Menu
+.nav-menu{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(41, 47, 53, .5);
+    backdrop-filter: blur(2vmax);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.menu-list{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-social-list{
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+    display: flex;
+    gap: 16px;
+}
+
+.social-icon > svg > .icon{
+    transition: all .5s ease;
+}
+
+.social-icon:hover > svg > .icon{
+    fill: rgba(246, 250, 255, 1);
 }
