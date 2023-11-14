@@ -8,7 +8,7 @@
             </p>
         </div>
 
-        <div class="section-container">
+        <div class="landing-container">
             <div class="hero-col">
                 <div class="hero-col-sm">
                     <p class="body-bold text-light">an aspiring</p>
@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <div class="section-container">
+        <div class="landing-container">
             <div class="hero-col">
                 <div class="hero-col-sm"></div>
                 <div class="col-full">

@@ -94,6 +94,11 @@
   fill: rgb(246, 250, 255);
 }
 
+.landing-container {
+  padding: 0px 60px;
+  margin-bottom: 280px;
+}
+
 .hero-section-container {
   padding: 0px 60px;
   margin: 260px 0px 200px 0px;
@@ -246,6 +251,50 @@
     transform: translate(-50%);
   }
 }
+.contact-section-container {
+  margin: 160px 0px 200px 0px;
+  width: 60%;
+}
+
+.contact-infos {
+  display: flex;
+  gap: 80px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-info > .contact-title-container > .contact-title-move > .body-bold,
+.contact-info > .contact-title-container > .contact-title-move > .body-light,
+.contact-info > .subtitle-light {
+  transition: all 0.5s ease;
+}
+
+.contact-info:hover > .contact-title-container > .contact-title-move > .body-bold,
+.contact-info:hover > .contact-title-container > .contact-title-move > .body-light,
+.contact-info:hover > .subtitle-light {
+  color: rgb(246, 250, 255);
+}
+
+.contact-title-container {
+  max-height: 1.5rem;
+  overflow: hidden;
+}
+
+.contact-title-move {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: all 0.5s ease;
+}
+
+.contact-info:hover > .contact-title-container > .contact-title-move {
+  transform: translateY(-1.6rem);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -270,8 +319,21 @@ a {
   text-decoration: none;
 }
 
-.section-container {
+::-moz-selection {
+  background: rgb(125, 247, 255);
+  color: rgb(41, 47, 53);
+}
+
+::selection {
+  background: rgb(125, 247, 255);
+  color: rgb(41, 47, 53);
+}
+
+.page-container {
   padding: 0px 60px;
+}
+
+.section-container {
   margin-bottom: 280px;
 }
 
