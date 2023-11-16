@@ -48,68 +48,8 @@
             <div class="scroll-track">
                 <div class="project-images">
 
-                    <!-- Convert to Components -->
+                    <projectCase />
 
-                    <router-link class="project-links over" to="/arcane">
-                        <img src="@/assets/landing/arcane.png" alt="" class="project-image" draggable="false">
-                        <div class="case-details">
-                            <p class="case-overview text-light">A frontend portfolio showcasing websites that I designed and developed.</p>
-                            <div class="case-titles">
-                                <h2 class="title-bold text-light">arcane.</h2>
-                                <p class="caption text-primary-blue">#web-design #vue #three-js</p>
-                            </div>
-                        </div>
-                    </router-link>
-                    <router-link class="project-links over" to="/charm">
-                        <img src="@/assets/landing/charm.png" alt="" class="project-image" draggable="false">
-                        <div class="case-details">
-                            <p class="case-overview text-light">Building an engaging portfolio websites for ArtCenter Spring 2023 Gradshow.</p>
-                            <div class="case-titles">
-                                <h2 class="title-bold text-light">charm.</h2>
-                                <p class="caption text-primary-blue">#web-design #vanillaJS</p>
-                            </div>
-                        </div>
-                    </router-link>
-                    <router-link class="project-links over" to="bright">
-                        <img src="@/assets/landing/bright.png" alt="" class="project-image" draggable="false">
-                        <div class="case-details">
-                            <p class="case-overview text-light">A personal archive to document highlighted events from my life.</p>
-                            <div class="case-titles">
-                                <h2 class="title-bold text-light">bright.</h2>
-                                <p class="caption text-primary-blue">#web-design #astro #cms</p>
-                            </div>
-                        </div>
-                    </router-link>
-                    <router-link class="project-links over" to="/arcane">
-                        <img src="@/assets/landing/arcane.png" alt="" class="project-image" draggable="false">
-                        <div class="case-details">
-                            <p class="case-overview text-light">A frontend portfolio showcasing websites that I designed and developed.</p>
-                            <div class="case-titles">
-                                <h2 class="title-bold text-light">arcane.</h2>
-                                <p class="caption text-primary-blue">#web-design #vue #three-js</p>
-                            </div>
-                        </div>
-                    </router-link>
-                    <router-link class="project-links over" to="/charm">
-                        <img src="@/assets/landing/charm.png" alt="" class="project-image" draggable="false">
-                        <div class="case-details">
-                            <p class="case-overview text-light">Building an engaging portfolio websites for ArtCenter Spring 2023 Gradshow.</p>
-                            <div class="case-titles">
-                                <h2 class="title-bold text-light">charm.</h2>
-                                <p class="caption text-primary-blue">#web-design #vanillaJS</p>
-                            </div>
-                        </div>
-                    </router-link>
-                    <router-link class="project-links over" to="bright">
-                        <img src="@/assets/landing/bright.png" alt="" class="project-image" draggable="false">
-                        <div class="case-details">
-                            <p class="case-overview text-light">A personal archive to document highlighted events from my life.</p>
-                            <div class="case-titles">
-                                <h2 class="title-bold text-light">bright.</h2>
-                                <p class="caption text-primary-blue">#web-design #astro #cms</p>
-                            </div>
-                        </div>
-                    </router-link>
                 </div>
             </div>
         </div>
@@ -136,3 +76,8 @@
 
     </div>
 </template>
+
+<script setup>
+    import projectCase from '@/components/ProjectCase.vue'
+
+</script>

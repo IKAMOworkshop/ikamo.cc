@@ -78,6 +78,22 @@
     gap: 4px;
 }
 
+.nav-title-container{
+    max-height: 9rem;
+    overflow: hidden;
+}
+
+.nav-title-move{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    transition: all .5s ease;
+}
+
+.nav-router:hover > .nav-title-container > .nav-title-move{
+    transform: translateY(-9rem);
+}
+
 .menu-social-list{
     position: absolute;
     right: 60px;

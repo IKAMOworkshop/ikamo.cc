@@ -23,10 +23,38 @@
         <!-- Menu -->
         <nav id="nav-menu" class="nav-menu">
             <ul class="menu-list">
-                <li class="nav-link"><router-link class="large-title text-light" to="/">home.</router-link></li>
-                <li class="nav-link"><router-link class="large-title text-light" to="/about">about.</router-link></li>
-                <li class="nav-link"><router-link class="large-title text-light" to="/data">data.</router-link></li>
-                <li class="nav-link"><router-link class="large-title text-light" to="/contact">contact.</router-link></li>
+                <li class="nav-link"><router-link class="nav-router" to="/">
+                    <div class="nav-title-container">
+                        <div class="nav-title-move">
+                            <h1 class="large-title text-light">home.</h1>
+                            <h1 class="large-title text-light">home.</h1>
+                        </div>
+                    </div>
+                </router-link></li>
+                <li class="nav-link"><router-link class="nav-router" to="/about">
+                    <div class="nav-title-container">
+                        <div class="nav-title-move">
+                            <h1 class="large-title text-light">about.</h1>
+                            <h1 class="large-title text-light">about.</h1>
+                        </div>
+                    </div>
+                </router-link></li>
+                <li class="nav-link"><router-link class="nav-router" to="/data">
+                    <div class="nav-title-container">
+                        <div class="nav-title-move">
+                            <h1 class="large-title text-light">data.</h1>
+                            <h1 class="large-title text-light">data.</h1>
+                        </div>
+                    </div>
+                </router-link></li>
+                <li class="nav-link"><router-link class="nav-router" to="/contact">
+                    <div class="nav-title-container">
+                        <div class="nav-title-move">
+                            <h1 class="large-title text-light">contact.</h1>
+                            <h1 class="large-title text-light">contact.</h1>
+                        </div>
+                    </div>
+                </router-link></li>
             </ul>
             <ul class="menu-social-list">
                 <li>
