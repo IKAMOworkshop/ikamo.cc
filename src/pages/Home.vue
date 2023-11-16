@@ -9,7 +9,7 @@
         </div>
 
         <div class="landing-container">
-            <div class="hero-col">
+            <div class="col">
                 <div class="hero-col-sm">
                     <p class="body-bold text-light">an aspiring</p>
                     <div class="scroll-icon">
@@ -28,7 +28,7 @@
         </div>
 
         <div class="landing-container">
-            <div class="hero-col">
+            <div class="col">
                 <div class="hero-col-sm"></div>
                 <div class="col-full">
                     <h4 class="body-bold text-light-gray">goals.</h4>

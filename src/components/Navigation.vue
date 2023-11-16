@@ -12,7 +12,12 @@
                     <p id="local-time" class="caption-light text-light-gray">los angeles, {{ localTime }} (gmt -7)</p>
                 </div>
                 <button id="menu-button" class="nav-menu-button">
-                    <p id="menu-text" class="caption-bold text-light-gray">open menu.</p>
+                        <div class="menu-title-container">
+                        <div class="menu-title-move">
+                            <h1 class="caption-bold text-light-gray">open menu.</h1>
+                            <h1 class="caption-bold text-light-gray">open menu.</h1>
+                        </div>
+                    </div>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path id="menu-icon" class="icon" fill-rule="evenodd" clip-rule="evenodd" d="M7 12.6665C7 13.7711 6.10457 14.6665 5 14.6665C3.89543 14.6665 3 13.7711 3 12.6665C3 11.5619 3.89543 10.6665 5 10.6665C6.10457 10.6665 7 11.5619 7 12.6665ZM14 12.6665C14 13.7711 13.1046 14.6665 12 14.6665C10.8954 14.6665 10 13.7711 10 12.6665C10 11.5619 10.8954 10.6665 12 10.6665C13.1046 10.6665 14 11.5619 14 12.6665ZM19 14.6665C20.1046 14.6665 21 13.7711 21 12.6665C21 11.5619 20.1046 10.6665 19 10.6665C17.8954 10.6665 17 11.5619 17 12.6665C17 13.7711 17.8954 14.6665 19 14.6665Z" fill="#7C8D9F"/>
                     </svg>

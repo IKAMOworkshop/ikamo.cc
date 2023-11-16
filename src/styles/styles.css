@@ -24,11 +24,27 @@
   gap: 4px;
 }
 
-.nav-menu-button > .caption-bold {
+.menu-title-container {
+  max-height: 1rem;
+  overflow: hidden;
+}
+
+.menu-title-move {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
   transition: all 0.5s ease;
 }
 
-.nav-menu-button:hover > .caption-bold {
+#menu-button:hover > .menu-title-container > .menu-title-move {
+  transform: translateY(-1.1rem);
+}
+
+.nav-menu-button > .menu-title-container > .menu-title-move > .caption-bold {
+  transition: all 0.5s ease;
+}
+
+.nav-menu-button:hover > .menu-title-container > .menu-title-move > .caption-bold {
   color: rgb(246, 250, 255);
 }
 
@@ -68,7 +84,7 @@
   justify-content: center;
   align-items: end;
   opacity: 0;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .menu-list {
@@ -118,10 +134,6 @@
 .hero-section-container {
   padding: 0px 60px;
   margin: 260px 0px 200px 0px;
-}
-
-.hero-col {
-  display: flex;
 }
 
 .hero-col-sm {
@@ -267,6 +279,68 @@
     transform: translate(-50%);
   }
 }
+.about-container {
+  padding: 0px 60px;
+  margin-bottom: 280px;
+}
+
+.about-design-container {
+  padding: 0px 60px;
+  margin-bottom: 440px;
+}
+
+.about-section-container {
+  margin: 160px 0px 200px 0px;
+  width: 70%;
+}
+
+.about-image-slider {
+  width: 100%;
+  overflow-x: hidden;
+  margin-bottom: 440px;
+}
+
+.slider-track {
+  display: flex;
+}
+
+.about-images {
+  display: flex;
+  gap: 48px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  animation: scrollRight 25s infinite linear;
+}
+
+.about-image {
+  position: relative;
+  width: 800px;
+  aspect-ratio: 16/12;
+  overflow: auto;
+  border-radius: 40px;
+  transition: all 1s ease;
+}
+
+.about-interest-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.about-interest {
+  width: 100%;
+  height: 800px;
+  border-radius: 40px;
+  display: flex;
+  align-items: end;
+  padding: 60px;
+}
+
+.offset-down {
+  margin-top: 280px;
+}
+
 .contact-section-container {
   margin: 160px 0px 200px 0px;
   width: 60%;
@@ -355,6 +429,7 @@ a {
 
 .col {
   display: flex;
+  gap: 60px;
 }
 
 .col-full {
@@ -364,8 +439,20 @@ a {
   gap: 36px;
 }
 
+.col-20 {
+  width: 20%;
+}
+
 .col-30 {
   width: 30%;
+}
+
+.col-50 {
+  width: 50%;
+}
+
+.col-60 {
+  width: 60%;
 }
 
 .hero {
@@ -374,7 +461,7 @@ a {
 }
 
 .large-title {
-  font-size: 9rem;
+  font-size: 8rem;
   font-weight: 700;
 }
 
@@ -409,11 +496,13 @@ a {
 .body-bold {
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 2rem;
 }
 
 .body-light {
   font-size: 1.5rem;
   font-weight: 400;
+  line-height: 2rem;
 }
 
 .caption-bold {
@@ -468,6 +557,10 @@ a {
 
 .dark-gray {
   background-color: rgb(41, 47, 53);
+}
+
+.gray {
+  background-color: rgb(61, 71, 80);
 }
 
 .light-gray {
