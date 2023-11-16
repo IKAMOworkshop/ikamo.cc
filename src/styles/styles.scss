@@ -5,6 +5,7 @@
 @import './navigation';
 @import './home';
 @import './about';
+@import './data';
 @import './contact';
 
 // Resets
@@ -42,6 +43,7 @@ a{
 }
 
 .section-container{
+    padding: 0px 60px;
     margin-bottom: 280px;
 }
 

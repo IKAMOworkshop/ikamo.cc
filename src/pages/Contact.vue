@@ -1,7 +1,7 @@
 <template>
     <div class="page-container">
 
-        <div class="contact-section-container">
+        <div class="contact-top">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">feel free</span>
                 <br />to reach out anytime!

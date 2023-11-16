@@ -1,14 +1,14 @@
 <template>
     <div>
 
-        <div class="hero-section-container">
+        <div class="hero-top">
             <p class="body-light text-light">
                 hello there!
                 <br /><span class="body-bold">i'm jeremy chang,</span>
             </p>
         </div>
 
-        <div class="landing-container">
+        <div class="section-container">
             <div class="col">
                 <div class="hero-col-sm">
                     <p class="body-bold text-light">an aspiring</p>
@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <div class="landing-container">
+        <div class="section-container">
             <div class="col">
                 <div class="hero-col-sm"></div>
                 <div class="col-full">

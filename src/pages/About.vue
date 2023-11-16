@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <div class="about-section-container about-container">
+        <div class="about-section-container section-container">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">everyday, i</span>
                 <br />learn, design, build, and repeat.
@@ -58,20 +58,20 @@
             </div>
         </div>
 
-        <div class="about-section-container about-container">
+        <div class="about-section-container section-container">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">outside of design,</span>
                 <br />i also enjoy...
             </p>
         </div>
 
-        <div class="about-container">
+        <div class="section-container">
             <div class="col">
-                <div class="col-50 about-interest-container offset-down">
+                <div class="col-50 about-interests offset-down">
                     <aboutInterest />
                     <aboutInterest />
                 </div>
-                <div class="col-50 about-interest-container">
+                <div class="col-50 about-interests">
                     <aboutInterest />
                     <aboutInterest />
                 </div>

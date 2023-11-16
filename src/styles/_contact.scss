@@ -1,4 +1,4 @@
-.contact-section-container{
+.contact-top{
     margin: 160px 0px 200px 0px;
     width: 60%;
 }
@@ -29,7 +29,7 @@
 }
 
 .contact-title-container{
-    max-height: 1.5rem;
+    max-height: 2rem;
     overflow: hidden;
 }
 
@@ -41,5 +41,5 @@
 }
 
 .contact-info:hover > .contact-title-container > .contact-title-move{
-    transform: translateY(-1.6rem);
+    transform: translateY(-2rem);
 }
