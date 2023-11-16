@@ -8,32 +8,6 @@
     width: 70%
 }
 
-.about-image-slider{
-    width: 100%;
-    overflow-x: hidden;
-    margin-bottom: 440px;
-}
-
-.slider-track{
-    display: flex;
-}
-
-.about-images{
-    display: flex;
-    gap: 48px;
-    user-select: none;
-    animation: scrollRight 25s infinite linear;
-}
-
-.about-image{
-    position: relative;
-    width: 800px;
-    aspect-ratio: 16/12;
-    overflow: auto;
-    border-radius: 40px;
-    transition: all 1s ease;
-}
-
 .about-interests{
     display: flex;
     flex-direction: column;

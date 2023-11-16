@@ -134,9 +134,3 @@
 .highlighted-list > :nth-child(7){
     opacity: .05;
 }
-
-// Scroll Animation
-@keyframes scrollRight {
-    from { transform: translate(0%); }
-    to { transform: translate(-50%); }
-}

@@ -1,5 +1,5 @@
 <template>
-    <div class="about-image gray">
+    <div class="slide-image gray">
         
     </div>
 </template>
