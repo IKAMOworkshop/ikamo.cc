@@ -87,9 +87,9 @@
 </template>
 
 <script setup>
-    import DataCard from '@/components/DataCard.vue'
-    import ExperienceCard from '@/components/ExperienceCard.vue'
-    import LearningCard from '@/components/LearningCard.vue'
-    import DesignCapability from '@/components/DesignCapability.vue'
-    import DevelopCapability from '@/components/DevelopCapability.vue'
+    import DataCard from '@/components/data/DataCard.vue'
+    import ExperienceCard from '@/components/data/ExperienceCard.vue'
+    import LearningCard from '@/components/data/LearningCard.vue'
+    import DesignCapability from '@/components/data/DesignCapability.vue'
+    import DevelopCapability from '@/components/data/DevelopCapability.vue'
 </script>

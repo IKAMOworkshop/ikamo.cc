@@ -99,7 +99,7 @@
 </template>
 
 <script setup>
-    import aboutImage from '@/components/AboutImages.vue'
-    import aboutInterest from '@/components/AboutInterest.vue'
+    import aboutImage from '@/components/about/AboutImages.vue'
+    import aboutInterest from '@/components/about/AboutInterest.vue'
     import projectCase from '@/components/ProjectCase.vue'
 </script>
