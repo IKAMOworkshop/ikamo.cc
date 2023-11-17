@@ -28,6 +28,20 @@
     justify-content: center;
     align-items: center;
     border-radius: 40px;
+    transition: all 1s ease;
+}
+
+.next-video-wrapper{
+    width: 100%;
+    height: 800px;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    transition: all 1s ease;
 }
 
 .project-video{
@@ -74,7 +88,6 @@
 .next-project-links{
     position: relative;
     width: 1400px;
-    aspect-ratio: 16/9;
     overflow: auto;
     transition: all 1s ease;
     overflow: visible;
@@ -94,7 +107,7 @@
 .next-project-details{
     width: 600px;
     margin-left: 100px;
-    margin-top: -96px;
+    margin-top: -1080px;
     transform: rotate(5deg);
     display: flex;
     flex-direction: column;
@@ -104,6 +117,6 @@
     pointer-events: none;
 }
 
-.next-project-links:hover > .project-links > .project-image{
+.next-project-links:hover > .project-links > .next-video-wrapper{
     transform: scale(1.1);
 }
