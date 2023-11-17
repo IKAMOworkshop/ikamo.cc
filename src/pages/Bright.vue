@@ -208,10 +208,13 @@
             </div>
         </div>
 
+        <MainFooter />
+
     </div>
 </template>
 
 <script setup>
     import BrightProcess from '@/components/bright/BrightProcess.vue'
     import BrightTakeaway from '@/components/bright/BrightTakeaway.vue'
+    import MainFooter from '@/components/MainFooter.vue'
 </script>

@@ -83,6 +83,8 @@
             </div>
         </div>
 
+        <MainFooter />
+
     </div>
 </template>
 
@@ -92,4 +94,5 @@
     import LearningCard from '@/components/data/LearningCard.vue'
     import DesignCapability from '@/components/data/DesignCapability.vue'
     import DevelopCapability from '@/components/data/DevelopCapability.vue'
+    import MainFooter from '@/components/MainFooter.vue'
 </script>

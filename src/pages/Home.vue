@@ -74,10 +74,11 @@
             </div>
         </div>
 
+        <MainFooter />
     </div>
 </template>
 
 <script setup>
     import projectCase from '@/components/ProjectCase.vue'
-
+    import MainFooter from '@/components/MainFooter.vue'
 </script>

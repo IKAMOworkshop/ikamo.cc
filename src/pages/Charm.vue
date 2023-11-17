@@ -176,10 +176,13 @@
             </div>
         </div>
 
+        <MainFooter />
+
     </div>
 </template>
 
 <script setup>
     import CharmProcess from '@/components/charm/CharmProcess.vue'
     import CharmTakeaways from '@/components/charm/CharmTakeaways.vue';
+    import MainFooter from '@/components/MainFooter.vue'
 </script>

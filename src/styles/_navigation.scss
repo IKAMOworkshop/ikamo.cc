@@ -125,3 +125,55 @@
 .social-icon:hover > svg > .icon{
     fill: rgba(246, 250, 255, 1);
 }
+
+// Footer
+footer{
+    width: 100%;
+    padding: 120px 60px;
+    border-radius: 40px 40px 0px 0px;
+}
+
+.footer-hero-container{
+    max-height: 14rem;
+    overflow: hidden;
+}
+
+.footer-hero-move{
+    transition: all .5s ease;
+}
+
+.footer-contact:hover >.footer-hero-container > .footer-hero-move{
+    transform: translateY(-14rem);
+}
+
+.footer-secondary{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    gap: 36px;
+}
+
+.footer-link-container{
+    max-height: 2rem;
+    overflow: hidden;
+    text-align: right;
+}
+
+.footer-link-move{
+    transition: all .5s ease;
+}
+
+.footer-link:hover > .footer-link-container > .footer-link-move{
+    transform: translateY(-2rem);
+}
+
+.copyright{
+    text-align: right;
+}

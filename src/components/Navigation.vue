@@ -28,11 +28,11 @@
         <!-- Menu -->
         <nav id="nav-menu" class="nav-menu">
             <ul class="menu-list">
-                <li class="nav-link"><router-link class="nav-router" to="/">
+                <li class="nav-link"><router-link class="nav-router" to="/works">
                     <div class="nav-title-container">
                         <div class="nav-title-move">
-                            <h1 class="large-title text-light">home.</h1>
-                            <h1 class="large-title text-light">home.</h1>
+                            <h1 class="large-title text-light">works.</h1>
+                            <h1 class="large-title text-light">works.</h1>
                         </div>
                     </div>
                 </router-link></li>

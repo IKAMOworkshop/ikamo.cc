@@ -90,6 +90,8 @@
             </div>
         </div>
 
+        <MainFooter />
+
     </div>
 </template>
 
@@ -97,4 +99,5 @@
     import aboutImage from '@/components/about/AboutImages.vue'
     import aboutInterest from '@/components/about/AboutInterest.vue'
     import projectCase from '@/components/ProjectCase.vue'
+    import MainFooter from '@/components/MainFooter.vue'
 </script>
