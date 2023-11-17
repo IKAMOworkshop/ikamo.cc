@@ -444,6 +444,10 @@
      object-fit: cover;
 }
 
+.margin-separator {
+  margin-bottom: 60px;
+}
+
 .next-project-container {
   width: 100%;
   display: flex;

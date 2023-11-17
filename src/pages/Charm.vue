@@ -160,7 +160,7 @@
                     <div class="next-project-details">
                         <p class="case-overview text-light">A personal archive to document highlighted events from my life.</p>
                         <div class="case-titles">
-                            <h2 class="title-bold text-light">Bright</h2>
+                            <h2 class="title-bold text-light">bright.</h2>
                             <p class="caption text-primary-blue">#web-design #astro #cms</p>
                         </div>
                     </div>
@@ -174,5 +174,5 @@
 
 <script setup>
     import CharmProcess from '@/components/charm/CharmProcess.vue'
-    import CharmTakeaways from '../components/charm/CharmTakeaways.vue';
+    import CharmTakeaways from '@/components/charm/CharmTakeaways.vue';
 </script>
