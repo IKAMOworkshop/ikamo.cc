@@ -432,15 +432,16 @@
 
 .image-container {
   width: 100%;
+  height: 100%;
   overflow: hidden;
   border-radius: 40px;
 }
 
 .contained-image {
-  -o-object-fit: cover;
-     object-fit: cover;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .next-project-container {
@@ -588,7 +589,7 @@ a {
   position: relative;
   width: 800px;
   aspect-ratio: 16/12;
-  overflow: auto;
+  overflow: hidden;
   border-radius: 40px;
 }
 

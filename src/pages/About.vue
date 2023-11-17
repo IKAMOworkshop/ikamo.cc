@@ -18,11 +18,6 @@
             <div class="slider-track">
                 <div class="sliding-images">
                     <aboutImage />
-                    <aboutImage />
-                    <aboutImage />
-                    <aboutImage />
-                    <aboutImage />
-                    <aboutImage />
                 </div>
             </div>
         </div>
