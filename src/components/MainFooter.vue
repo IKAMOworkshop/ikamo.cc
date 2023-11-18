@@ -24,7 +24,7 @@
                                 <h4 class="body-light text-dark-gray">copy email.</h4>
                             </div>
                         </div>
-                        <p class="subtitle-light text-dark-gray">email.</p>
+                        <p class="subtitle-light text-dark-gray">email</p>
                     </button>
 
                     <router-link to="/about" class="footer-link">
@@ -34,7 +34,7 @@
                                 <h4 class="body-light text-dark-gray">go to about.</h4>
                             </div>
                         </div>
-                        <p class="subtitle-light text-dark-gray">about.</p>
+                        <p class="subtitle-light text-dark-gray">about</p>
                     </router-link>
                 </div>
                 <p class="caption-light text-dark-gray copyright">©2023 Jeremy Chang</p>
