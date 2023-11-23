@@ -1,6 +1,6 @@
 <template>
     <div>
-        <footer class="footer primary-blue col">
+        <footer id="footer" class="footer primary-blue col">
 
             <div class="col-50">
                 <router-link class="footer-contact" to="/contact">

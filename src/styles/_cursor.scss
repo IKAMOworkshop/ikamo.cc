@@ -1,0 +1,84 @@
+.cursor-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+.cursor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.cursor-bar{
+    transition: all .5s ease;
+}
+
+.cursor-bar-vertical{
+    width: 2px;
+    height: 6px;
+    background-color: #ffffff;
+}
+
+.cursor-bar-horizontal-container{
+    display: flex;
+    gap: 4px;
+}
+
+.cursor-bar-horizontal{
+    width: 8px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+// Gradient
+.cursor-gradient-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -100;
+}
+
+.cursor-gradient-overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -99;
+    backdrop-filter: blur(8vmax);
+}
+
+.cursor-gradient{
+    position: absolute;
+    z-index: -100;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 20%;
+    height: 30%;
+    border-radius: 100%;
+    background: linear-gradient(to right, #5AFFE1 30%, #2400FF);
+    animation: rotate 20s infinite;
+}
+
+// Animation
+@keyframes rotate{
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
