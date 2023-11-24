@@ -82,3 +82,10 @@
         rotate: 360deg;
     }
 }
+
+// Responsive
+@media screen and (max-width: 768px){
+    .cursor{
+        display: none;
+    }
+}

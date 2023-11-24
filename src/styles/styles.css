@@ -1039,6 +1039,11 @@ footer {
     rotate: 360deg;
   }
 }
+@media screen and (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
+}
 * {
   box-sizing: border-box;
 }
