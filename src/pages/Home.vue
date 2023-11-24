@@ -9,7 +9,7 @@
         </div>
 
         <div class="section-container">
-            <div class="col">
+            <div class="hero-col">
                 <div class="hero-col-sm">
                     <p class="body-bold text-light">an aspiring</p>
                     <div class="scroll-icon">

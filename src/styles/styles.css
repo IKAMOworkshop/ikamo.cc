@@ -263,6 +263,12 @@ footer {
   margin: 260px 0px 200px 0px;
 }
 
+.hero-col {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
 .hero-col-sm {
   width: 60%;
   display: flex;
@@ -432,6 +438,9 @@ footer {
   .down-arrow {
     width: 36px;
   }
+  .hero-col {
+    gap: 36px;
+  }
 }
 @media screen and (max-width: 1280px) {
   .hero-top {
@@ -465,6 +474,9 @@ footer {
   }
   .down-arrow {
     width: 24px;
+  }
+  .hero-col {
+    gap: 24px;
   }
 }
 .work-background-container {
