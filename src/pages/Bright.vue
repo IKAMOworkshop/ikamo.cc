@@ -6,7 +6,7 @@
                 <div class="col-50">
                     <p class="hero text-light">
                         <span class="hero-text-overlay">work</span>
-                        <br />charm.
+                        <br />bright.
                     </p>
                 </div>
                 <div class="col-40 project-descriptions">

@@ -29,11 +29,17 @@
 
         <ul class="works-list">
             <li><router-link v-on:mouseover="updateToCharm" to="/charm" class="large-title text-light work-link charm">charm.</router-link></li>
-            <li><router-link v-on:mouseover="updateToBright" to="/charm" class="large-title text-light work-link bright">bright.</router-link></li>
-            <li><router-link v-on:mouseover="updateToArcane" to="/charm" class="large-title text-light work-link arcane">arcane.</router-link></li>
+            <li><router-link v-on:mouseover="updateToBright" to="/bright" class="large-title text-light work-link bright">bright.</router-link></li>
+            <li><router-link v-on:mouseover="updateToArcane" to="/arcane" class="large-title text-light work-link arcane">arcane.</router-link></li>
             <li><router-link v-on:mouseover="updateToCharm" to="/charm" class="large-title text-light work-link charm">charm.</router-link></li>
-            <li><router-link v-on:mouseover="updateToBright" to="/charm" class="large-title text-light work-link bright">bright.</router-link></li>
-            <li><router-link v-on:mouseover="updateToArcane" to="/charm" class="large-title text-light work-link arcane">arcane.</router-link></li>
+            <li><router-link v-on:mouseover="updateToBright" to="/bright" class="large-title text-light work-link bright">bright.</router-link></li>
+            <li><router-link v-on:mouseover="updateToArcane" to="/arcane" class="large-title text-light work-link arcane">arcane.</router-link></li>
+            <li><router-link v-on:mouseover="updateToCharm" to="/charm" class="large-title text-light work-link charm">charm.</router-link></li>
+            <li><router-link v-on:mouseover="updateToBright" to="/bright" class="large-title text-light work-link bright">bright.</router-link></li>
+            <li><router-link v-on:mouseover="updateToArcane" to="/arcane" class="large-title text-light work-link arcane">arcane.</router-link></li>
+            <li><router-link v-on:mouseover="updateToCharm" to="/charm" class="large-title text-light work-link charm">charm.</router-link></li>
+            <li><router-link v-on:mouseover="updateToBright" to="/bright" class="large-title text-light work-link bright">bright.</router-link></li>
+            <li><router-link v-on:mouseover="updateToArcane" to="/arcane" class="large-title text-light work-link arcane">arcane.</router-link></li>
         </ul>
 
     </div>
@@ -78,22 +84,26 @@
     requestAnimationFrame(raf);
 
     onMounted(() => {
-        const repeatItems = (parentEl, total = 0) => {
-        const items = [...parentEl.children];
-            for (let i = 0; i <= total-1; ++i) {
-                var cln = items[i].cloneNode(true);
-                parentEl.appendChild(cln);
-            }
-        };
-        repeatItems(document.querySelector('.works-list'), 6);
+        const imageContainer = document.getElementById('image-container')
+        const mousePos = {
+            x: 0,
+            y: 0,
+        }
+
+        window.addEventListener('mousemove', (e) => {
+            mousePos.x = - (e.clientX / window.innerWidth) * 3
+            mousePos.y = - (e.clientY / window.innerHeight) * 3
+
+            imageContainer.style.translate = `${mousePos.x}% ${mousePos.y}% `
+        })
     })
 
     onUnmounted(() => {
         function destroy(){
-            lenis.destroy();
+            lenis.destroy()
         }
         
-        destroy();
+        destroy()
     })
 
 </script>
