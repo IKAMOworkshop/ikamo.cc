@@ -70,6 +70,7 @@
                 trigger: '#footer',
                 start: 'top 85%',
                 end: 'bottom 70%',
+                toggleActions: 'play reverse play reverse'
             },
             duration: .5,
             opacity: 0,

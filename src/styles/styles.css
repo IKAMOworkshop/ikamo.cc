@@ -307,7 +307,7 @@ footer {
 
 .cases-title-container {
   padding: 0px 60px;
-  margin-bottom: 100px;
+  margin-bottom: 280px;
 }
 
 .selected-work-container {
@@ -1140,6 +1140,7 @@ span {
 
 .slider-track {
   display: flex;
+  gap: 48px;
 }
 
 .sliding-images {
@@ -1148,7 +1149,6 @@ span {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  animation: scrollRight 25s infinite linear;
 }
 
 .slide-image {
@@ -1157,6 +1157,7 @@ span {
   aspect-ratio: 16/12;
   overflow: hidden;
   border-radius: 40px;
+  animation: primary 20s linear infinite;
 }
 
 .info-text-container {
@@ -1169,6 +1170,14 @@ span {
   justify-content: end;
 }
 
+@keyframes primary {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
 @keyframes scrollRight {
   from {
     transform: translate(0%);
@@ -1286,6 +1295,9 @@ span {
   .sliding-images {
     gap: 36px;
   }
+  .slider-track {
+    gap: 36px;
+  }
   .slide-image {
     width: 600px;
   }
@@ -1369,6 +1381,9 @@ span {
     line-height: 2rem;
   }
   .sliding-images {
+    gap: 24px;
+  }
+  .slider-track {
     gap: 24px;
   }
   .slide-image {

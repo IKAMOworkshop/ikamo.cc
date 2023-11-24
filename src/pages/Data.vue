@@ -19,6 +19,9 @@
                 <div class="sliding-images">
                     <DataCard />
                 </div>
+                <div class="sliding-images">
+                    <DataCard />
+                </div>
             </div>
         </div>
 

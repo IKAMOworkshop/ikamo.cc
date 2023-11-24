@@ -19,6 +19,9 @@
                 <div class="sliding-images">
                     <aboutImage />
                 </div>
+                <div class="sliding-images">
+                    <aboutImage />
+                </div>
             </div>
         </div>
 
@@ -27,7 +30,7 @@
                 <div class="col-60"></div>
                 <div class="col-full">
                     <h4 class="body-bold text-light-gray">rapid-learning.</h4>
-                    <p class="subtitle-light text-light">I strives in a fast-pace learning environment, as constant improvement motivates me.</p>
+                    <p id="rapid-learning" class="subtitle-light text-light">I strives in a fast-pace learning environment, as constant improvement motivates me.</p>
                 </div>
             </div>
         </div>
@@ -37,7 +40,7 @@
                 <div class="col-60"></div>
                 <div class="col-full">
                     <h4 class="body-bold text-light-gray">mix and match.</h4>
-                    <p class="subtitle-light text-light">I enjoy blending different skills and things to craft the unexpected.</p>
+                    <p id="mix-match" class="subtitle-light text-light">I enjoy blending different skills and things to craft the unexpected.</p>
                 </div>
             </div>
         </div>
@@ -48,7 +51,7 @@
                 <div class="col-60"></div>
                 <div class="col-full">
                     <h4 class="body-bold text-light-gray">beyond just design.</h4>
-                    <p class="subtitle-light text-light">I value being able of building out the things I designed. The process is enjoyable and eye-opening.</p>
+                    <p id="beyond-design" class="subtitle-light text-light">I value being able of building out the things I designed. The process is enjoyable and eye-opening.</p>
                 </div>
             </div>
         </div>
@@ -56,7 +59,7 @@
         <div class="about-section-container section-container">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">outside of design,</span>
-                <br />i also enjoy...
+                <br /><span id="interest-title">i also enjoy...</span>
             </p>
         </div>
 
@@ -76,7 +79,7 @@
         <div class="cases-title-container">
             <h2 class="large-title text-light">
                 <span class="hero-text-overlay">selected</span>
-                <br />work.
+                <br /><span id="about-works">works.</span>
             </h2>
         </div>
 
@@ -101,20 +104,81 @@
     import projectCase from '@/components/ProjectCase.vue'
     import MainFooter from '@/components/MainFooter.vue'
 
-    import { onUnmounted } from 'vue'
+    import { onUnmounted, onMounted } from 'vue'
     import Lenis from '@studio-freight/lenis'
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
 
     const lenis = new Lenis({
-            smooth: true,
-            infinite: false,
-        })
+        smooth: true,
+        infinite: false,
+    })
 
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
 
         requestAnimationFrame(raf)
+
+    onMounted(() => {
+
+        gsap.from('#rapid-learning', {
+            scrollTrigger: {
+                trigger: '#rapid-learning',
+                start: 'top 85%',
+                end: 'bottom 65%',
+                scrub: true,
+                markers: true
+            },
+            opacity: 0,
+        })
+
+        gsap.from('#mix-match', {
+            scrollTrigger: {
+                trigger: '#mix-match',
+                start: 'top 85%',
+                end: '170% 65%',
+                scrub: true,
+                markers: true
+            },
+            opacity: 0,
+        })
+
+        gsap.from('#beyond-design', {
+            scrollTrigger: {
+                trigger: '#beyond-design',
+                start: 'top 85%',
+                end: 'bottom 65%',
+                scrub: true,
+                markers: true
+            },
+            opacity: 0,
+        })
+
+        gsap.from('#interest-title', {
+            scrollTrigger: {
+                trigger: '#interest-title',
+                start: 'top 85%',
+                end: '180% 70%',
+                scrub: true,
+            },
+            opacity: 0
+        })
+
+        gsap.from('#about-works', {
+            scrollTrigger: {
+                trigger: '#about-works',
+                start: 'top 85%',
+                end: '180% 70%',
+                scrub: true,
+            },
+            opacity: 0
+        })
+
+    })
 
     onUnmounted(() => {
         function destroy(){

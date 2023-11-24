@@ -93,13 +93,13 @@ span{
 
 .slider-track{
     display: flex;
+    gap: 48px;
 }
 
 .sliding-images{
     display: flex;
     gap: 48px;
     user-select: none;
-    animation: scrollRight 25s infinite linear;
 }
 
 .slide-image{
@@ -108,6 +108,7 @@ span{
     aspect-ratio: 16/12;
     overflow: hidden;
     border-radius: 40px;
+    animation: primary 20s linear infinite;
 }
 
 .info-text-container{
@@ -118,6 +119,15 @@ span{
     flex-direction: column;
     gap: 36px;
     justify-content: end;
+}
+
+@keyframes primary {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -100%;
+    }
 }
 
 // Animation
@@ -238,6 +248,9 @@ span{
     .sliding-images{
         gap: 36px;
     }
+    .slider-track{
+        gap: 36px;
+    }
     .slide-image{
         width: 600px;
     }
@@ -323,6 +336,9 @@ span{
         line-height: 2rem;
     }
     .sliding-images{
+        gap: 24px;
+    }
+    .slider-track{
         gap: 24px;
     }
     .slide-image{
