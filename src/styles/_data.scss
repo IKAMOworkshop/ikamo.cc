@@ -20,6 +20,7 @@
     flex-direction: column;
     gap: 36px;
     justify-content: end;
+    overflow: hidden;
 }
 
 .capability-card{
@@ -27,7 +28,7 @@
     width: 100%;
     overflow: auto;
     border-radius: 40px;
-    padding: 100px 100px 100px 100px;
+    padding: 100px;
     display: flex;
     flex-direction: column;
     gap: 36px;
@@ -38,4 +39,48 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+.capability-col{
+    display: flex;
+    gap: 36px;
+}
+
+// Responsive
+@media screen and (max-width: 1280px){
+    .data-top{
+        width: 90%;
+    }
+    .info-card{
+        padding: 60px 120px 60px 60px;
+    }
+    .capability-card{
+        padding: 60px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .info-card{
+        padding: 48px;
+        gap: 16px;
+    }
+    .capability-card{
+        padding: 48px;
+    }
+    .data-container{
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .data-top{
+        width: 100%;
+    }
+    .info-card{
+        padding: 36px;
+        gap: 16px;
+    }
+    .capability-card{
+        padding: 36px;
+    }
 }

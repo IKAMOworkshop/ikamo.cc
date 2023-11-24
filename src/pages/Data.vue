@@ -9,7 +9,7 @@
         </div>
 
         <div class="section-container">
-            <div class="col-20">
+            <div class="col-40">
                 <p class="body-bold text-light-gray">in my 8 years design journey, i went from designing “gfx” to complex digital products.</p>
             </div>
         </div>

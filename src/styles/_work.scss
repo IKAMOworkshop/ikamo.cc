@@ -29,6 +29,7 @@
     object-fit: cover;
     border-radius: 40px;
     opacity: .3;
+    user-select: none;
 }
 
 .support-image{
@@ -40,7 +41,7 @@
     position: absolute;
     left: 50%;
     translate: -50% 0%;
-    z-index: 2000;
+    z-index: 900;
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -68,5 +69,18 @@
     }
     100%{
         transform: scale(1) rotate(-5deg);;
+    }
+}
+
+// Responsive
+@media screen and (max-width: 1280px){
+    .work-image{
+        width: 720px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .works-list{
+        gap: 60px;
     }
 }

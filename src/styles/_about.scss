@@ -26,3 +26,43 @@
 .offset-down{
     margin-top: 280px;
 }
+
+@media screen and (max-width: 1280px){
+    .about-section-container{
+        width: 100%;
+    }
+    .about-design-container{
+        margin-bottom: 360px;
+    }
+    .about-interests{
+        gap: 36px;
+    }
+    .about-interest{
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .about-interest{
+        height: 400px;
+    }
+    .about-design-container{
+        margin-bottom: 280px;
+    }
+    .offset-down{
+        margin-top: 200px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .about-interests{
+        gap: 24px;
+    }
+    .about-interest{
+        height: 360px;
+        padding: 36px;
+    }
+    .offset-down{
+        margin-top: 100px;
+    }
+}

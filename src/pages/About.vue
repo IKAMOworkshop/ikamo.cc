@@ -9,7 +9,7 @@
         </div>
 
         <div class="section-container">
-            <div class="col-20">
+            <div class="col-40">
                 <p class="body-bold text-light-gray">i enjoy creating transformative and immersive experience by blending visuals and motion.</p>
             </div>
         </div>

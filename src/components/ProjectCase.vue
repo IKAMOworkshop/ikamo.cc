@@ -7,7 +7,7 @@
                 <p class="case-overview text-light">{{ project.description }}</p>
                 <div class="case-titles">
                     <h2 class="title-bold text-light">{{ project.name }}</h2>
-                    <p class="caption text-primary-blue">{{ project.tags }}</p>
+                    <p class="body-light text-primary-blue">{{ project.tags }}</p>
                 </div>
             </div>
         </router-link>
@@ -32,7 +32,7 @@
                 cover: './src/assets/landing/charm.png',
                 name: 'charm.',
                 description: 'Building an engaging portfolio websites for ArtCenter Spring 2023 Gradshow.',
-                tags: '#web-design #vanillaJS<',
+                tags: '#web-design #vanillaJS',
                 path: 'charm'
                 },
                 {

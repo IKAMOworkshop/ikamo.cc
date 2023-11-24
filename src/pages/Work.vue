@@ -6,21 +6,21 @@
             <div class="rotate-background" id="image-container">
                 
                 <div class="image-row">
-                    <img :src="imageURL" alt="" class="work-image support-image">
-                    <img :src="imageURL" alt="" class="work-image support-image">
-                    <img :src="imageURL" alt="" class="work-image support-image">
+                    <img :src="imageURL" alt="" class="work-image support-image" draggable ="false">
+                    <img :src="imageURL" alt="" class="work-image support-image" draggable ="false">
+                    <img :src="imageURL" alt="" class="work-image support-image" draggable ="false">
                 </div>
 
                 <div class="image-row">
-                    <img :src="imageURL" alt="" class="work-image support-image">
-                    <img :src="imageURL" alt="" class="work-image">
-                    <img :src="imageURL" alt="" class="work-image support-image">
+                    <img :src="imageURL" alt="" class="work-image support-image" draggable ="false">
+                    <img :src="imageURL" alt="" class="work-image" draggable ="false">
+                    <img :src="imageURL" alt="" class="work-image support-image" draggable ="false">
                 </div>
 
                 <div class="image-row">
-                    <img :src="imageURL" alt="" class="work-image support-image">
-                    <img :src="imageURL" alt="" class="work-image support-image">
-                    <img :src="imageURL" alt="" class="work-image support-image">
+                    <img :src="imageURL" alt="" class="work-image support-image" draggable ="false">
+                    <img :src="imageURL" alt="" class="work-image support-image" draggable ="false">
+                    <img :src="imageURL" alt="" class="work-image support-image" draggable ="false">
                 </div>
                 
             </div>
@@ -28,6 +28,9 @@
         </div>
 
         <ul class="works-list">
+            <li><router-link v-on:mouseover="updateToCharm" to="/charm" class="large-title text-light work-link charm">charm.</router-link></li>
+            <li><router-link v-on:mouseover="updateToBright" to="/bright" class="large-title text-light work-link bright">bright.</router-link></li>
+            <li><router-link v-on:mouseover="updateToArcane" to="/arcane" class="large-title text-light work-link arcane">arcane.</router-link></li>
             <li><router-link v-on:mouseover="updateToCharm" to="/charm" class="large-title text-light work-link charm">charm.</router-link></li>
             <li><router-link v-on:mouseover="updateToBright" to="/bright" class="large-title text-light work-link bright">bright.</router-link></li>
             <li><router-link v-on:mouseover="updateToArcane" to="/arcane" class="large-title text-light work-link arcane">arcane.</router-link></li>

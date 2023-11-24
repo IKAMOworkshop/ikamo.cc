@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container">
+    <div class="page-container contact-container">
 
         <div class="contact-top">
             <p class="large-title text-light">

@@ -2,7 +2,7 @@
 
     <div class="capability-card gray">
         <h3 class="subtitle-light text-primary-blue">develop.</h3>
-        <div class="col">
+        <div class="capability-col">
             <div class="col-50 capability-text">
                 <p class="body-light text-light" v-for="text in columnOne">{{ text.info }}</p>
             </div>
