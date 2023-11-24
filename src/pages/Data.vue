@@ -123,20 +123,7 @@
                 start: 'top 85%',
                 end: '150% 70%',
                 scrub: true,
-                markers: true
             },
-            opacity: 0
-        })
-
-        gsap.from('#experience-body', {
-            scrollTrigger: {
-                trigger: '#experience-body',
-                start: 'top 85%',
-                end: '16% 70%',
-                scrub: true,
-                markers: true
-            },
-            x: -100,
             opacity: 0
         })
 
@@ -146,7 +133,6 @@
                 start: 'top 85%',
                 end: '150% 70%',
                 scrub: true,
-                markers: true
             },
             opacity: 0
         })
@@ -157,20 +143,7 @@
                 start: 'top 85%',
                 end: '150% 70%',
                 scrub: true,
-                markers: true
             },
-            opacity: 0
-        })
-
-        gsap.from('#capability-body', {
-            scrollTrigger: {
-                trigger: '#capability-body',
-                start: 'top 85%',
-                end: '30% 70%',
-                scrub: true,
-                markers: true
-            },
-            x: -100,
             opacity: 0
         })
     })

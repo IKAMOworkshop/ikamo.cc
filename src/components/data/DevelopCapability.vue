@@ -78,7 +78,6 @@
                 start: 'top 85%',
                 end: 'bottom 70%',
                 scrub: true,
-                markers: true
             },
             x: 100,
             opacity: 0
