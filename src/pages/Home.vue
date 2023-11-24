@@ -79,6 +79,30 @@
 </template>
 
 <script setup>
+    import { onMounted, onUnmounted } from 'vue'
+    import Lenis from '@studio-freight/lenis'
+
     import projectCase from '@/components/ProjectCase.vue'
     import MainFooter from '@/components/MainFooter.vue'
+
+    const lenis = new Lenis({
+            smooth: true,
+            infinite: false,
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+    onUnmounted(() => {
+        function destroy(){
+            lenis.destroy();
+        }
+        
+        destroy();
+    })
+
 </script>

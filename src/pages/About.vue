@@ -100,4 +100,27 @@
     import aboutInterest from '@/components/about/AboutInterest.vue'
     import projectCase from '@/components/ProjectCase.vue'
     import MainFooter from '@/components/MainFooter.vue'
+
+    import { onUnmounted } from 'vue'
+    import Lenis from '@studio-freight/lenis'
+
+    const lenis = new Lenis({
+            smooth: true,
+            infinite: false,
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+    onUnmounted(() => {
+        function destroy(){
+            lenis.destroy();
+        }
+        
+        destroy();
+    })
 </script>

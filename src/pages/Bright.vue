@@ -190,18 +190,24 @@
         </div>
 
         <!-- Next Project -->
-        <!-- Next Project -->
         <div class="next-project-container">
             <div class="next-project-links over">
         
                 <router-link class="project-links over" to="/arcane">
-                    <img src="@/assets/landing/arcane.png" alt="" class="project-image" draggable="false">
+                    
+                    <div class="next-video-wrapper">
+                        <!-- Video -->
+                        <video class="project-video" autoplay muted loop>
+                            <source src="@/assets/charm/video/landing.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
                     <div class="next-project-details">
-                        <p class="case-overview text-light">A frontend portfolio showcasing websites that I designed and developed.</p>
                         <div class="case-titles">
-                            <h2 class="title-bold text-light">arcane.</h2>
-                            <p class="caption text-primary-blue">#web-design #vue #three-js</p>
+                            <h2 class="title-bold text-light">up next.</h2>
+                            <p class="caption text-primary-blue">arcane | #web-design #astro #cms</p>
                         </div>
+                        <p class="case-overview text-light">A personal archive to document highlighted events from my life.</p>
                     </div>
                 </router-link>
 
@@ -217,4 +223,27 @@
     import BrightProcess from '@/components/bright/BrightProcess.vue'
     import BrightTakeaway from '@/components/bright/BrightTakeaway.vue'
     import MainFooter from '@/components/MainFooter.vue'
+
+    import { onUnmounted } from 'vue'
+    import Lenis from '@studio-freight/lenis'
+
+    const lenis = new Lenis({
+            smooth: true,
+            infinite: false,
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+    onUnmounted(() => {
+        function destroy(){
+            lenis.destroy();
+        }
+        
+        destroy();
+    })
 </script>

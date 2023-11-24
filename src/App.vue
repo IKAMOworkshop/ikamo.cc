@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Cursor />
+        <!-- <Cursor /> -->
         <Navigation />
         <router-view></router-view>
     </div>

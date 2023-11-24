@@ -62,8 +62,38 @@
 </script>
 
 <script setup>
-    const imageContainer = document.getElementById('image-container')
+    import { onMounted, onUnmounted } from 'vue'
+    import Lenis from '@studio-freight/lenis'
 
-    
+    const lenis = new Lenis({
+    smooth: true,
+    infinite: true,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    onMounted(() => {
+        const repeatItems = (parentEl, total = 0) => {
+        const items = [...parentEl.children];
+            for (let i = 0; i <= total-1; ++i) {
+                var cln = items[i].cloneNode(true);
+                parentEl.appendChild(cln);
+            }
+        };
+        repeatItems(document.querySelector('.works-list'), 6);
+    })
+
+    onUnmounted(() => {
+        function destroy(){
+            lenis.destroy();
+        }
+        
+        destroy();
+    })
 
 </script>

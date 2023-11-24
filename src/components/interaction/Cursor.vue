@@ -49,17 +49,17 @@ onMounted(() => {
             }, {duration: 16000, fill: 'forwards'})
         })
 
-        mainFooter.addEventListener('mouseover', ()=> {
-            for(let i = 0; i < cursorBar.length; i++){
-                cursorBar[i].style.backgroundColor = 'rgba(41, 47, 53, 1)'
-            }
-        })
+        // mainFooter.addEventListener('mouseover', ()=> {
+        //     for(let i = 0; i < cursorBar.length; i++){
+        //         cursorBar[i].style.backgroundColor = 'rgba(41, 47, 53, 1)'
+        //     }
+        // })
 
-        mainFooter.addEventListener('mouseout', ()=> {
-            for(let i = 0; i < cursorBar.length; i++){
-                cursorBar[i].style.backgroundColor = 'rgba(255, 255, 255, 1)'
-            }
-        })
+        // mainFooter.addEventListener('mouseout', ()=> {
+        //     for(let i = 0; i < cursorBar.length; i++){
+        //         cursorBar[i].style.backgroundColor = 'rgba(255, 255, 255, 1)'
+        //     }
+        // })
 
     })
 

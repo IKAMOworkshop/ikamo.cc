@@ -95,4 +95,27 @@
     import DesignCapability from '@/components/data/DesignCapability.vue'
     import DevelopCapability from '@/components/data/DevelopCapability.vue'
     import MainFooter from '@/components/MainFooter.vue'
+
+    import { onUnmounted } from 'vue'
+    import Lenis from '@studio-freight/lenis'
+
+    const lenis = new Lenis({
+            smooth: true,
+            infinite: false,
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+    onUnmounted(() => {
+        function destroy(){
+            lenis.destroy();
+        }
+        
+        destroy();
+    })
 </script>

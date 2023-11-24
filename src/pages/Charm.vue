@@ -160,16 +160,16 @@
                     <div class="next-video-wrapper">
                         <!-- Video -->
                         <video class="project-video" autoplay muted loop>
-                            <source src="@/assets/charm/video/landing.mp4" type="video/mp4">
+                            <source src="@/assets/bright/video/landing.mp4" type="video/mp4">
                         </video>
                     </div>
 
                     <div class="next-project-details">
                         <div class="case-titles">
                             <h2 class="title-bold text-light">up next.</h2>
-                            <p class="caption text-primary-blue">bright | #web-design #astro #cms</p>
+                            <p class="caption text-primary-blue">bright | #web-design #vue #three-js</p>
                         </div>
-                        <p class="case-overview text-light">A personal archive to document highlighted events from my life.</p>
+                        <p class="case-overview text-light">A frontend portfolio showcasing websites that I designed and developed.</p>
                     </div>
                 </router-link>
 
@@ -185,4 +185,27 @@
     import CharmProcess from '@/components/charm/CharmProcess.vue'
     import CharmTakeaways from '@/components/charm/CharmTakeaways.vue';
     import MainFooter from '@/components/MainFooter.vue'
+
+    import { onUnmounted } from 'vue'
+    import Lenis from '@studio-freight/lenis'
+
+    const lenis = new Lenis({
+            smooth: true,
+            infinite: false,
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+    onUnmounted(() => {
+        function destroy(){
+            lenis.destroy();
+        }
+        
+        destroy();
+    })
 </script>
