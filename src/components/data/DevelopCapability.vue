@@ -1,6 +1,6 @@
 <template>
 
-    <div class="capability-card gray">
+    <div id="develop-card" class="capability-card gray">
         <h3 class="subtitle-light text-primary-blue">develop.</h3>
         <div class="capability-col">
             <div class="col-50 capability-text">
@@ -62,4 +62,26 @@
             }
         }
     }
+</script>
+
+<script setup>
+    import { onMounted } from 'vue'
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    onMounted(() => {
+        gsap.from('#develop-card', {
+            scrollTrigger: {
+                trigger: '#develop-card',
+                start: 'top 85%',
+                end: 'bottom 70%',
+                scrub: true,
+                markers: true
+            },
+            x: 100,
+            opacity: 0
+        })
+    })
 </script>

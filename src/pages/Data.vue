@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-container">
         
         <div class="section-container data-top">
             <p class="large-title text-light">
@@ -25,13 +25,13 @@
         <div class="section-container">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">featured</span>
-                <br />experience.
+                <br /><span id="experience-title">experience.</span>
             </p>
         </div>
 
         <div class="section-container">
             <div class="col">
-                <div class="col-40">
+                <div class="col-40 left-trigger" id="experience-body">
                     <p class="subtitle-light text-light">Since I've graduated, I’ve worked on and learned many things.</p>
                 </div>
                 <div class="col-50">
@@ -45,7 +45,7 @@
         <div class="section-container">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">my</span>
-                <br />learnings.
+                <br /><span id="learning-title">learngins.</span>
             </p>
         </div>
 
@@ -65,14 +65,14 @@
         <div class="section-container">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">project</span>
-                <br />capability.
+                <br /><span id="capability-title">capability.</span>
             </p>
         </div>
 
         <div class="section-container">
             <div class="col">
-                <div class="col-40">
-                    <p class="subtitle-light text-light">I’m get asked what I do outside of work, a whole lot of these</p>
+                <div class="col-40" id="capability-body">
+                    <p class="subtitle-light text-light ">I’m get asked what I do outside of work, a whole lot of these</p>
                 </div>
                 <div class="col-50">
                     <div class="data-container">
@@ -96,20 +96,84 @@
     import DevelopCapability from '@/components/data/DevelopCapability.vue'
     import MainFooter from '@/components/MainFooter.vue'
 
-    import { onUnmounted } from 'vue'
+    import { onUnmounted, onMounted } from 'vue'
     import Lenis from '@studio-freight/lenis'
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
 
     const lenis = new Lenis({
             smooth: true,
             infinite: false,
+    })
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    onMounted(() => {
+
+        gsap.from('#experience-title', {
+            scrollTrigger: {
+                trigger: '#experience-title',
+                start: 'top 85%',
+                end: '150% 70%',
+                scrub: true,
+                markers: true
+            },
+            opacity: 0
         })
 
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
+        gsap.from('#experience-body', {
+            scrollTrigger: {
+                trigger: '#experience-body',
+                start: 'top 85%',
+                end: '16% 70%',
+                scrub: true,
+                markers: true
+            },
+            x: -100,
+            opacity: 0
+        })
 
-        requestAnimationFrame(raf)
+        gsap.from('#learning-title', {
+            scrollTrigger: {
+                trigger: '#learning-title',
+                start: 'top 85%',
+                end: '150% 70%',
+                scrub: true,
+                markers: true
+            },
+            opacity: 0
+        })
+
+        gsap.from('#capability-title', {
+            scrollTrigger: {
+                trigger: '#capability-title',
+                start: 'top 85%',
+                end: '150% 70%',
+                scrub: true,
+                markers: true
+            },
+            opacity: 0
+        })
+
+        gsap.from('#capability-body', {
+            scrollTrigger: {
+                trigger: '#capability-body',
+                start: 'top 85%',
+                end: '30% 70%',
+                scrub: true,
+                markers: true
+            },
+            x: -100,
+            opacity: 0
+        })
+    })
 
     onUnmounted(() => {
         function destroy(){
@@ -118,4 +182,5 @@
         
         destroy();
     })
+
 </script>

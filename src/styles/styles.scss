@@ -36,16 +36,16 @@ a{
     text-decoration: none;
 }
 
+span{
+    display: inline-block;
+}
+
 ::selection{
     background: rgba(125, 247, 255, 1);
     color: rgba(41, 47, 53, 1);
 }
 
 // Container
-.page-container{
-    padding: 0px 60px;
-}
-
 .section-container{
     padding: 0px 60px;
     margin-bottom: 280px;

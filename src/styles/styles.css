@@ -1080,6 +1080,10 @@ a {
   text-decoration: none;
 }
 
+span {
+  display: inline-block;
+}
+
 ::-moz-selection {
   background: rgb(125, 247, 255);
   color: rgb(41, 47, 53);
@@ -1088,10 +1092,6 @@ a {
 ::selection {
   background: rgb(125, 247, 255);
   color: rgb(41, 47, 53);
-}
-
-.page-container {
-  padding: 0px 60px;
 }
 
 .section-container {
