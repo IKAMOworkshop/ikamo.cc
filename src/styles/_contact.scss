@@ -53,11 +53,23 @@
     .contact-top{
         width: 80%;
     }
+    .contact-title-container{
+        max-height: 1.5rem;
+    }
+    .contact-info:hover > .contact-title-container > .contact-title-move{
+        transform: translateY(-1.6rem);
+    }
 }
 
 @media screen and (max-width: 1024px){
     .contact-infos{
         gap: 40px;
+    }
+    .contact-title-container{
+        max-height: 1rem;
+    }
+    .contact-info:hover > .contact-title-container > .contact-title-move{
+        transform: translateY(-1rem);
     }
 }
 
