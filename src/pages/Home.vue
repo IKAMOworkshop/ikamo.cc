@@ -44,9 +44,10 @@
         <div class="selected-work-container">
             <div class="scroll-track">
                 <div class="project-images">
-
                     <projectCase />
-
+                </div>
+                <div class="project-images">
+                    <projectCase />
                 </div>
             </div>
         </div>

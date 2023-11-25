@@ -328,7 +328,6 @@ footer {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  animation: scrollRight 20s infinite linear;
 }
 
 .project-links {
@@ -338,6 +337,7 @@ footer {
   overflow: auto;
   transition: all 1s ease;
   overflow: visible;
+  animation: primary 40s infinite linear;
 }
 
 .project-image {
@@ -455,6 +455,9 @@ footer {
   .project-images {
     gap: 36px;
   }
+  .scroll-track {
+    gap: 36px;
+  }
   .selected-work-container {
     margin: 0px 0px 200px 0px;
   }
@@ -467,6 +470,9 @@ footer {
     width: 420px;
   }
   .project-images {
+    gap: 24px;
+  }
+  .scroll-track {
     gap: 24px;
   }
   .case-details {
@@ -1191,10 +1197,10 @@ span {
 }
 @keyframes scrollRight {
   from {
-    transform: translate(0%);
+    left: 0%;
   }
   to {
-    transform: translate(-50%);
+    left: -100%;
   }
 }
 .hero {

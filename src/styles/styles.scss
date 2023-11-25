@@ -133,8 +133,12 @@ span{
 // Animation
 // Scroll Animation
 @keyframes scrollRight {
-    from { transform: translate(0%); }
-    to { transform: translate(-50%); }
+    from {
+        left: 0%;
+    }
+    to {
+        left: -100%;
+    }
 }
 
 // Typography
