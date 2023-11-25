@@ -45,6 +45,8 @@
     import {onMounted} from 'vue'
 
     onMounted(() => {
+        window.scrollTo(0, 0)
+
         const emailButton = document.getElementById('email-button')
 
         const copyEmail = () => {

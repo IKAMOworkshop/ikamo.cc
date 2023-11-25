@@ -89,6 +89,9 @@
     requestAnimationFrame(raf);
 
     onMounted(() => {
+
+        window.scrollTo(0, 0)
+
         const imageContainer = document.getElementById('image-container')
         const mousePos = {
             x: 0,

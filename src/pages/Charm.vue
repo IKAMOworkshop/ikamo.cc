@@ -213,6 +213,8 @@
 
     onMounted(() => {
 
+        window.scrollTo(0, 0)
+
         gsap.from('#charm-process', {
             scrollTrigger: {
                 trigger: '#charm-process',

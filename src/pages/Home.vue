@@ -100,6 +100,8 @@
     requestAnimationFrame(raf)
 
     onMounted(() => {
+        
+        window.scrollTo(0, 0)
 
         gsap.from('#what-i-do', {
             scrollTrigger: {

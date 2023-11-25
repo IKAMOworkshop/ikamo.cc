@@ -251,6 +251,8 @@
 
     onMounted(() => {
 
+        window.scrollTo(0, 0)
+
         gsap.from('#bright-process', {
             scrollTrigger: {
                 trigger: '#bright-process',

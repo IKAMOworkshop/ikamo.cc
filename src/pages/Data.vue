@@ -120,6 +120,8 @@
 
     onMounted(() => {
 
+        window.scrollTo(0, 0)
+
         gsap.from('#experience-title', {
             scrollTrigger: {
                 trigger: '#experience-title',
