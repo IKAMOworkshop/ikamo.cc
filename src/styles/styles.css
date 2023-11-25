@@ -892,6 +892,7 @@ footer {
   display: flex;
   justify-content: center;
   margin-bottom: 280px;
+  margin-top: 520px;
 }
 
 .next-project-links {
@@ -1207,6 +1208,15 @@ span {
     left: -100%;
   }
 }
+.content-hidden {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.content-reveal {
+  opacity: 1;
+}
+
 .hero {
   font-size: 14rem;
   font-weight: 700;

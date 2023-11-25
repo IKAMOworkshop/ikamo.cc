@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div class="section-container col">
+        <div class="section-container col content-hidden">
             <div class="col-50">
                 <h3 class="subtitle-light text-light">A multi-level experience with immersive and engaging motions and images.</h3>
             </div>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="section-container">
-            <div class="col">
+            <div class="col content-hidden">
 
                 <div class="col-50 video-wrapper">
                     <video class="project-video" autoplay muted loop>
@@ -64,20 +64,20 @@
 
             </div>
             
-            <div class="video-wrapper">
+            <div class="video-wrapper content-hidden">
                 <!-- Video -->
                 <video class="project-video" autoplay muted loop>
                     <source src="@/assets/charm/video/menu.mp4" type="video/mp4">
                 </video>
             </div>
 
-            <img src="@/assets/charm/image/screens.webp" alt="" class="image">
+            <img src="@/assets/charm/image/screens.webp" alt="" class="image content-hidden">
         </div>
 
         <div class="about-section-container section-container">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">build</span>
-                <br />process.
+                <br /><span id="charm-process">process.</span>
             </p>
         </div>
 
@@ -92,7 +92,7 @@
             </div>
         </div>
 
-        <div class="section-container col">
+        <div class="section-container col content-hidden">
             <div class="col-50">
                 <h3 class="subtitle-light text-light">Building a personalized router to break through the limits of hyperlinks.</h3>
             </div>
@@ -105,7 +105,7 @@
             </div>
         </div>
 
-        <div class="section-container col">
+        <div class="section-container col content-hidden">
             <div class="col-50 image-container">
                 <img src="@/assets/charm/image/router-code.webp" alt="" class="contained-image">
             </div>
@@ -114,15 +114,15 @@
             </div>
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <h2 class="title-light text-light">Integrating a modular workflow to better organize the code.</h2>
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <img src="@/assets/charm/image/modular-code.webp" alt="" class="image">
         </div>
 
-        <div class="section-container col">
+        <div class="section-container col content-hidden">
             <div class="col-50">
                 <h3 class="subtitle-light text-light">Optimizing media formats to speed up performance without losing quality.</h3>
             </div>
@@ -135,14 +135,14 @@
             </div>
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <img src="@/assets/charm/image/file-format.webp" alt="" class="image">
         </div>
 
         <div class="about-section-container section-container">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">personal</span>
-                <br />takeaways.
+                <br /><span id="charm-takeaways">takeaways.</span>
             </p>
         </div>
 
@@ -192,20 +192,62 @@
     import CharmTakeaways from '@/components/charm/CharmTakeaways.vue';
     import MainFooter from '@/components/MainFooter.vue'
 
-    import { onUnmounted } from 'vue'
+    import { onUnmounted, onMounted } from 'vue'
     import Lenis from '@studio-freight/lenis'
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
 
     const lenis = new Lenis({
-            smooth: true,
-            infinite: false,
+        smooth: true,
+        infinite: false,
+    })
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    onMounted(() => {
+
+        gsap.from('#charm-process', {
+            scrollTrigger: {
+                trigger: '#charm-process',
+                start: 'top 80%',
+                end: '180% 60%',
+                scrub: true,
+            },
+            opacity: 0
         })
 
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
+        gsap.from('#charm-takeaways', {
+            scrollTrigger: {
+                trigger: '#charm-takeaways',
+                start: 'top 80%',
+                end: '180% 60%',
+                scrub: true,
+            },
+            opacity: 0
+        })
 
-        requestAnimationFrame(raf)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('content-reveal');
+                }
+            })
+        },
+        {
+            threshold: .1,
+        });
+
+        const hiddenElements = document.querySelectorAll(".content-hidden");
+        hiddenElements.forEach((el) => observer.observe(el));
+
+    })
 
     onUnmounted(() => {
         function destroy(){
