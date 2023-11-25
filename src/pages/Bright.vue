@@ -86,6 +86,9 @@
                 <div class="sliding-images">
                     <BrightProcess />
                 </div>
+                <div class="sliding-images">
+                    <BrightProcess />
+                </div>
             </div>
         </div>
 
@@ -186,6 +189,9 @@
                 <div class="sliding-images">
                     <BrightTakeaway />
                 </div>
+                <div class="sliding-images">
+                    <BrightTakeaway />
+                </div>
             </div>
         </div>
 
@@ -193,7 +199,7 @@
         <div class="next-project-container">
             <div class="next-project-links over">
         
-                <router-link class="project-links over" to="/arcane">
+                <router-link class="next-project-links over" to="/arcane">
                     
                     <div class="next-video-wrapper">
                         <!-- Video -->

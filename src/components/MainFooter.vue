@@ -65,15 +65,16 @@
         emailButton.addEventListener('click', copyEmail)
 
         // GSAP
-        gsap.from('#footer', {
-            scrollTrigger: {
-                trigger: '#footer',
-                start: 'top 85%',
-                end: 'bottom 70%',
-                toggleActions: 'play reverse play reverse'
-            },
-            duration: .5,
-            opacity: 0,
-        })
+        // gsap.from('#footer', {
+        //     scrollTrigger: {
+        //         trigger: '#footer',
+        //         start: 'top 85%',
+        //         end: 'bottom 70%',
+        //         toggleActions: 'play reverse play reverse',
+        //         markers: true
+        //     },
+        //     duration: .5,
+        //     opacity: 0,
+        // })
     })
 </script>

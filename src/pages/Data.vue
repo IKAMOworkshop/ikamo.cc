@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container">
+    <div>
         
         <div class="section-container data-top">
             <p class="large-title text-light">

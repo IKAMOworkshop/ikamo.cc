@@ -86,6 +86,9 @@
                 <div class="sliding-images">
                     <CharmProcess />
                 </div>
+                <div class="sliding-images">
+                    <CharmProcess />
+                </div>
             </div>
         </div>
 
@@ -148,6 +151,9 @@
                 <div class="sliding-images">
                     <CharmTakeaways />
                 </div>
+                <div class="sliding-images">
+                    <CharmTakeaways />
+                </div>
             </div>
         </div>
 
@@ -155,7 +161,7 @@
         <div class="next-project-container">
             <div class="next-project-links over">
         
-                <router-link class="project-links over" to="/bright">
+                <router-link class="next-project-links over" to="/bright">
                     
                     <div class="next-video-wrapper">
                         <!-- Video -->

@@ -51,6 +51,10 @@ span{
     margin-bottom: 280px;
 }
 
+.page-container{
+    padding: 0px 60px;
+}
+
 .col{
     display: flex;
     justify-content: space-between;
@@ -108,7 +112,7 @@ span{
     aspect-ratio: 16/12;
     overflow: hidden;
     border-radius: 40px;
-    animation: primary 20s linear infinite;
+    animation: primary 30s linear infinite;
 }
 
 .info-text-container{
