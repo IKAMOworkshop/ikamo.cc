@@ -236,16 +236,16 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('content-reveal');
+                    entry.target.classList.add('content-reveal')
                 }
             })
         },
         {
             threshold: .1,
-        });
+        })
 
-        const hiddenElements = document.querySelectorAll(".content-hidden");
-        hiddenElements.forEach((el) => observer.observe(el));
+        const hiddenElements = document.querySelectorAll(".content-hidden")
+        hiddenElements.forEach((el) => observer.observe(el))
 
     })
 

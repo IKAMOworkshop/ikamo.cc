@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div class="section-container col">
+        <div class="section-container col content-hidden">
             <div class="col-50">
                 <h3 class="subtitle-light text-light">Designing an elegant experience that focuses on individual moments.</h3>
             </div>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="section-container">
-            <div class="col">
+            <div class="col content-hidden">
 
                 <div class="col-50 video-wrapper">
                     <video class="project-video" autoplay muted loop>
@@ -64,20 +64,20 @@
 
             </div>
             
-            <div class="video-wrapper">
+            <div class="video-wrapper content-hidden">
                 <!-- Video -->
                 <video class="project-video" autoplay muted loop>
                     <source src="@/assets/bright/video/dark-mode.mp4" type="video/mp4">
                 </video>
             </div>
 
-            <img src="@/assets/bright/image/screen.webp" alt="" class="image">
+            <img src="@/assets/bright/image/screen.webp" alt="" class="image content-hidden">
         </div>
         
         <div class="about-section-container section-container">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">build</span>
-                <br />process.
+                <br /><span id="bright-process">process.</span>
             </p>
         </div>
 
@@ -92,7 +92,7 @@
             </div>
         </div>
 
-        <div class="section-container col">
+        <div class="section-container col content-hidden">
             <div class="col-50">
                 <h3 class="subtitle-light text-light">Setting up the project files to include frontend and backend.</h3>
             </div>
@@ -106,7 +106,7 @@
         </div>
 
         <div class="section-container">
-            <div class="col margin-separator">
+            <div class="col margin-separator content-hidden">
                 <div class="col-50 image-container">
                     <img src="@/assets/bright/image/sanity-files.webp" alt="" class="contained-image">
                 </div>
@@ -114,14 +114,14 @@
                     <img src="@/assets/bright/image/sanity-code.webp" alt="" class="contained-image">
                 </div>
             </div>
-            <img src="@/assets/bright/image/sanity-ui.webp" alt="" class="image">
+            <img src="@/assets/bright/image/sanity-ui.webp" alt="" class="image content-hidden">
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <h2 class="title-light text-light">Date sorting and converting the date format to strings.</h2>
         </div>
 
-        <div class="section-container col">
+        <div class="section-container col content-hidden">
             <div class="col-50 image-container">
                 <img src="@/assets/bright/image/date-format.webp" alt="" class="contained-image">
             </div>
@@ -130,7 +130,7 @@
             </div>
         </div>
 
-        <div class="section-container col">
+        <div class="section-container col content-hidden">
             <div class="col-50">
                 <h3 class="subtitle-light text-light">Building light and dark theme layouts utilizing local storage.</h3>
             </div>
@@ -144,8 +144,8 @@
         </div>
 
         <div class="section-container">
-            <img src="@/assets/bright/image/light-dark-screen.webp" alt="" class="image margin-separator">
-            <div class="col">
+            <img src="@/assets/bright/image/light-dark-screen.webp" alt="" class="image margin-separator content-hidden">
+            <div class="col content-hidden">
                 <div class="col-50 image-container">
                     <img src="@/assets/bright/image/light-dark-switch.webp" alt="" class="contained-image">
                 </div>
@@ -155,19 +155,19 @@
             </div>
         </div>
 
-        <div class="section-container">
+        <div class="section-container content-hidden">
             <h2 class="title-light text-light">Learning and implementing GSAP to load animation.</h2>
         </div>
 
         <div class="section-container">
-            <div class="video-wrapper">
+            <div class="video-wrapper content-hidden">
                 <!-- Video -->
                 <video class="project-video" autoplay muted loop>
                     <source src="@/assets/bright/video/gsap.mp4" type="video/mp4">
                 </video>
             </div>
             
-            <div class="col">
+            <div class="col content-hidden">
                 <div class="col-50 image-container">
                     <img src="@/assets/bright/image/gsap-code-1.webp" alt="" class="contained-image">
                 </div>
@@ -180,7 +180,7 @@
         <div class="about-section-container section-container">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">personal</span>
-                <br />takeaways.
+                <br /><span id="bright-takeaways">takeaways.</span>
             </p>
         </div>
 
@@ -230,20 +230,62 @@
     import BrightTakeaway from '@/components/bright/BrightTakeaway.vue'
     import MainFooter from '@/components/MainFooter.vue'
 
-    import { onUnmounted } from 'vue'
+    import { onUnmounted, onMounted } from 'vue'
     import Lenis from '@studio-freight/lenis'
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
 
     const lenis = new Lenis({
-            smooth: true,
-            infinite: false,
+        smooth: true,
+        infinite: false,
+    })
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    onMounted(() => {
+
+        gsap.from('#bright-process', {
+            scrollTrigger: {
+                trigger: '#bright-process',
+                start: 'top 80%',
+                end: '180% 60%',
+                scrub: true,
+            },
+            opacity: 0
         })
 
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
+        gsap.from('#bright-takeaways', {
+            scrollTrigger: {
+                trigger: '#bright-takeaways',
+                start: 'top 80%',
+                end: '180% 60%',
+                scrub: true,
+            },
+            opacity: 0
+        })
 
-        requestAnimationFrame(raf)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('content-reveal')
+                }
+            })
+        },
+        {
+            threshold: .1,
+        })
+
+        const hiddenElements = document.querySelectorAll(".content-hidden")
+        hiddenElements.forEach((el) => observer.observe(el))
+
+    })
 
     onUnmounted(() => {
         function destroy(){
