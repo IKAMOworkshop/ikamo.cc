@@ -29,15 +29,15 @@
 
         <div class="section-container home-goal">
             <div class="home-subtitle-container">
-                <h4 class="body-bold text-light-gray">goals.</h4>
-                <p class="subtitle-light text-light">I aim to create seamless and immersive digital experiences to engage users on multiple levels.</p>
+                <h4 class="body-bold text-light-gray">what i do.</h4>
+                <p id="what-i-do" class="subtitle-light text-light">I aim to create seamless and immersive digital experiences to engage users on multiple levels.</p>
             </div>
         </div>
 
         <div class="cases-title-container">
             <h2 class="large-title text-light">
                 <span class="hero-text-overlay">selected</span>
-                <br />work.
+                <br /><span id="home-works">works.</span>
             </h2>
         </div>
 
@@ -54,19 +54,19 @@
         <div class="personal-highlight">
             <div class="col-40">
                 <h3 class="subtitle-bold text-light text-right">
-                    i endjoy blending things to
-                    <span class="text-primary-blue">craft the unexpected.</span>
+                    i endjoy blending different things to
+                    <span id="blending-title" class="text-primary-blue">craft the unexpected.</span>
                 </h3>
             </div>
             <div class="col-40">
                 <div class="highlighted-list">
-                    <p class="subtitle-light text-light">visuals.</p>
-                    <p class="subtitle-light text-light">tech.</p>
-                    <p class="subtitle-light text-light">brands.</p>
-                    <p class="subtitle-light text-light">motion.</p>
-                    <p class="subtitle-light text-light">modeling.</p>
-                    <p class="subtitle-light text-light">illustration.</p>
-                    <p class="subtitle-light text-light">and more...</p>
+                    <p class="subtitle-light text-light blending-text">visuals.</p>
+                    <p class="subtitle-light text-light blending-text">tech.</p>
+                    <p class="subtitle-light text-light blending-text">brands.</p>
+                    <p class="subtitle-light text-light blending-text">motion.</p>
+                    <p class="subtitle-light text-light blending-text">modeling.</p>
+                    <p class="subtitle-light text-light blending-text">illustration.</p>
+                    <p class="subtitle-light text-light blending-text">and more...</p>
                 </div>
             </div>
         </div>
@@ -76,23 +76,73 @@
 </template>
 
 <script setup>
-    import { onMounted, onUnmounted } from 'vue'
-    import Lenis from '@studio-freight/lenis'
-
     import projectCase from '@/components/ProjectCase.vue'
     import MainFooter from '@/components/MainFooter.vue'
 
-            const lenis = new Lenis({
-            smooth: true,
-            infinite: false,
+    import { onMounted, onUnmounted } from 'vue'
+    import Lenis from '@studio-freight/lenis'
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const lenis = new Lenis({
+        smooth: true,
+        infinite: false,
+    })
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    onMounted(() => {
+
+        gsap.from('#what-i-do', {
+            scrollTrigger: {
+                trigger: '#what-i-do',
+                start: 'top 85%',
+                end: 'bottom 65%',
+                scrub: true,
+
+            },
+            opacity: 0,
         })
 
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
+        gsap.from('#home-works', {
+            scrollTrigger: {
+                trigger: '#home-works',
+                start: 'top 85%',
+                end: '180% 70%',
+                scrub: true,
+            },
+            opacity: 0
+        })
 
-        requestAnimationFrame(raf)
+        gsap.from('#blending-title', {
+            scrollTrigger: {
+                trigger: '#blending-title',
+                start: '-180% 40%',
+                end: '100% 20%',
+                scrub: true,
+            },
+            opacity: 0
+        })
+
+        gsap.from('.blending-text', {
+            scrollTrigger: {
+                trigger: '.blending-text',
+                start: '500% 85%',
+            },
+            duration: .5,
+            x: 100,
+            opacity: 0,
+            stagger: .1,
+        })
+
+    })
 
     onUnmounted(() => {
         function destroy(){

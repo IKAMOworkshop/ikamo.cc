@@ -131,7 +131,7 @@
                 start: 'top 85%',
                 end: 'bottom 65%',
                 scrub: true,
-                markers: true
+
             },
             opacity: 0,
         })
@@ -142,7 +142,6 @@
                 start: 'top 85%',
                 end: '170% 65%',
                 scrub: true,
-                markers: true
             },
             opacity: 0,
         })
@@ -153,7 +152,6 @@
                 start: 'top 85%',
                 end: 'bottom 65%',
                 scrub: true,
-                markers: true
             },
             opacity: 0,
         })
