@@ -1,5 +1,7 @@
 <template>
     <div>
+        
+        <div class="vingnette"></div>
 
         <div class="work-background-container">
 
