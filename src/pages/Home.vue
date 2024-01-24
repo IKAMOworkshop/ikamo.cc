@@ -103,7 +103,9 @@
 
     requestAnimationFrame(raf)
 
-    // THREE JS
+    /*
+    THREE JS
+    */
     const scene =  new THREE.Scene()
 
     // Loading Model
@@ -152,16 +154,16 @@
     )
 
     // Tablet Model
-    let tabletModel = null
+    let controllerModel = null
 
     gltfLoader.load(
-        '/models/tablet.glb',
+        '/models/controller.glb',
         (gltf) => {
-            tabletModel = gltf.scene
-            tabletModel.rotation.set(0, -2.2, -1)
-            tabletModel.scale.set(0.4, 0.4, 0.4)
-            tabletModel.position.set(1.8, 0, 2.1)
-            scene.add(tabletModel)
+            controllerModel = gltf.scene
+            controllerModel.rotation.set(1.2, 0, .5)
+            controllerModel.scale.set(0.25, 0.25, 0.25)
+            controllerModel.position.set(1.8, 0, 2.1)
+            scene.add(controllerModel)
         }
     )
 
@@ -182,6 +184,12 @@
     const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100)
     camera.position.z = 5
     scene.add(camera)
+
+    // Scroll
+    let scrollY = window.scrollY
+    window.addEventListener('scroll', () => {
+        scrollY = window.scrollY
+    })
 
 
     onMounted(() => {
@@ -230,7 +238,9 @@
             stagger: .1,
         })
 
-        // THREE JS
+        /*
+        THREE JS
+        */
         const canvas = document.getElementById('landing-three')
         const renderer = new THREE.WebGLRenderer({
             canvas,
@@ -276,9 +286,12 @@
                 catModel.position.y = Math.sin(elapsedTime * 1.2) *.15 - 1.85
             }
 
-            if(tabletModel){
-                tabletModel.position.y = Math.sin(elapsedTime * .6) *.15
+            if(controllerModel){
+                controllerModel.position.y = Math.sin(elapsedTime * .6) *.15
             }
+
+            // Scroll Camera
+            camera.position.y = scrollY * -.005
 
             // Render Function
             renderer.render(scene, camera);
