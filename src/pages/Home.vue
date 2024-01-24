@@ -139,29 +139,29 @@
         }
     )
 
-    // Cat Model
-    let catModel = null
+    // Tablet Model
+    let tabletModel = null
 
     gltfLoader.load(
-        '/models/cat.glb',
+        '/models/tablet.glb',
         (gltf) => {
-            catModel = gltf.scene
-            catModel.rotation.set(-.5, 2.8, 0)
-            catModel.scale.set(0.4, 0.4, 0.4)
-            catModel.position.set(-2.2, -1.8, -.5)
-            scene.add(catModel)
+            tabletModel = gltf.scene
+            tabletModel.rotation.set(-.5, 2, .8)
+            tabletModel.scale.set(0.6, 0.6, 0.6)
+            tabletModel.position.set(-2, -1.8, -.5)
+            scene.add(tabletModel)
         }
     )
 
-    // Tablet Model
+    // Controller Model
     let controllerModel = null
 
     gltfLoader.load(
         '/models/controller.glb',
         (gltf) => {
             controllerModel = gltf.scene
-            controllerModel.rotation.set(1.2, 0, .5)
-            controllerModel.scale.set(0.25, 0.25, 0.25)
+            controllerModel.rotation.set(1.2, -.5, .8)
+            controllerModel.scale.set(0.23, 0.23, 0.23)
             controllerModel.position.set(1.8, 0, 2.1)
             scene.add(controllerModel)
         }
@@ -175,8 +175,8 @@
 
     // Light
     const ambientLight = new THREE.AmbientLight('#ffffff', .3)
-    const directionalLight = new THREE.DirectionalLight('#ffffff', .7)
-    directionalLight.position.set(-2, 0, 5)
+    const directionalLight = new THREE.DirectionalLight('#ffffff', 1)
+    directionalLight.position.set(-8, 10, 6)
 
     scene.add(ambientLight, directionalLight);
 
@@ -280,8 +280,8 @@
                 keyboardModel.position.y = Math.sin(elapsedTime * .8) *.15 + 1.4
             }
 
-            if(catModel){
-                catModel.position.y = Math.sin(elapsedTime * 1.2) *.15 - 1.85
+            if(tabletModel){
+                tabletModel.position.y = Math.sin(elapsedTime * 1.2) *.15 - 1.8
             }
 
             if(controllerModel){
