@@ -1,6 +1,8 @@
 <template>
     <div class="page-container contact-container">
 
+        <canvas id="contact-three"></canvas>
+
         <div class="contact-top">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">feel free</span>
@@ -43,6 +45,48 @@
 
 <script setup>
     import {onMounted} from 'vue'
+    import * as THREE from 'three'
+    import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+
+    /*
+    THREE JS
+    */
+    const scene =  new THREE.Scene()
+
+    // Loading Model
+    const gltfLoader = new GLTFLoader()
+
+    //Robot Model
+    let planeModel = null
+
+    gltfLoader.load(
+        '/models/plane.glb',
+        (gltf) => {
+            planeModel = gltf.scene
+            planeModel.scale.set(3, 2, 2)
+            planeModel.rotation.set(2.2, 2.5, 2.5)
+            planeModel.position.set(1.9, .5, 0)
+            scene.add(planeModel)
+        }
+    )
+
+    // Size
+    const sizes = {
+        width: window.innerWidth,
+        height: window.innerHeight,
+    }
+
+    // Light
+    const ambientLight = new THREE.AmbientLight('#ffffff', .3)
+    const directionalLight = new THREE.DirectionalLight('#ffffff', .7)
+    directionalLight.position.set(-2, 0, 5)
+
+    scene.add(ambientLight, directionalLight);
+
+    // Camera
+    const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100)
+    camera.position.z = 5
+    scene.add(camera)
 
     onMounted(() => {
         window.scrollTo(0, 0)
@@ -58,5 +102,55 @@
         }
 
         emailButton.addEventListener('click', copyEmail)
+
+        /*
+        THREE JS
+        */
+        const canvas = document.getElementById('contact-three')
+        const renderer = new THREE.WebGLRenderer({
+            canvas,
+            antialias: true,
+        })
+
+        renderer.setSize(sizes.width, sizes.height)
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+        renderer.setClearAlpha(0)
+        renderer.render(scene, camera)
+
+        // Resize
+        window.addEventListener('resize', () => {
+            // Update sizes
+            sizes.width = window.innerWidth
+            sizes.height = window.innerHeight
+
+            // Update camera
+            camera.aspect = sizes.width / sizes.height
+            camera.updateProjectionMatrix()
+            
+            // Update renderer
+            renderer.setSize(sizes.width, sizes.height)
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+        })
+
+        const clock = new THREE.Clock();
+
+        // Loop Function
+        const loop = () => {
+            const elapsedTime = clock.getElapsedTime();
+
+            // Model Animation
+            if(planeModel){
+                planeModel.position.y = Math.sin(elapsedTime * 1) * .06 + .1
+            }
+
+            // Scroll Camera
+            camera.position.y = scrollY * -.003
+
+            // Render Function
+            renderer.render(scene, camera);
+            window.requestAnimationFrame(loop);
+        };
+
+        loop();
     })
 </script>
