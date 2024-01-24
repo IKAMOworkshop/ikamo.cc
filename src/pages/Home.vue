@@ -185,15 +185,13 @@
     camera.position.z = 5
     scene.add(camera)
 
-    // Scroll
-    let scrollY = window.scrollY
-    window.addEventListener('scroll', () => {
-        scrollY = window.scrollY
-    })
-
-
     onMounted(() => {
-        
+        // Scroll
+        let scrollY = window.scrollY
+        window.addEventListener('scroll', () => {
+            scrollY = window.scrollY
+        })
+
         window.scrollTo(0, 0)
 
         gsap.from('#what-i-do', {
@@ -291,7 +289,7 @@
             }
 
             // Scroll Camera
-            camera.position.y = scrollY * -.005
+            camera.position.y = scrollY * -.003
 
             // Render Function
             renderer.render(scene, camera);
