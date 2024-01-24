@@ -1,6 +1,8 @@
 <template>
     <div>
 
+        <canvas id="landing-three"></canvas>
+
         <div class="hero-top">
             <p class="body-light text-light">
                 hello there!
@@ -81,6 +83,8 @@
     import MainFooter from '@/components/MainFooter.vue'
 
     import { onMounted, onUnmounted } from 'vue'
+    import * as THREE from 'three'
+    import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
     import Lenis from '@studio-freight/lenis'
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -98,6 +102,87 @@
     }
 
     requestAnimationFrame(raf)
+
+    // THREE JS
+    const scene =  new THREE.Scene()
+
+    // Loading Model
+    const gltfLoader = new GLTFLoader()
+
+    //Robot Model
+    let robotModel = null
+
+    gltfLoader.load(
+        '/models/robot.glb',
+        (gltf) => {
+            robotModel = gltf.scene
+            robotModel.position.set(.8, .8, -.5)
+            robotModel.rotation.set(-.2, -.5, .05)
+            robotModel.scale.set(1.5, 1.5, 1.5)
+            scene.add(robotModel)
+        }
+    )
+
+    // Keyboard Model
+    let keyboardModel = null
+
+    gltfLoader.load(
+        '/models/keyboard.glb',
+        (gltf) => {
+            keyboardModel = gltf.scene
+            keyboardModel.scale.set(0.5, 0.5, 0.5)
+            keyboardModel.rotation.set(2, -1, 1)
+            keyboardModel.position.set(-1.4, 1, 0)
+            scene.add(keyboardModel)
+        }
+    )
+
+    // Cat Model
+    let catModel = null
+
+    gltfLoader.load(
+        '/models/cat.glb',
+        (gltf) => {
+            catModel = gltf.scene
+            catModel.rotation.set(-.5, 2.8, 0)
+            catModel.scale.set(0.4, 0.4, 0.4)
+            catModel.position.set(-2.2, -1.8, -.5)
+            scene.add(catModel)
+        }
+    )
+
+    // Tablet Model
+    let tabletModel = null
+
+    gltfLoader.load(
+        '/models/tablet.glb',
+        (gltf) => {
+            tabletModel = gltf.scene
+            tabletModel.rotation.set(0, -2.2, -1)
+            tabletModel.scale.set(0.4, 0.4, 0.4)
+            tabletModel.position.set(1.8, 0, 2.1)
+            scene.add(tabletModel)
+        }
+    )
+
+    // Size
+    const sizes = {
+        width: window.innerWidth,
+        height: window.innerHeight,
+    }
+
+    // Light
+    const ambientLight = new THREE.AmbientLight('#ffffff', .3)
+    const directionalLight = new THREE.DirectionalLight('#ffffff', .7)
+    directionalLight.position.set(-2, 0, 5)
+
+    scene.add(ambientLight, directionalLight);
+
+    // Camera
+    const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100)
+    camera.position.z = 5
+    scene.add(camera)
+
 
     onMounted(() => {
         
@@ -144,6 +229,63 @@
             opacity: 0,
             stagger: .1,
         })
+
+        // THREE JS
+        const canvas = document.getElementById('landing-three')
+        const renderer = new THREE.WebGLRenderer({
+            canvas,
+            antialias: true,
+        })
+
+        renderer.setSize(sizes.width, sizes.height)
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+        renderer.setClearAlpha(0)
+        renderer.render(scene, camera)
+
+        // Resize
+        window.addEventListener('resize', () => {
+            // Update sizes
+            sizes.width = window.innerWidth
+            sizes.height = window.innerHeight
+
+            // Update camera
+            camera.aspect = sizes.width / sizes.height
+            camera.updateProjectionMatrix()
+            
+            // Update renderer
+            renderer.setSize(sizes.width, sizes.height)
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+        })
+
+        const clock = new THREE.Clock();
+
+        // Loop Function
+        const loop = () => {
+            const elapsedTime = clock.getElapsedTime();
+
+            // Model Animation
+            if(robotModel){
+                robotModel.position.y = Math.sin(elapsedTime * 1) * .05
+            }
+
+            if(keyboardModel){
+                keyboardModel.position.y = Math.sin(elapsedTime * .8) *.15 + 1.4
+            }
+
+            if(catModel){
+                catModel.position.y = Math.sin(elapsedTime * 1.2) *.15 - 1.85
+            }
+
+            if(tabletModel){
+                tabletModel.position.y = Math.sin(elapsedTime * .6) *.15
+            }
+
+            // Render Function
+            renderer.render(scene, camera);
+            window.requestAnimationFrame(loop);
+        };
+
+        loop();
 
     })
 

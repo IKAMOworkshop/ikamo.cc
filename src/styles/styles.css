@@ -258,6 +258,13 @@ footer {
     text-align: right;
   }
 }
+#landing-three {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .hero-top {
   padding: 0px 60px;
   margin: 260px 0px 200px 0px;
