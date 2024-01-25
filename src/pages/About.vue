@@ -45,7 +45,7 @@
                 <div class="col-60">
                     <div id="mixer" class="about-design"></div>
                 </div>
-                <div class="col-60">
+                <div id="mixer-text" class="col-60">
                     <h4 class="body-bold text-light-gray">mix and match.</h4>
                     <p id="mix-match" class="subtitle-light text-light">I enjoy blending different skills and things to craft the unexpected.</p>
                 </div>
@@ -142,7 +142,15 @@
         requestAnimationFrame(raf)
     }
 
-        requestAnimationFrame(raf)
+    requestAnimationFrame(raf)
+
+    // Cursor
+    const cursor = new THREE.Vector2();
+
+    window.addEventListener('mousemove', (event) => {
+        cursor.x = event.clientX / sizes.width * 2 - 1;
+        cursor.y = - (event.clientY / sizes.height * 2 - 1);
+    });
 
         /*
     THREE JS
@@ -626,18 +634,46 @@
 
             if(illustrationSceneInfo.tabletModel){
                 illustrationSceneInfo.tabletModel.position.y = Math.sin(elapsedTime * 1.6) *.15 + .5
+                document.querySelector( '#illustration' ).addEventListener('mouseover', () => {
+                    gsap.to(illustrationSceneInfo.tabletModel.rotation, {
+                        duration: 2,
+                        ease: 'power2.inOut',
+                        y: '+=6.3'
+                    })
+                })
             }
 
             if(techSceneInfo.keyboardModel){
                 techSceneInfo.keyboardModel.position.y = Math.sin(elapsedTime * 1.6) *.15 + .5
+                document.querySelector( '#tech' ).addEventListener('mouseover', () => {
+                    gsap.to(techSceneInfo.keyboardModel.rotation, {
+                        duration: 2,
+                        ease: 'power2.inOut',
+                        y: '+=6.3'
+                    })
+                })
             }
 
             if(catSceneInfo.catModel){
                 catSceneInfo.catModel.position.y = Math.sin(elapsedTime * 1.6) *.15 - .45
+                document.querySelector( '#cat' ).addEventListener('mouseover', () => {
+                    gsap.to(catSceneInfo.catModel.rotation, {
+                        duration: 2,
+                        ease: 'power2.inOut',
+                        y: '+=6.3'
+                    })
+                })
             }
 
             if(gameSceneInfo.controllerModel){
                 gameSceneInfo.controllerModel.position.y = Math.sin(elapsedTime * 1.6) *.15
+                document.querySelector( '#game' ).addEventListener('mouseover', () => {
+                    gsap.to(gameSceneInfo.controllerModel.rotation, {
+                        duration: 2,
+                        ease: 'power2.inOut',
+                        y: '+=6.3'
+                    })
+                })
             }
 
             // Scroll Camera
