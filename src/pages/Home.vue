@@ -57,7 +57,7 @@
         <div class="personal-highlight">
             <div class="col-40">
                 <h3 class="subtitle-bold text-light text-right">
-                    i endjoy blending different things to
+                    i enjoy blending different things to
                     <span id="blending-title" class="text-primary-blue">craft the unexpected.</span>
                 </h3>
             </div>

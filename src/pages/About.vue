@@ -2,6 +2,7 @@
     <div>
 
         <canvas id="about-three"></canvas>
+        <div id="about-main" class="about-main"></div>
 
         <div class="about-section-container section-container">
             <p class="large-title text-light">
@@ -67,13 +68,21 @@
 
         <div class="section-container">
             <div class="col">
-                <div class="col-50 about-interests offset-down">
-                    <aboutInterest />
-                    <aboutInterest />
+                <div id="interest-1" class="col-50 about-interests offset-down">
+                    <div id="illustration" class="about-interest">
+                        <p class="caption-bold text-light">drawing illustrations.</p>
+                    </div>
+                    <div class="about-interest gray">
+                        <p class="caption-bold text-light">drawing illustrations.</p>
+                    </div>
                 </div>
                 <div class="col-50 about-interests">
-                    <aboutInterest />
-                    <aboutInterest />
+                    <div class="about-interest gray">
+                        <p class="caption-bold text-light">drawing illustrations.</p>
+                    </div>
+                    <div class="about-interest gray">
+                        <p class="caption-bold text-light">drawing illustrations.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,7 +111,6 @@
 
 <script setup>
     import aboutImage from '@/components/about/AboutImages.vue'
-    import aboutInterest from '@/components/about/AboutInterest.vue'
     import projectCase from '@/components/ProjectCase.vue'
     import MainFooter from '@/components/MainFooter.vue'
 
@@ -130,126 +138,38 @@
         /*
     THREE JS
     */
-    const scene =  new THREE.Scene()
+	function makeScene( elem ) {
+
+        const scene = new THREE.Scene();
+
+        const fov = 45;
+        const aspect = 2; // the canvas default
+        const near = 0.1;
+        const far = 1000;
+        const camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
+        camera.position.set( 0, 0, 5 );
+        camera.lookAt( 0, 0, 0 );
+
+        {
+            const ambientLight = new THREE.AmbientLight('#ffffff', .3)
+            const directionalLight = new THREE.DirectionalLight( '#ffffff', .7 );
+            directionalLight.position.set(-8, 10, 6)
+            scene.add( directionalLight, ambientLight );
+
+        }
+
+        return { scene, camera, elem };
+
+    }
 
     // Loading Model
     const gltfLoader = new GLTFLoader()
-
-    //Robot Model
-    let catModel = null
-
-    gltfLoader.load(
-        '/models/cat.glb',
-        (gltf) => {
-            catModel = gltf.scene
-            catModel.scale.set(1, 1, 1)
-            catModel.rotation.set(-.3, 2.5, .2)
-            catModel.position.set(1.4, -5, .5)
-            scene.add(catModel)
-        }
-    )
-
-    // Keyboard Model
-    let keyboardModel = null
-
-    gltfLoader.load(
-        '/models/keyboard.glb',
-        (gltf) => {
-            keyboardModel = gltf.scene
-            keyboardModel.scale.set(0.4, 0.4, 0.4)
-            keyboardModel.rotation.set(2, -1, 1)
-            keyboardModel.position.set(.4, 1, -1)
-            scene.add(keyboardModel)
-        }
-    )
-
-    // Tablet Model
-    let tabletModel = null
-
-    gltfLoader.load(
-        '/models/tablet.glb',
-        (gltf) => {
-            tabletModel = gltf.scene
-            tabletModel.rotation.set(-.5, 2, .8)
-            tabletModel.scale.set(0.6, 0.6, 0.6)
-            tabletModel.position.set(.1, -1.8, 1.5)
-            scene.add(tabletModel)
-        }
-    )
-
-    // Controller Model
-    let controllerModel = null
-
-    gltfLoader.load(
-        '/models/controller.glb',
-        (gltf) => {
-            controllerModel = gltf.scene
-            controllerModel.rotation.set(1.2, -.5, .8)
-            controllerModel.scale.set(0.16, 0.16, 0.16)
-            controllerModel.position.set(1.8, 0, 2.1)
-            scene.add(controllerModel)
-        }
-    )
-
-    // Laptop Model
-    let laptopModel = null
-
-    gltfLoader.load(
-        '/models/laptop.glb',
-        (gltf) => {
-            laptopModel = gltf.scene
-            laptopModel.rotation.set(1, 1, -.5)
-            laptopModel.scale.set(.9, .9, .9)
-            laptopModel.position.set(-2.2, -5.8, 0)
-            scene.add(laptopModel)
-        }
-    )
-
-    // Laptop Model
-    let mixerModel = null
-
-    gltfLoader.load(
-        '/models/mixer.glb',
-        (gltf) => {
-            mixerModel = gltf.scene
-            mixerModel.rotation.set(.3, -2, 0)
-            mixerModel.scale.set(.7, .7, .7)
-            mixerModel.position.set(-2.2, -9, 0)
-            scene.add(mixerModel)
-        }
-    )
-
-    // Hammer Model
-    let hammerModel = null
-
-    gltfLoader.load(
-        '/models/hammer.glb',
-        (gltf) => {
-            hammerModel = gltf.scene
-            hammerModel.rotation.set(-.5, -1, -.5)
-            hammerModel.scale.set(0.6, 0.6, 0.6)
-            hammerModel.position.set(-2.2, -12.6, 0)
-            scene.add(hammerModel)
-        }
-    )
 
     // Size
     const sizes = {
         width: window.innerWidth,
         height: window.innerHeight,
     }
-
-    // Light
-    const ambientLight = new THREE.AmbientLight('#ffffff', .3)
-    const directionalLight = new THREE.DirectionalLight('#ffffff', .7)
-    directionalLight.position.set(-8, 10, 6)
-
-    scene.add(ambientLight, directionalLight);
-
-    // Camera
-    const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100)
-    camera.position.z = 5
-    scene.add(camera)
 
     onMounted(() => {
 
@@ -321,10 +241,119 @@
             antialias: true,
         })
 
+        // Main Model List
+        let catModel = null
+        let keyboardModel = null
+        let tabletModel = null
+        let controllerModel = null
+        let laptopModel = null
+        let mixerModel = null
+        let hammerModel = null
+
+        function setupScene1() {
+
+            const sceneInfo = makeScene( document.querySelector( '#about-main' ) );
+
+            //Cat Model
+            gltfLoader.load(
+                '/models/cat.glb',
+                (gltf) => {
+                    catModel = gltf.scene
+                    catModel.scale.set(1, 1, 1)
+                    catModel.rotation.set(-.3, 2.5, .2)
+                    catModel.position.set(1.4, -5, .5)
+                    sceneInfo.scene.add( catModel );
+                    sceneInfo.catModel = catModel;
+                }
+            )
+
+            // Keyboard Model
+            gltfLoader.load(
+                '/models/keyboard.glb',
+                (gltf) => {
+                    keyboardModel = gltf.scene
+                    keyboardModel.scale.set(0.4, 0.4, 0.4)
+                    keyboardModel.rotation.set(2, -1, 1)
+                    keyboardModel.position.set(.4, 1, -1)
+                    sceneInfo.scene.add( keyboardModel );
+                    sceneInfo.keyboardModel = keyboardModel;
+                }
+            )
+
+            // Tablet Model
+            gltfLoader.load(
+                '/models/tablet.glb',
+                (gltf) => {
+                    tabletModel = gltf.scene
+                    tabletModel.rotation.set(-.5, 2, .8)
+                    tabletModel.scale.set(0.6, 0.6, 0.6)
+                    tabletModel.position.set(.1, -1.8, 1.5)
+                    sceneInfo.scene.add( tabletModel );
+                    sceneInfo.tabletModel = tabletModel;
+                }
+            )
+
+            // Controller Model
+            gltfLoader.load(
+                '/models/controller.glb',
+                (gltf) => {
+                    controllerModel = gltf.scene
+                    controllerModel.rotation.set(1.2, -.5, .8)
+                    controllerModel.scale.set(0.16, 0.16, 0.16)
+                    controllerModel.position.set(1.8, 0, 2.1)
+                    sceneInfo.scene.add( controllerModel );
+                    sceneInfo.controllerModel = controllerModel;
+                }
+            )
+
+            // Laptop Model
+            gltfLoader.load(
+                '/models/laptop.glb',
+                (gltf) => {
+                    laptopModel = gltf.scene
+                    laptopModel.rotation.set(1, 1, -.5)
+                    laptopModel.scale.set(.9, .9, .9)
+                    laptopModel.position.set(-2.2, -5.8, 0)
+                    sceneInfo.scene.add( laptopModel );
+                    sceneInfo.laptopModel = laptopModel;
+                }
+            )
+
+            // Mixer Model
+            gltfLoader.load(
+                '/models/mixer.glb',
+                (gltf) => {
+                    mixerModel = gltf.scene
+                    mixerModel.rotation.set(.3, -2, 0)
+                    mixerModel.scale.set(.7, .7, .7)
+                    mixerModel.position.set(-2.2, -9, 0)
+                    sceneInfo.scene.add( mixerModel );
+                    sceneInfo.mixerModel = mixerModel;
+                }
+            )
+
+            // Hammer Model
+            gltfLoader.load(
+                '/models/hammer.glb',
+                (gltf) => {
+                    hammerModel = gltf.scene
+                    hammerModel.rotation.set(-.5, -1, -.5)
+                    hammerModel.scale.set(0.6, 0.6, 0.6)
+                    hammerModel.position.set(-2.2, -12.6, 0)
+                    sceneInfo.scene.add( hammerModel );
+                    sceneInfo.hammerModel = hammerModel;
+                }
+            )
+
+            return sceneInfo;
+
+        }
+
+        const sceneInfo1 = setupScene1();
+
         renderer.setSize(sizes.width, sizes.height)
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
         renderer.setClearAlpha(0)
-        renderer.render(scene, camera)
 
         // Resize
         window.addEventListener('resize', () => {
@@ -332,26 +361,82 @@
             sizes.width = window.innerWidth
             sizes.height = window.innerHeight
 
-            // Update camera
-            camera.aspect = sizes.width / sizes.height
-            camera.updateProjectionMatrix()
+            // // Update camera
+            // camera.aspect = sizes.width / sizes.height
+            // camera.updateProjectionMatrix()
             
             // Update renderer
             renderer.setSize(sizes.width, sizes.height)
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
         })
 
-        const clock = new THREE.Clock();
+        function resizeRendererToDisplaySize( renderer ) {
+
+        const canvas = renderer.domElement;
+        const width = canvas.clientWidth;
+        const height = canvas.clientHeight;
+        const needResize = canvas.width !== width || canvas.height !== height;
+        if ( needResize ) {
+
+            renderer.setSize( width, height, false );
+
+        }
+
+        return needResize;
+
+        }
+
+        function renderSceneInfo( sceneInfo ) {
+
+            const { scene, camera, elem } = sceneInfo;
+
+            // get the viewport relative position of this element
+            const { left, right, top, bottom, width, height } = elem.getBoundingClientRect();
+
+            const isOffscreen =
+            bottom < 0 ||
+            top > renderer.domElement.clientHeight ||
+            right < 0 ||
+            left > renderer.domElement.clientWidth;
+
+            if ( isOffscreen ) {
+
+                return;
+
+            }
+
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+
+            const positiveYUpBottom = renderer.domElement.clientHeight - bottom;
+            renderer.setScissor( left, positiveYUpBottom, width, height );
+            renderer.setViewport( left, positiveYUpBottom, width, height );
+
+            renderer.render( scene, camera );
+
+        }
+
+
+        const clock = new THREE.Clock()
+        const clearColor = new THREE.Color( '#000' )
 
         // Loop Function
-        const loop = () => {
+        const loop = (time) => {
             const elapsedTime = clock.getElapsedTime();
+
+            resizeRendererToDisplaySize( renderer );
+
+            renderer.setScissorTest( false );
+            renderer.clear( true, true );
+            renderer.setScissorTest( true );
 
             // Model Animation
             if(catModel){
                 catModel.position.y = Math.sin(elapsedTime * 1) * .06 - 1.5
             }
 
+            renderSceneInfo( sceneInfo1 );
+            
             if(keyboardModel){
                 keyboardModel.position.y = Math.sin(elapsedTime * .8) *.15 + 1.4
             }
@@ -365,15 +450,14 @@
             }
 
             // Scroll Camera
-            camera.position.y = scrollY * -.003
+            sceneInfo1.camera.position.y = scrollY * -.003
 
             // Render Function
-            renderer.render(scene, camera);
+            // renderer.render(scene, camera);
             window.requestAnimationFrame(loop);
         };
-
-        loop();
-
+    
+    window.requestAnimationFrame(loop);
 
     })
 
