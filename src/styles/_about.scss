@@ -2,7 +2,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
 }
 
 .about-main{
@@ -16,12 +15,25 @@
 
 .about-design-container{
     padding: 0px 60px;
-    margin-bottom: 880px;
+    margin-bottom: 100px;
+}
+
+.about-hero-title{
+    max-width: 60%;
 }
 
 .about-section-container{
     margin: 160px 0px 200px 0px;
     width: 70%
+}
+
+.about-design-col{
+    align-items: center;
+}
+
+.about-design{
+    width: 100%;
+    height: 800px;
 }
 
 .about-interests{
@@ -38,6 +50,7 @@
     align-items: end;
     padding: 60px;
     overflow: hidden;
+    background: radial-gradient(rgb(69, 80, 90) 36%, rgb(52, 60, 68));
 }
 
 .interest-container{
@@ -65,6 +78,9 @@
     .about-interests{
         gap: 36px;
     }
+    .about-design{
+        height: 600px;
+    }
     .about-interest{
         height: 600px;
     }
@@ -89,6 +105,9 @@
     .about-interest{
         height: 360px;
         padding: 36px;
+    }
+    .about-design{
+        height: 600px;
     }
     .offset-down{
         margin-top: 100px;

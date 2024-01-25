@@ -301,6 +301,7 @@
     })
 
     onUnmounted(() => {
+        window.scrollTo(0, 0)
         function destroy(){
             lenis.destroy();
         }
