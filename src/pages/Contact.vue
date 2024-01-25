@@ -79,7 +79,7 @@
     // Light
     const ambientLight = new THREE.AmbientLight('#ffffff', .3)
     const directionalLight = new THREE.DirectionalLight('#ffffff', .7)
-    directionalLight.position.set(-8, 10, 6)
+    directionalLight.position.set(-2, 6, 0)
 
     scene.add(ambientLight, directionalLight);
 
@@ -140,7 +140,7 @@
 
             // Model Animation
             if(planeModel){
-                planeModel.position.y = Math.sin(elapsedTime * 1) * .06 + .1
+                planeModel.position.y = Math.sin(elapsedTime * .8) * .15 + .1
             }
 
             // Scroll Camera

@@ -1228,7 +1228,7 @@ span {
   aspect-ratio: 16/12;
   overflow: hidden;
   border-radius: 40px;
-  animation: primary 30s linear infinite;
+  animation: primary 35s linear infinite;
 }
 
 .info-text-container {

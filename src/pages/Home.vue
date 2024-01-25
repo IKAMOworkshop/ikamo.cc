@@ -162,7 +162,7 @@
             controllerModel = gltf.scene
             controllerModel.rotation.set(1.2, -.5, .8)
             controllerModel.scale.set(0.23, 0.23, 0.23)
-            controllerModel.position.set(1.8, 0, 2.1)
+            controllerModel.position.set(1.9, 0, 2.1)
             scene.add(controllerModel)
         }
     )
@@ -176,7 +176,7 @@
     // Light
     const ambientLight = new THREE.AmbientLight('#ffffff', .3)
     const directionalLight = new THREE.DirectionalLight('#ffffff', 1)
-    directionalLight.position.set(-8, 10, 6)
+    directionalLight.position.set(-40, 20, 6)
 
     scene.add(ambientLight, directionalLight);
 

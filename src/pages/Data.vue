@@ -153,7 +153,7 @@
     // Light
     const ambientLight = new THREE.AmbientLight('#ffffff', .3)
     const directionalLight = new THREE.DirectionalLight('#ffffff', .7)
-    directionalLight.position.set(-8, 10, 6)
+    directionalLight.position.set(-14, 14, 6)
 
     scene.add(ambientLight, directionalLight);
 
