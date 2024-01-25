@@ -72,16 +72,16 @@
                     <div id="illustration" class="about-interest">
                         <p class="caption-bold text-light">drawing illustrations.</p>
                     </div>
-                    <div class="about-interest gray">
-                        <p class="caption-bold text-light">drawing illustrations.</p>
+                    <div id="tech" class="about-interest">
+                        <p class="caption-bold text-light">collecting tech.</p>
                     </div>
                 </div>
                 <div class="col-50 about-interests">
-                    <div class="about-interest gray">
-                        <p class="caption-bold text-light">drawing illustrations.</p>
+                    <div id="cat" class="about-interest">
+                        <p class="caption-bold text-light">touching cats.</p>
                     </div>
-                    <div class="about-interest gray">
-                        <p class="caption-bold text-light">drawing illustrations.</p>
+                    <div id="game" class="about-interest">
+                        <p class="caption-bold text-light">playing games.</p>
                     </div>
                 </div>
             </div>
@@ -140,29 +140,29 @@
     */
 	function makeScene( elem ) {
 
-        const scene = new THREE.Scene();
+        const scene = new THREE.Scene()
 
-        const fov = 45;
-        const aspect = 2; // the canvas default
-        const near = 0.1;
-        const far = 1000;
-        const camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
-        camera.position.set( 0, 0, 5 );
-        camera.lookAt( 0, 0, 0 );
+        const fov = 45
+        const aspect = 2
+        const near = 0.1
+        const far = 1000
+        const camera = new THREE.PerspectiveCamera( fov, aspect, near, far )
+        camera.position.set( 0, 0, 5 )
+        camera.lookAt( 0, 0, 0 )
 
         {
             const ambientLight = new THREE.AmbientLight('#ffffff', .3)
-            const directionalLight = new THREE.DirectionalLight( '#ffffff', .7 );
+            const directionalLight = new THREE.DirectionalLight( '#ffffff', .7 )
             directionalLight.position.set(-8, 10, 6)
-            scene.add( directionalLight, ambientLight );
+            scene.add( directionalLight, ambientLight )
 
         }
 
-        return { scene, camera, elem };
+        return { scene, camera, elem }
 
     }
 
-    // Loading Model
+    // Model Loader
     const gltfLoader = new GLTFLoader()
 
     // Size
@@ -240,19 +240,21 @@
             canvas,
             antialias: true,
         })
+        renderer.setClearAlpha(0)
 
-        // Main Model List
-        let catModel = null
-        let keyboardModel = null
-        let tabletModel = null
-        let controllerModel = null
-        let laptopModel = null
-        let mixerModel = null
-        let hammerModel = null
+        // Main Scene
+        function mainSceneSetup() {
 
-        function setupScene1() {
+            const sceneInfo = makeScene( document.querySelector( '#about-main' ) )
 
-            const sceneInfo = makeScene( document.querySelector( '#about-main' ) );
+            // Main Model List
+            let catModel = null
+            let keyboardModel = null
+            let tabletModel = null
+            let controllerModel = null
+            let laptopModel = null
+            let mixerModel = null
+            let hammerModel = null
 
             //Cat Model
             gltfLoader.load(
@@ -262,8 +264,8 @@
                     catModel.scale.set(1, 1, 1)
                     catModel.rotation.set(-.3, 2.5, .2)
                     catModel.position.set(1.4, -5, .5)
-                    sceneInfo.scene.add( catModel );
-                    sceneInfo.catModel = catModel;
+                    sceneInfo.scene.add( catModel )
+                    sceneInfo.catModel = catModel
                 }
             )
 
@@ -275,8 +277,8 @@
                     keyboardModel.scale.set(0.4, 0.4, 0.4)
                     keyboardModel.rotation.set(2, -1, 1)
                     keyboardModel.position.set(.4, 1, -1)
-                    sceneInfo.scene.add( keyboardModel );
-                    sceneInfo.keyboardModel = keyboardModel;
+                    sceneInfo.scene.add( keyboardModel )
+                    sceneInfo.keyboardModel = keyboardModel
                 }
             )
 
@@ -288,8 +290,8 @@
                     tabletModel.rotation.set(-.5, 2, .8)
                     tabletModel.scale.set(0.6, 0.6, 0.6)
                     tabletModel.position.set(.1, -1.8, 1.5)
-                    sceneInfo.scene.add( tabletModel );
-                    sceneInfo.tabletModel = tabletModel;
+                    sceneInfo.scene.add( tabletModel )
+                    sceneInfo.tabletModel = tabletModel
                 }
             )
 
@@ -301,8 +303,8 @@
                     controllerModel.rotation.set(1.2, -.5, .8)
                     controllerModel.scale.set(0.16, 0.16, 0.16)
                     controllerModel.position.set(1.8, 0, 2.1)
-                    sceneInfo.scene.add( controllerModel );
-                    sceneInfo.controllerModel = controllerModel;
+                    sceneInfo.scene.add( controllerModel )
+                    sceneInfo.controllerModel = controllerModel
                 }
             )
 
@@ -314,8 +316,8 @@
                     laptopModel.rotation.set(1, 1, -.5)
                     laptopModel.scale.set(.9, .9, .9)
                     laptopModel.position.set(-2.2, -5.8, 0)
-                    sceneInfo.scene.add( laptopModel );
-                    sceneInfo.laptopModel = laptopModel;
+                    sceneInfo.scene.add( laptopModel )
+                    sceneInfo.laptopModel = laptopModel
                 }
             )
 
@@ -327,8 +329,8 @@
                     mixerModel.rotation.set(.3, -2, 0)
                     mixerModel.scale.set(.7, .7, .7)
                     mixerModel.position.set(-2.2, -9, 0)
-                    sceneInfo.scene.add( mixerModel );
-                    sceneInfo.mixerModel = mixerModel;
+                    sceneInfo.scene.add( mixerModel )
+                    sceneInfo.mixerModel = mixerModel
                 }
             )
 
@@ -340,30 +342,141 @@
                     hammerModel.rotation.set(-.5, -1, -.5)
                     hammerModel.scale.set(0.6, 0.6, 0.6)
                     hammerModel.position.set(-2.2, -12.6, 0)
-                    sceneInfo.scene.add( hammerModel );
-                    sceneInfo.hammerModel = hammerModel;
+                    sceneInfo.scene.add( hammerModel )
+                    sceneInfo.hammerModel = hammerModel
                 }
             )
 
-            return sceneInfo;
+            sceneInfo.renderAlpha = 0
+            sceneInfo.renderColor = 0x000000
+
+            return sceneInfo
 
         }
 
-        const sceneInfo1 = setupScene1();
+        // Illustartion Scene
+        function illustrationScenSetup() {
+
+            const sceneInfo = makeScene( document.querySelector( '#illustration' ) )
+
+            // Tablet Model
+            let tabletModel = null
+
+            gltfLoader.load(
+                '/models/tablet.glb',
+                (gltf) => {
+                    tabletModel = gltf.scene
+                    tabletModel.rotation.set(-.5, 2, .8)
+                    tabletModel.scale.set(1.6, 1.6, 1.6)
+                    tabletModel.position.set(0, 0, 0)
+                    sceneInfo.scene.add( tabletModel )
+                    sceneInfo.tabletModel = tabletModel
+                }
+            )
+
+            sceneInfo.renderAlpha = 1
+            sceneInfo.renderColor = 0x3D4750
+
+            return sceneInfo
+
+        }
+
+        // Tech Scene
+        function techScenSetup() {
+
+            const sceneInfo = makeScene( document.querySelector( '#tech' ) )
+
+            // Keyboard Model
+            let keyboardModel = null
+
+            gltfLoader.load(
+                '/models/keyboard.glb',
+                (gltf) => {
+                    keyboardModel = gltf.scene
+                    keyboardModel.scale.set(1, 1, 1)
+                    keyboardModel.rotation.set(2, -1, 1)
+                    keyboardModel.position.set(0, 0, 0)
+                    sceneInfo.scene.add( keyboardModel )
+                    sceneInfo.keyboardModel = keyboardModel
+                }
+            )
+
+            sceneInfo.renderAlpha = 1
+            sceneInfo.renderColor = 0x3D4750
+
+            return sceneInfo
+
+        }
+
+        // Cat Scene
+        function catScenSetup() {
+
+            const sceneInfo = makeScene( document.querySelector( '#cat' ) )
+
+            // Cat Model
+            let catModel = null
+
+            gltfLoader.load(
+                '/models/cat.glb',
+                (gltf) => {
+                    catModel = gltf.scene
+                    catModel.scale.set(1, 1, 1)
+                    catModel.rotation.set(-.3, 2.5, .2)
+                    catModel.position.set(0, -1.3, 0)
+                    sceneInfo.scene.add( catModel )
+                    sceneInfo.catModel = catModel
+                }
+            )
+
+            sceneInfo.renderAlpha = 1
+            sceneInfo.renderColor = 0x3D4750
+
+            return sceneInfo
+
+        }
+
+        // Game Scene
+        function gameScenSetup() {
+
+            const sceneInfo = makeScene( document.querySelector( '#game' ) )
+
+            // Controller Model
+            let controllerModel = null
+
+            gltfLoader.load(
+                '/models/controller.glb',
+                (gltf) => {
+                    controllerModel = gltf.scene
+                    controllerModel.rotation.set(1.2, -.5, .8)
+                    controllerModel.scale.set(.8, .8, .8)
+                    controllerModel.position.set(0, 0, 0)
+                    sceneInfo.scene.add( controllerModel )
+                    sceneInfo.controllerModel = controllerModel
+                }
+            )
+
+            sceneInfo.renderAlpha = 1
+            sceneInfo.renderColor = 0x3D4750
+
+            return sceneInfo
+
+        }
+
+        // Saving Scene Info
+        const mainSceneInfo = mainSceneSetup()
+        const illustrationSceneInfo = illustrationScenSetup()
+        const techSceneInfo = techScenSetup()
+        const catSceneInfo = catScenSetup()
+        const gameSceneInfo = gameScenSetup()
 
         renderer.setSize(sizes.width, sizes.height)
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-        renderer.setClearAlpha(0)
 
         // Resize
         window.addEventListener('resize', () => {
             // Update sizes
             sizes.width = window.innerWidth
             sizes.height = window.innerHeight
-
-            // // Update camera
-            // camera.aspect = sizes.width / sizes.height
-            // camera.updateProjectionMatrix()
             
             // Update renderer
             renderer.setSize(sizes.width, sizes.height)
@@ -372,13 +485,13 @@
 
         function resizeRendererToDisplaySize( renderer ) {
 
-        const canvas = renderer.domElement;
-        const width = canvas.clientWidth;
-        const height = canvas.clientHeight;
-        const needResize = canvas.width !== width || canvas.height !== height;
+        const canvas = renderer.domElement
+        const width = canvas.clientWidth
+        const height = canvas.clientHeight
+        const needResize = canvas.width !== width || canvas.height !== height
         if ( needResize ) {
 
-            renderer.setSize( width, height, false );
+            renderer.setSize( width, height, false )
 
         }
 
@@ -388,72 +501,73 @@
 
         function renderSceneInfo( sceneInfo ) {
 
-            const { scene, camera, elem } = sceneInfo;
+            const { scene, camera, elem, renderAlpha, renderColor } = sceneInfo
 
             // get the viewport relative position of this element
-            const { left, right, top, bottom, width, height } = elem.getBoundingClientRect();
+            const { left, right, top, bottom, width, height } = elem.getBoundingClientRect()
 
             const isOffscreen =
             bottom < 0 ||
             top > renderer.domElement.clientHeight ||
             right < 0 ||
-            left > renderer.domElement.clientWidth;
+            left > renderer.domElement.clientWidth
 
             if ( isOffscreen ) {
 
-                return;
+                return
 
             }
 
             camera.aspect = width / height;
-            camera.updateProjectionMatrix();
+            camera.updateProjectionMatrix()
 
-            const positiveYUpBottom = renderer.domElement.clientHeight - bottom;
-            renderer.setScissor( left, positiveYUpBottom, width, height );
-            renderer.setViewport( left, positiveYUpBottom, width, height );
+            const positiveYUpBottom = renderer.domElement.clientHeight - bottom
+            renderer.setScissor( left, positiveYUpBottom, width, height )
+            renderer.setViewport( left, positiveYUpBottom, width, height )
+            renderer.setClearColor(renderColor, renderAlpha)
 
-            renderer.render( scene, camera );
+            renderer.render( scene, camera )
 
         }
 
-
         const clock = new THREE.Clock()
-        const clearColor = new THREE.Color( '#000' )
 
         // Loop Function
         const loop = (time) => {
-            const elapsedTime = clock.getElapsedTime();
+            const elapsedTime = clock.getElapsedTime()
 
-            resizeRendererToDisplaySize( renderer );
+            resizeRendererToDisplaySize( renderer )
 
-            renderer.setScissorTest( false );
-            renderer.clear( true, true );
-            renderer.setScissorTest( true );
+            renderer.setScissorTest( false )
+            renderer.clear( true, true )
+            renderer.setScissorTest( true )
 
             // Model Animation
-            if(catModel){
-                catModel.position.y = Math.sin(elapsedTime * 1) * .06 - 1.5
+            if(mainSceneInfo.catModel){
+                mainSceneInfo.catModel.position.y = Math.sin(elapsedTime * 1) * .06 - 1.5
             }
-
-            renderSceneInfo( sceneInfo1 );
             
-            if(keyboardModel){
-                keyboardModel.position.y = Math.sin(elapsedTime * .8) *.15 + 1.4
+            if(mainSceneInfo.keyboardModel){
+                mainSceneInfo.keyboardModel.position.y = Math.sin(elapsedTime * .8) *.15 + 1.4
             }
 
-            if(tabletModel){
-                tabletModel.position.y = Math.sin(elapsedTime * 1.2) *.15 - 1
+            if(mainSceneInfo.tabletModel){
+                mainSceneInfo.tabletModel.position.y = Math.sin(elapsedTime * 1.2) *.15 - 1
             }
 
-            if(controllerModel){
-                controllerModel.position.y = Math.sin(elapsedTime * .6) *.15 - .5
+            if(mainSceneInfo.controllerModel){
+                mainSceneInfo.controllerModel.position.y = Math.sin(elapsedTime * .6) *.15 - .5
             }
 
             // Scroll Camera
-            sceneInfo1.camera.position.y = scrollY * -.003
+            mainSceneInfo.camera.position.y = scrollY * -.003
 
             // Render Function
-            // renderer.render(scene, camera);
+            renderSceneInfo(mainSceneInfo)
+            renderSceneInfo(illustrationSceneInfo)
+            renderSceneInfo(techSceneInfo)
+            renderSceneInfo(catSceneInfo)
+            renderSceneInfo(gameSceneInfo)
             window.requestAnimationFrame(loop);
         };
     
