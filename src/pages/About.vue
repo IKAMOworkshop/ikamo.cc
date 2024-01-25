@@ -33,7 +33,7 @@
                 <div class="col-60">
                     <div id="laptop" class="about-design"></div>
                 </div>
-                <div class="col-60">
+                <div class="col-60 about-design-text">
                     <h4 class="body-bold text-light-gray">rapid-learning.</h4>
                     <p id="rapid-learning" class="subtitle-light text-light">I strives in a fast-pace learning environment, as constant improvement motivates me.</p>
                 </div>
@@ -45,7 +45,7 @@
                 <div class="col-60">
                     <div id="mixer" class="about-design"></div>
                 </div>
-                <div id="mixer-text" class="col-60">
+                <div class="col-60 about-design-text">
                     <h4 class="body-bold text-light-gray">mix and match.</h4>
                     <p id="mix-match" class="subtitle-light text-light">I enjoy blending different skills and things to craft the unexpected.</p>
                 </div>
@@ -58,7 +58,7 @@
                 <div class="col-60">
                     <div id="hammer" class="about-design"></div>
                 </div>
-                <div class="col-60">
+                <div class="col-60 about-design-text">
                     <h4 class="body-bold text-light-gray">beyond just design.</h4>
                     <p id="beyond-design" class="subtitle-light text-light">I value being able of building out the things I designed. The process is enjoyable and eye-opening.</p>
                 </div>

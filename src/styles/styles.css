@@ -627,6 +627,12 @@ footer {
   height: 800px;
 }
 
+.about-design-text {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
 .about-interests {
   display: flex;
   flex-direction: column;
@@ -697,6 +703,9 @@ footer {
   }
   .about-design {
     height: 600px;
+  }
+  .about-design-text {
+    gap: 24px;
   }
   .offset-down {
     margin-top: 100px;
