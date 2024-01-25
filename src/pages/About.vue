@@ -97,9 +97,10 @@
         <div class="selected-work-container">
             <div class="scroll-track">
                 <div class="project-images">
-
                     <projectCase />
-
+                </div>
+                <div class="project-images">
+                    <projectCase />
                 </div>
             </div>
         </div>
@@ -422,7 +423,7 @@
                     catModel = gltf.scene
                     catModel.scale.set(1, 1, 1)
                     catModel.rotation.set(-.3, 2.5, .2)
-                    catModel.position.set(0, -1.3, 0)
+                    catModel.position.set(-.3, -1.3, 0)
                     sceneInfo.scene.add( catModel )
                     sceneInfo.catModel = catModel
                 }

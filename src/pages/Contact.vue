@@ -64,8 +64,8 @@
         (gltf) => {
             planeModel = gltf.scene
             planeModel.scale.set(3, 2, 2)
-            planeModel.rotation.set(2.2, 2.5, 2.5)
-            planeModel.position.set(1.9, .5, 0)
+            planeModel.rotation.set(1.3, 2.3, -.8)
+            planeModel.position.set(2.3, .5, 0)
             scene.add(planeModel)
         }
     )

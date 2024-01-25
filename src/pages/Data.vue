@@ -137,9 +137,9 @@
         '/models/graphs.glb',
         (gltf) => {
             graphsModel = gltf.scene
-            graphsModel.scale.set(1.6, 1.6, 1.6)
-            graphsModel.rotation.set(1.2, -.2, .4)
-            graphsModel.position.set(.5, -.2, 0)
+            graphsModel.scale.set(1.3, 1.3, 1.3)
+            graphsModel.rotation.set(1.3, -.2, .4)
+            graphsModel.position.set(1, 0, 0)
             scene.add(graphsModel)
         }
     )
