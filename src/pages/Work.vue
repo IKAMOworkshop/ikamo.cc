@@ -183,7 +183,7 @@
         const tl = gsap.timeline()
         tl
         .to('.work-title-move', {
-            duration: 1,
+            duration: .8,
             y: 200,
             ease: 'power2.in0ut',
         })

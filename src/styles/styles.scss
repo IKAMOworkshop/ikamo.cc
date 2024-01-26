@@ -244,6 +244,24 @@ span{
     transform: translateY(14rem);
 }
 
+.large-title-container{
+    max-height: 8rem;
+    overflow: hidden;
+}
+
+.large-title-move{
+    transform: translateY(8rem);
+}
+
+.subtitle-container{
+    max-height: 4rem;
+    overflow: hidden;
+}
+
+.subtitle-move{
+    transform: translateY(4rem);
+}
+
 .body-container{
     max-height: 1.5rem;
     overflow: hidden;

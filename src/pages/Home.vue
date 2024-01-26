@@ -357,20 +357,20 @@
         const tl = gsap.timeline()
         tl
         .to('.hero-move', {
-            duration: 1.2,
+            duration: .8,
             mixBlendMode: 'overlay',
             y: 200,
             opacity: 0,
             ease: 'power2.in0ut',
         })
         .to('.body-move', {
-            duration: 1.2,
+            duration: .8,
             y: 30,
             opacity: 0,
             ease: 'power2.in0ut',
-        },'-=1.2')
+        },'-=.8')
         .to('#landing-three',{
-            duration: 1.5,
+            duration: 1.2,
             opacity: 0,
             onComplete: () => {
                 next()
@@ -378,11 +378,8 @@
         },'-=1.4')
 
         gsap.to('.landing-gsap', {
-            duration: 1.2,
+            duration: .8,
             opacity: 0,
-            onComplete: () => {
-                next()
-            },
         })
     })
 

@@ -3,6 +3,7 @@
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: 0;
 }
 
 .contact-container{
@@ -32,11 +33,15 @@
     transition: all .5s ease;
 }
 
-.contact-info:hover > .contact-title-container > .contact-title-move > .body-bold,
-.contact-info:hover > .contact-title-container > .contact-title-move > .body-light,
-.contact-info:hover > .subtitle-light
+.contact-info:hover > .contact-title-container > .contact-gsap > .contact-title-move > .body-bold,
+.contact-info:hover > .contact-title-container > .contact-gsap > .contact-title-move > .body-light,
+.contact-info:hover > .subtitle-container > .subtitle-move > .subtitle-light
 {
     color: rgba(246, 250, 255, 1);
+}
+
+.contact-gsap{
+    transform: translateY(2rem);
 }
 
 .contact-title-container{
@@ -51,7 +56,7 @@
     transition: all .5s ease;
 }
 
-.contact-info:hover > .contact-title-container > .contact-title-move{
+.contact-info:hover > .contact-title-container > .contact-gsap > .contact-title-move{
     transform: translateY(-2rem);
 }
 
