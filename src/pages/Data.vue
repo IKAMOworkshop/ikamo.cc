@@ -4,19 +4,44 @@
         <canvas id="data-three"></canvas>
         
         <div class="section-container data-top">
-            <p class="large-title text-light">
-                <span class="hero-text-overlay">it’s all about data!</span>
-                <br />here’s me in the form of data.
-            </p>
-        </div>
-
-        <div class="section-container">
-            <div class="col-40">
-                <p class="body-bold text-light-gray">in my 8 years design journey, i went from designing “gfx” to complex digital products.</p>
+            <div class="large-title-container">
+                <div class="large-title-move hero-text-overlay data-title-overlay">
+                    <h2 class="large-title text-light">it's all about data!</h2>
+                </div>
+            </div>
+            <div class="large-title-container">
+                <div class="large-title-move hero-text-normal data-title-normal">
+                    <h2 class="large-title text-light">here's about me</h2>
+                </div>
+            </div>
+            <div class="large-title-container">
+                <div class="large-title-move hero-text-normal data-title-normal">
+                    <h2 class="large-title text-light">in numbers.</h2>
+                </div>
             </div>
         </div>
 
-        <div class="image-slider">
+        <div class="section-container data-gsap">
+            <div class="col-40">
+                <div class="body-container">
+                    <div class="body-move">
+                        <p class="body-bold text-light-gray">in my 8 years of design,</p>
+                    </div>
+                </div>
+                <div class="body-container">
+                    <div class="body-move">
+                        <p class="body-bold text-light-gray">i went from designing "gfx"</p>
+                    </div>
+                </div>
+                <div class="body-container">
+                    <div class="body-move">
+                        <p class="body-bold text-light-gray">to complex digital product.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-slider data-gsap">
             <div class="slider-track">
                 <div class="sliding-images">
                     <DataCard />
@@ -27,14 +52,14 @@
             </div>
         </div>
 
-        <div class="section-container">
+        <div class="section-container data-gsap">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">featured</span>
                 <br /><span id="experience-title">experience.</span>
             </p>
         </div>
 
-        <div class="section-container">
+        <div class="section-container data-gsap">
             <div class="col">
                 <div class="col-40 left-trigger" id="experience-body">
                     <p class="subtitle-light text-light">Since I've graduated, I’ve worked on and learned many things.</p>
@@ -47,14 +72,14 @@
             </div>
         </div>
 
-        <div class="section-container">
+        <div class="section-container data-gsap">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">my</span>
                 <br /><span id="learning-title">learngins.</span>
             </p>
         </div>
 
-        <div class="section-container">
+        <div class="section-container data-gsap">
             <div class="col">
                 <div class="col-50">
                     <div class="data-container">
@@ -67,14 +92,14 @@
             </div>
         </div>
 
-        <div class="section-container">
+        <div class="section-container data-gsap">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">project</span>
                 <br /><span id="capability-title">capability.</span>
             </p>
         </div>
 
-        <div class="section-container">
+        <div class="section-container data-gsap">
             <div class="col">
                 <div class="col-40" id="capability-body">
                     <p class="subtitle-light text-light ">I’m get asked what I do outside of work, a whole lot of these</p>
@@ -102,6 +127,8 @@
     import MainFooter from '@/components/MainFooter.vue'
 
     import { onUnmounted, onMounted } from 'vue'
+    import { onBeforeRouteLeave } from 'vue-router'
+
     import * as THREE from 'three'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
     import Lenis from '@studio-freight/lenis'
@@ -170,6 +197,38 @@
         })
 
         window.scrollTo(0, 0)
+
+        // GSAP Animation
+        const tl = gsap.timeline()
+
+        tl
+        .to('#data-three',{
+            duration: 1.5,
+            opacity: 1,
+        })
+        .to('.data-title-normal', {
+            duration: 1.2,
+            opacity: 1,
+            y: -8,
+            ease: 'power2.in0ut',
+        },'-=1')
+        .to('.data-title-overlay',{
+            duration: 1.2,
+            opacity: 1,
+            y: -8,
+            ease: 'power2.in0ut',
+        },'-=1.2')
+        .to('.body-move', {
+            duration: 1.2,
+            y: -5,
+            opacity: 1,
+            ease: 'power2.in0ut',
+        },'-=1.2')
+
+        gsap.to('.data-gsap',{
+            duration: 1.2,
+            opacity: 1,
+        })
 
         gsap.from('#experience-title', {
             scrollTrigger: {
@@ -260,6 +319,42 @@
         }
         
         destroy();
+    })
+
+    onBeforeRouteLeave((to, from, next) => {
+        const tl = gsap.timeline()
+
+        tl
+        .to('.data-title-normal', {
+            duration: .8,
+            opacity: 0,
+            y: 120,
+            ease: 'power2.in0ut',
+        })
+        .to('.data-title-overlay',{
+            duration: .8,
+            opacity: 0,
+            y: 120,
+            ease: 'power2.in0ut',
+        },'-=.8')
+        .to('.body-move', {
+            duration: .8,
+            y: 28,
+            opacity: 1,
+            ease: 'power2.in0ut',
+        },'-=.8')
+        .to('#data-three',{
+            duration: 1.2,
+            opacity: 0,
+            onComplete: () => {
+                next()
+            },
+        },'-=1.2')
+
+        gsap.to('.data-gsap',{
+            duration: 1.2,
+            opacity: 0,
+        })
     })
 
 </script>

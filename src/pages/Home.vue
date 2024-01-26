@@ -32,13 +32,13 @@
                 </div>
                 <div class="hero-col-lg">
                     <div class="hero-container">
-                        <div class="hero-move">
-                            <h1 class="hero text-light hero-text-overlay">creative</h1>
+                        <div class="hero-move hero-text-overlay">
+                            <h1 class="hero text-light">creative</h1>
                         </div>
                     </div>
                     <div class="hero-container">
-                        <div class="hero-move">
-                            <h1 class="hero text-light hero-text-overlay">developer</h1>
+                        <div class="hero-move hero-text-normal">
+                            <h1 class="hero text-light">developer</h1>
                         </div>
                     </div>
                 </div>
@@ -225,13 +225,18 @@
             opacity: 1,
             ease: 'power2.in0ut',
         },'-=1')
-        .to('.hero-move', {
+        .to('.hero-text-overlay', {
             duration: 1.2,
             opacity: 1,
-            mixBlendMode: 'overlay',
             y: -5,
             ease: 'power2.in0ut',
-        },'-=1.2')
+        },'-=1.4')
+        .to('.hero-text-normal', {
+            duration: 1.2,
+            opacity: 1,
+            y: -5,
+            ease: 'power2.in0ut',
+        },'-=1.4')
 
         gsap.to('.landing-gsap',{
             duration: 1.5,
@@ -356,19 +361,24 @@
     onBeforeRouteLeave((to, from, next) => {
         const tl = gsap.timeline()
         tl
-        .to('.hero-move', {
+        .to('.hero-text-overlay', {
             duration: .8,
-            mixBlendMode: 'overlay',
             y: 200,
             opacity: 0,
             ease: 'power2.in0ut',
         })
+        .to('.hero-text-normal', {
+            duration: .8,
+            y: 200,
+            opacity: 0,
+            ease: 'power2.in0ut',
+        },'-=.8')
         .to('.body-move', {
             duration: .8,
             y: 30,
             opacity: 0,
             ease: 'power2.in0ut',
-        },'-=.8')
+        },'-=1')
         .to('#landing-three',{
             duration: 1.2,
             opacity: 0,
