@@ -198,57 +198,6 @@
 
         window.scrollTo(0, 0)
 
-        // gsap.from('#rapid-learning', {
-        //     scrollTrigger: {
-        //         trigger: '#rapid-learning',
-        //         start: 'top 85%',
-        //         end: 'bottom 65%',
-        //         scrub: true,
-
-        //     },
-        //     opacity: 0,
-        // })
-
-        // gsap.from('#mix-match', {
-        //     scrollTrigger: {
-        //         trigger: '#mix-match',
-        //         start: 'top 85%',
-        //         end: '170% 65%',
-        //         scrub: true,
-        //     },
-        //     opacity: 0,
-        // })
-
-        // gsap.from('#beyond-design', {
-        //     scrollTrigger: {
-        //         trigger: '#beyond-design',
-        //         start: 'top 85%',
-        //         end: 'bottom 65%',
-        //         scrub: true,
-        //     },
-        //     opacity: 0,
-        // })
-
-        // gsap.from('#interest-title', {
-        //     scrollTrigger: {
-        //         trigger: '#interest-title',
-        //         start: 'top 85%',
-        //         end: '180% 70%',
-        //         scrub: true,
-        //     },
-        //     opacity: 0
-        // })
-
-        // gsap.from('#about-works', {
-        //     scrollTrigger: {
-        //         trigger: '#about-works',
-        //         start: 'top 85%',
-        //         end: '180% 70%',
-        //         scrub: true,
-        //     },
-        //     opacity: 0
-        // })
-
             /*
         THREE JS
         */

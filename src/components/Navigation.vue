@@ -30,33 +30,41 @@
             <ul class="menu-list">
                 <li class="nav-link"><router-link class="nav-router" to="/works">
                     <div class="nav-title-container">
-                        <div class="nav-title-move">
-                            <h1 class="large-title text-light">works.</h1>
-                            <h1 class="large-title text-light">works.</h1>
+                        <div class="gsap-move">
+                            <div id="work-move" class="nav-title-move">
+                                <h1 class="large-title text-light">works.</h1>
+                                <h1 class="large-title text-light">works.</h1>
+                            </div>
                         </div>
                     </div>
                 </router-link></li>
                 <li class="nav-link"><router-link class="nav-router" to="/about">
                     <div class="nav-title-container">
-                        <div class="nav-title-move">
-                            <h1 class="large-title text-light">about.</h1>
-                            <h1 class="large-title text-light">about.</h1>
+                        <div class="gsap-move">
+                            <div class="nav-title-move">
+                                <h1 class="large-title text-light">about.</h1>
+                                <h1 class="large-title text-light">about.</h1>
+                            </div>
                         </div>
                     </div>
                 </router-link></li>
                 <li class="nav-link"><router-link class="nav-router" to="/data">
                     <div class="nav-title-container">
-                        <div class="nav-title-move">
-                            <h1 class="large-title text-light">data.</h1>
-                            <h1 class="large-title text-light">data.</h1>
+                        <div class="gsap-move">
+                            <div class="nav-title-move">
+                                <h1 class="large-title text-light">data.</h1>
+                                <h1 class="large-title text-light">data.</h1>
+                            </div>
                         </div>
                     </div>
                 </router-link></li>
                 <li class="nav-link"><router-link class="nav-router" to="/contact">
                     <div class="nav-title-container">
-                        <div class="nav-title-move">
-                            <h1 class="large-title text-light">contact.</h1>
-                            <h1 class="large-title text-light">contact.</h1>
+                        <div class="gsap-move">
+                            <div class="nav-title-move">
+                                <h1 class="large-title text-light">contact.</h1>
+                                <h1 class="large-title text-light">contact.</h1>
+                            </div>
                         </div>
                     </div>
                 </router-link></li>
@@ -91,6 +99,7 @@
 <script setup>
     import { onMounted } from 'vue';
     import moment from 'moment'
+    import gsap from 'gsap'
 
     let localTime = moment().format('LTS')
 
@@ -101,6 +110,15 @@
         const homeButton = document.getElementById('home-button')
         let openCheck = false
 
+        // GSAP load in animation
+        const tl = gsap.timeline()
+        tl.to('.gsap-move', {
+            duration: 1,
+            y: 0,
+        })
+
+        tl.pause()
+
         function toggleMenu() {
                 if (openCheck === true) {
                     return closeMenu();
@@ -109,15 +127,19 @@
             }
 
         function openMenu() {
+            tl.play()
             navMenu.style.display = "flex";
+            openCheck = true
             setTimeout(function(){
                 navMenu.style.opacity = "1";
-                openCheck = true
             }, 1)
         }
 
         function closeMenu() {
-            navMenu.style.opacity = "0"
+            tl.reverse()
+            setTimeout(function(){
+                navMenu.style.opacity = "0"
+            }, 360)
             setTimeout(function(){
                 navMenu.style.display = "none"
                 openCheck = false
@@ -129,12 +151,16 @@
 
         for (let i = 0; i < menuListItems.length; i++){
             menuListItems[i].addEventListener('click', () => {
-                navMenu.style.opacity = "0"
+                tl.reverse()
+                setTimeout(function(){
+                    navMenu.style.opacity = "0"
+                }, 360)
                 setTimeout(function(){
                     navMenu.style.display = "none"
                     openCheck = false
                 }, 1000)
             })
         }
+
     })
 </script>
