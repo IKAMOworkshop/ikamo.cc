@@ -3,11 +3,12 @@
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: 0;
 }
 
 .hero-top{
     padding: 0px 60px;
-    margin: 260px 0px 200px 0px;
+    margin: 260px 0px 160px 0px;
 }
 
 .hero-col{
@@ -30,10 +31,7 @@
 .hero-col-lg{
     width: 100%;
     display: flex;
-}
-
-.hero-col-lg > .hero {
-    margin-top: -60px;
+    flex-direction: column;
 }
 
 .home-goal{
