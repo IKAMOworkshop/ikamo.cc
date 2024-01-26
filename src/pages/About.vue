@@ -5,19 +5,44 @@
         <div id="about-main" class="about-main"></div>
 
         <div class="about-section-container section-container about-hero-title">
-            <p class="large-title text-light">
-                <span class="hero-text-overlay">everyday, i</span>
-                <br />learn, design, and build.
-            </p>
+            <div class="large-title-container">
+                <div class="large-title-move hero-text-overlay data-title-overlay">
+                    <h2 class="large-title text-light">everyday, i</h2>
+                </div>
+            </div>
+            <div class="large-title-container">
+                <div class="large-title-move hero-text-normal data-title-normal">
+                    <h2 class="large-title text-light">learn, design,</h2>
+                </div>
+            </div>
+            <div class="large-title-container">
+                <div class="large-title-move hero-text-normal data-title-normal">
+                    <h2 class="large-title text-light">and build</h2>
+                </div>
+            </div>
         </div>
 
         <div class="section-container">
             <div class="col-40">
-                <p class="body-bold text-light-gray">i enjoy creating transformative and immersive experience by blending visuals and motion.</p>
+                <div class="body-container">
+                    <div class="body-move">
+                        <p class="body-bold text-light-gray">i enjoy crafting transformative</p>
+                    </div>
+                </div>
+                <div class="body-container">
+                    <div class="body-move">
+                        <p class="body-bold text-light-gray">and immersive experience by</p>
+                    </div>
+                </div>
+                <div class="body-container">
+                    <div class="body-move">
+                        <p class="body-bold text-light-gray">blending visuals and motion.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="image-slider">
+        <div class="image-slider about-gsap">
             <div class="slider-track">
                 <div class="sliding-images">
                     <aboutImage />
@@ -28,7 +53,7 @@
             </div>
         </div>
 
-        <div class="about-design-container">
+        <div class="about-design-container about-gsap">
             <div class="col about-design-col">
                 <div class="col-60">
                     <div id="laptop" class="about-design"></div>
@@ -40,7 +65,7 @@
             </div>
         </div>
 
-        <div class="about-design-container">
+        <div class="about-design-container about-gsap">
             <div class="col about-design-col">
                 <div class="col-60">
                     <div id="mixer" class="about-design"></div>
@@ -53,7 +78,7 @@
         </div>
         
 
-        <div class="about-design-container">
+        <div class="about-design-container about-gsap">
             <div class="col about-design-col">
                 <div class="col-60">
                     <div id="hammer" class="about-design"></div>
@@ -65,14 +90,14 @@
             </div>
         </div>
 
-        <div class="about-section-container section-container">
+        <div class="about-section-container section-container about-gsap">
             <p class="large-title text-light">
                 <span class="hero-text-overlay">outside of design,</span>
                 <br /><span id="interest-title">i also enjoy...</span>
             </p>
         </div>
 
-        <div class="section-container">
+        <div class="section-container about-gsap">
             <div class="col">
                 <div id="interest-1" class="col-50 about-interests offset-down">
                     <div id="illustration" class="about-interest">
@@ -93,14 +118,14 @@
             </div>
         </div>
 
-        <div class="cases-title-container">
+        <div class="cases-title-container about-gsap">
             <h2 class="large-title text-light">
                 <span class="hero-text-overlay">selected</span>
                 <br /><span id="about-works">works.</span>
             </h2>
         </div>
 
-        <div class="selected-work-container">
+        <div class="selected-work-container about-gsap">
             <div class="scroll-track">
                 <div class="project-images">
                     <projectCase />
@@ -122,6 +147,7 @@
     import MainFooter from '@/components/MainFooter.vue'
 
     import { onUnmounted, onMounted } from 'vue'
+    import { onBeforeRouteLeave } from 'vue-router'
 
     import * as THREE from 'three'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -197,6 +223,38 @@
         })
 
         window.scrollTo(0, 0)
+
+        // GSAP Animation
+        const tl = gsap.timeline()
+
+        tl
+        .to('#about-three',{
+            duration: 1.5,
+            opacity: 1,
+        })
+        .to('.data-title-normal', {
+            duration: 1.2,
+            opacity: 1,
+            y: -8,
+            ease: 'power2.in0ut',
+        },'-=1')
+        .to('.data-title-overlay',{
+            duration: 1.2,
+            opacity: 1,
+            y: -8,
+            ease: 'power2.in0ut',
+        },'-=1.2')
+        .to('.body-move', {
+            duration: 1.2,
+            y: -5,
+            opacity: 1,
+            ease: 'power2.in0ut',
+        },'-=1.2')
+
+        gsap.to('.about-gsap',{
+            duration: 1.2,
+            opacity: 1,
+        })
 
             /*
         THREE JS
@@ -653,5 +711,41 @@
         }
         
         destroy();
+    })
+
+    onBeforeRouteLeave((to, from, next) => {
+        const tl = gsap.timeline()
+
+        tl
+        .to('.data-title-normal', {
+            duration: .8,
+            opacity: 0,
+            y: 120,
+            ease: 'power2.in0ut',
+        })
+        .to('.data-title-overlay',{
+            duration: .8,
+            opacity: 0,
+            y: 120,
+            ease: 'power2.in0ut',
+        },'-=.8')
+        .to('.body-move', {
+            duration: .8,
+            y: 28,
+            opacity: 1,
+            ease: 'power2.in0ut',
+        },'-=.8')
+        .to('#about-three',{
+            duration: 1.2,
+            opacity: 0,
+            onComplete: () => {
+                next()
+            },
+        },'-=1.2')
+
+        gsap.to('.about-gsap',{
+            duration: 1,
+            opacity: 0,
+        })
     })
 </script>

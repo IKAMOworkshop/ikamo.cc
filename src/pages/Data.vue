@@ -352,7 +352,7 @@
         },'-=1.2')
 
         gsap.to('.data-gsap',{
-            duration: 1.2,
+            duration: 1,
             opacity: 0,
         })
     })
