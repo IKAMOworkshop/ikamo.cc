@@ -904,10 +904,19 @@ footer {
   padding: 32px 0px;
 }
 
+.project-description {
+  opacity: 0;
+}
+
 .project-detail {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  opacity: 0;
+}
+
+.hero-video {
+  opacity: 0;
 }
 
 .video-wrapper {

@@ -4,13 +4,19 @@
         <div class="project-top">
             <div class="col project-title-container">
                 <div class="col-50">
-                    <p class="hero text-light">
-                        <span class="hero-text-overlay">work</span>
-                        <br />charm.
-                    </p>
+                    <div class="hero-container">
+                        <div class="hero-move hero-text-overlay charm-title-overlay">
+                            <h1 class="hero text-light">work</h1>
+                        </div>
+                    </div>
+                    <div class="hero-container">
+                        <div class="hero-move hero-text-normal data-title-normal">
+                            <h1 class="hero text-light">charm.</h1>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-40 project-descriptions">
-                    <h2 class="case-overview text-light">Building an engaging portfolio websites for ArtCenter Gradshow.</h2>
+                    <h2 class="case-overview text-light project-description">Building an engaging portfolio website for ArtCenter Gradshow.</h2>
                     <div class="col project-details">
                         <div class="col-50 project-detail">
                             <h5 class="caption-bold text-light-gray">tech.</h5>
@@ -25,7 +31,7 @@
             </div>
         </div>
 
-        <div class="section-container">
+        <div class="section-container hero-video">
             <div class="video-wrapper">
                 <!-- Video -->
                 <video class="project-video" autoplay muted loop>
@@ -34,7 +40,8 @@
             </div>
         </div>
 
-        <div class="section-container col content-hidden">
+        <div class="charm-gsap">
+            <div class="section-container col content-hidden">
             <div class="col-50">
                 <h3 class="subtitle-light text-light">A multi-level experience with immersive and engaging motions and images.</h3>
             </div>
@@ -175,7 +182,7 @@
                             <h2 class="title-bold text-light">up next.</h2>
                             <p class="caption text-primary-blue">bright | #web-design #vue #three-js</p>
                         </div>
-                        <p class="case-overview text-light">A frontend portfolio showcasing websites that I designed and developed.</p>
+                        <p class="case-overview text-light">A frontend portfolio showcasing website that I designed and developed.</p>
                     </div>
                 </router-link>
 
@@ -183,6 +190,7 @@
         </div>
 
         <MainFooter />
+        </div>
 
     </div>
 </template>
@@ -193,6 +201,8 @@
     import MainFooter from '@/components/MainFooter.vue'
 
     import { onUnmounted, onMounted } from 'vue'
+    import { onBeforeRouteLeave } from 'vue-router'
+
     import Lenis from '@studio-freight/lenis'
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -215,25 +225,57 @@
 
         window.scrollTo(0, 0)
 
-        gsap.from('#charm-process', {
-            scrollTrigger: {
-                trigger: '#charm-process',
-                start: 'top 80%',
-                end: '180% 60%',
-                scrub: true,
-            },
-            opacity: 0
-        })
+        // GSAP Animation
+        const tl = gsap.timeline()
+        tl
+        .to('.hero-text-overlay', {
+            duration: 1.2,
+            opacity: 1,
+            y: -5,
+            ease: 'power2.in0ut',
+        },)
+        .to('.hero-text-normal', {
+            duration: 1.2,
+            opacity: 1,
+            y: -5,
+            ease: 'power2.in0ut',
+        },'-=1.2')
+        .to('.project-description', {
+            duration: 1.5,
+            opacity: 1,
+            ease: 'power2.in0ut',
+        },'-=.6')
+        .to('.project-detail', {
+            duration: 1.5,
+            opacity: 1,
+            ease: 'power2.in0ut',
+            stagger: .2,
+        },'-=1.2')
+        .to('.hero-video', {
+            duration: 1.5,
+            opacity: 1,
+            ease: 'power2.in0ut',
+        }, '-=1.2')
 
-        gsap.from('#charm-takeaways', {
-            scrollTrigger: {
-                trigger: '#charm-takeaways',
-                start: 'top 80%',
-                end: '180% 60%',
-                scrub: true,
-            },
-            opacity: 0
-        })
+        // gsap.from('#charm-process', {
+        //     scrollTrigger: {
+        //         trigger: '#charm-process',
+        //         start: 'top 80%',
+        //         end: '180% 60%',
+        //         scrub: true,
+        //     },
+        //     opacity: 0
+        // })
+
+        // gsap.from('#charm-takeaways', {
+        //     scrollTrigger: {
+        //         trigger: '#charm-takeaways',
+        //         start: 'top 80%',
+        //         end: '180% 60%',
+        //         scrub: true,
+        //     },
+        //     opacity: 0
+        // })
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -258,5 +300,47 @@
         }
         
         destroy();
+    })
+
+    onBeforeRouteLeave((to, from, next) => {
+        const tl = gsap.timeline()
+
+        tl
+        .to('.hero-text-overlay', {
+            duration: .8,
+            opacity: 0,
+            y: 200,
+            ease: 'power2.in0ut',
+        },)
+        .to('.hero-text-normal', {
+            duration: .8,
+            opacity: 0,
+            y: 200,
+            ease: 'power2.in0ut',
+        },'-=.8')
+        .to('.project-description', {
+            duration: .8,
+            opacity: 0,
+            ease: 'power2.in0ut',
+        },'-=.8')
+        .to('.project-detail', {
+            duration: .8,
+            opacity: 0,
+            ease: 'power2.in0ut',
+        },'-=.8')
+        .to('.hero-video', {
+            duration: .8,
+            opacity: 0,
+            ease: 'power2.in0ut',
+            onComplete: () => {
+                next()
+            },
+        }, '-=.8')
+        
+        gsap.to('.charm-gsap',{
+            duration:.8,
+            opacity: 0,
+            ease: 'power2.in0ut',
+        })
     })
 </script>

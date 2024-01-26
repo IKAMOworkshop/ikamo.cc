@@ -32,12 +32,12 @@
                 </div>
                 <div class="hero-col-lg">
                     <div class="hero-container">
-                        <div class="hero-move hero-text-overlay">
+                        <div class="hero-move hero-text-overlay home-title-overlay">
                             <h1 class="hero text-light">creative</h1>
                         </div>
                     </div>
                     <div class="hero-container">
-                        <div class="hero-move hero-text-normal">
+                        <div class="hero-move hero-text-normal home-title-normal">
                             <h1 class="hero text-light">developer</h1>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
         (gltf) => {
             keyboardModel = gltf.scene
             keyboardModel.scale.set(0.5, 0.5, 0.5)
-            keyboardModel.rotation.set(2, -1, 1)
+            keyboardModel.rotation.set(1, -.5, 0)
             keyboardModel.position.set(-1.4, 1, 0)
             scene.add(keyboardModel)
         }
@@ -361,13 +361,13 @@
     onBeforeRouteLeave((to, from, next) => {
         const tl = gsap.timeline()
         tl
-        .to('.hero-text-overlay', {
+        .to('.home-title-overlay', {
             duration: .8,
             y: 200,
             opacity: 0,
             ease: 'power2.in0ut',
         })
-        .to('.hero-text-normal', {
+        .to('.home-title-normal', {
             duration: .8,
             y: 200,
             opacity: 0,

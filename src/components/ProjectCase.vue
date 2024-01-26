@@ -24,14 +24,14 @@
                 {
                 cover: './src/assets/landing/arcane.png',
                 name: 'arcane.',
-                description: 'A frontend portfolio showcasing websites that I designed and developed.',
+                description: 'A frontend portfolio showcasing website that I designed and developed.',
                 tags: '#web-design #vue #three-js',
                 path: 'arcane'
                 },
                 {
                 cover: './src/assets/landing/charm.png',
                 name: 'charm.',
-                description: 'Building an engaging portfolio websites for ArtCenter Spring 2023 Gradshow.',
+                description: 'Building an engaging portfolio website for ArtCenter Spring 2023 Gradshow.',
                 tags: '#web-design #vanillaJS',
                 path: 'charm'
                 },
@@ -45,14 +45,14 @@
                 {
                 cover: './src/assets/landing/arcane.png',
                 name: 'arcane.',
-                description: 'A frontend portfolio showcasing websites that I designed and developed.',
+                description: 'A frontend portfolio showcasing website that I designed and developed.',
                 tags: '#web-design #vue #three-js',
                 path: 'arcane'
                 },
                 {
                 cover: './src/assets/landing/charm.png',
                 name: 'charm.',
-                description: 'Building an engaging portfolio websites for ArtCenter Spring 2023 Gradshow.',
+                description: 'Building an engaging portfolio website for ArtCenter Spring 2023 Gradshow.',
                 tags: '#web-design #vanillaJS<',
                 path: 'charm'
                 },

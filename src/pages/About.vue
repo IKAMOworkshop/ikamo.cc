@@ -6,17 +6,17 @@
 
         <div class="about-section-container section-container about-hero-title">
             <div class="large-title-container">
-                <div class="large-title-move hero-text-overlay data-title-overlay">
+                <div class="large-title-move hero-text-overlay about-title-overlay">
                     <h2 class="large-title text-light">everyday, i</h2>
                 </div>
             </div>
             <div class="large-title-container">
-                <div class="large-title-move hero-text-normal data-title-normal">
+                <div class="large-title-move hero-text-normal about-title-normal">
                     <h2 class="large-title text-light">learn, design,</h2>
                 </div>
             </div>
             <div class="large-title-container">
-                <div class="large-title-move hero-text-normal data-title-normal">
+                <div class="large-title-move hero-text-normal about-title-normal">
                     <h2 class="large-title text-light">and build</h2>
                 </div>
             </div>
@@ -232,13 +232,13 @@
             duration: 1.5,
             opacity: 1,
         })
-        .to('.data-title-normal', {
+        .to('.about-title-normal', {
             duration: 1.2,
             opacity: 1,
             y: -8,
             ease: 'power2.in0ut',
         },'-=1')
-        .to('.data-title-overlay',{
+        .to('.about-title-overlay',{
             duration: 1.2,
             opacity: 1,
             y: -8,
@@ -717,13 +717,13 @@
         const tl = gsap.timeline()
 
         tl
-        .to('.data-title-normal', {
+        .to('.about-title-normal', {
             duration: .8,
             opacity: 0,
             y: 120,
             ease: 'power2.in0ut',
         })
-        .to('.data-title-overlay',{
+        .to('.about-title-overlay',{
             duration: .8,
             opacity: 0,
             y: 120,
