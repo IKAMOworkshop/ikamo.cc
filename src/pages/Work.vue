@@ -30,21 +30,69 @@
         </div>
 
         <ul class="works-list">
-            <li><router-link v-on:mouseover="updateToCharm" to="/charm" class="large-title text-light work-link charm">charm.</router-link></li>
-            <li><router-link v-on:mouseover="updateToBright" to="/bright" class="large-title text-light work-link bright">bright.</router-link></li>
-            <li><router-link v-on:mouseover="updateToArcane" to="/arcane" class="large-title text-light work-link arcane">arcane.</router-link></li>
-            <li><router-link v-on:mouseover="updateToCharm" to="/charm" class="large-title text-light work-link charm">charm.</router-link></li>
-            <li><router-link v-on:mouseover="updateToBright" to="/bright" class="large-title text-light work-link bright">bright.</router-link></li>
-            <li><router-link v-on:mouseover="updateToArcane" to="/arcane" class="large-title text-light work-link arcane">arcane.</router-link></li>
-            <li><router-link v-on:mouseover="updateToCharm" to="/charm" class="large-title text-light work-link charm">charm.</router-link></li>
-            <li><router-link v-on:mouseover="updateToBright" to="/bright" class="large-title text-light work-link bright">bright.</router-link></li>
-            <li><router-link v-on:mouseover="updateToArcane" to="/arcane" class="large-title text-light work-link arcane">arcane.</router-link></li>
-            <li><router-link v-on:mouseover="updateToCharm" to="/charm" class="large-title text-light work-link charm">charm.</router-link></li>
-            <li><router-link v-on:mouseover="updateToBright" to="/bright" class="large-title text-light work-link bright">bright.</router-link></li>
-            <li><router-link v-on:mouseover="updateToArcane" to="/arcane" class="large-title text-light work-link arcane">arcane.</router-link></li>
-            <li><router-link v-on:mouseover="updateToCharm" to="/charm" class="large-title text-light work-link charm">charm.</router-link></li>
-            <li><router-link v-on:mouseover="updateToBright" to="/bright" class="large-title text-light work-link bright">bright.</router-link></li>
-            <li><router-link v-on:mouseover="updateToArcane" to="/arcane" class="large-title text-light work-link arcane">arcane.</router-link></li>
+            <li>
+                <router-link v-on:mouseover="updateToCharm" to="/charm" class="charm">
+                    <div class="work-title-container">
+                        <h1 class="large-title text-light work-link work-title-move">charm.</h1>
+                    </div>
+                </router-link>
+            </li>
+            <li>
+                <router-link v-on:mouseover="updateToBright" to="/bright" class="bright">
+                    <div class="work-title-container">
+                        <h1 class="large-title text-light work-link work-title-move">bright.</h1>
+                    </div>
+                </router-link>
+            </li>
+            <li>
+                <router-link v-on:mouseover="updateToArcane" to="/arcane" class="arcane">
+                    <div class="work-title-container">
+                        <h1 class="large-title text-light work-link work-title-move">arcane.</h1>
+                    </div>
+                </router-link>
+            </li>
+            <li>
+                <router-link v-on:mouseover="updateToCharm" to="/charm" class="charm">
+                    <div class="work-title-container">
+                        <h1 class="large-title text-light work-link work-title-move">charm.</h1>
+                    </div>
+                </router-link>
+            </li>
+            <li>
+                <router-link v-on:mouseover="updateToBright" to="/bright" class="bright">
+                    <div class="work-title-container">
+                        <h1 class="large-title text-light work-link work-title-move">bright.</h1>
+                    </div>
+                </router-link>
+            </li>
+            <li>
+                <router-link v-on:mouseover="updateToArcane" to="/arcane" class="arcane">
+                    <div class="work-title-container">
+                        <h1 class="large-title text-light work-link work-title-move">arcane.</h1>
+                    </div>
+                </router-link>
+            </li>
+            <li>
+                <router-link v-on:mouseover="updateToCharm" to="/charm" class="charm">
+                    <div class="work-title-container">
+                        <h1 class="large-title text-light work-link work-title-move">charm.</h1>
+                    </div>
+                </router-link>
+            </li>
+            <li>
+                <router-link v-on:mouseover="updateToBright" to="/bright" class="bright">
+                    <div class="work-title-container">
+                        <h1 class="large-title text-light work-link work-title-move">bright.</h1>
+                    </div>
+                </router-link>
+            </li>
+            <li>
+                <router-link v-on:mouseover="updateToArcane" to="/arcane" class="arcane">
+                    <div class="work-title-container">
+                        <h1 class="large-title text-light work-link work-title-move">arcane.</h1>
+                    </div>
+                </router-link>
+            </li>
         </ul>
 
     </div>
@@ -74,7 +122,10 @@
 
 <script setup>
     import { onMounted, onUnmounted } from 'vue'
+    import { onBeforeRouteLeave } from 'vue-router'
+
     import Lenis from '@studio-freight/lenis'
+    import gsap from 'gsap'
 
     const lenis = new Lenis({
     smooth: true,
@@ -91,6 +142,20 @@
     onMounted(() => {
 
         window.scrollTo(0, 0)
+
+        // GSAP load in animation
+        const tl = gsap.timeline()
+        tl
+        .from('.work-background-container',{
+            duration: 1.5,
+            opacity: 0,
+        })
+        .to('.work-title-move',{
+            duration: 1.2,
+            y: -10,
+            ease: 'power2.in0ut',
+        }, '-=1')
+
 
         const imageContainer = document.getElementById('image-container')
         const mousePos = {
@@ -112,6 +177,23 @@
         }
         
         destroy()
+    })
+
+    onBeforeRouteLeave((to, from, next) => {
+        const tl = gsap.timeline()
+        tl
+        .to('.work-title-move', {
+            duration: 1,
+            y: 200,
+            ease: 'power2.in0ut',
+        })
+        .to('.work-background-container', {
+            duration: .8,
+            opacity: 0,
+            onComplete: () => {
+                next()
+            },
+        }, '-=1')
     })
 
 </script>

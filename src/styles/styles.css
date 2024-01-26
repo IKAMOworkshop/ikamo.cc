@@ -548,6 +548,15 @@ footer {
   gap: 100px;
 }
 
+.work-title-container {
+  max-height: 8.5rem;
+  overflow: hidden;
+}
+
+.work-title-move {
+  transform: translateY(8rem);
+}
+
 .work-link {
   opacity: 0.2;
   transition: opacity 1s ease;

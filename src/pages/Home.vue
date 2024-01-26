@@ -194,47 +194,49 @@
 
         window.scrollTo(0, 0)
 
-        gsap.from('#what-i-do', {
-            scrollTrigger: {
-                trigger: '#what-i-do',
-                start: 'top 85%',
-                end: 'bottom 65%',
-                scrub: true,
+        // GSAP Load In
 
-            },
-            opacity: 0,
-        })
+        // gsap.from('#what-i-do', {
+        //     scrollTrigger: {
+        //         trigger: '#what-i-do',
+        //         start: 'top 85%',
+        //         end: 'bottom 65%',
+        //         scrub: true,
 
-        gsap.from('#home-works', {
-            scrollTrigger: {
-                trigger: '#home-works',
-                start: 'top 85%',
-                end: '180% 70%',
-                scrub: true,
-            },
-            opacity: 0
-        })
+        //     },
+        //     opacity: 0,
+        // })
 
-        gsap.from('#blending-title', {
-            scrollTrigger: {
-                trigger: '#blending-title',
-                start: '-180% 40%',
-                end: '100% 20%',
-                scrub: true,
-            },
-            opacity: 0
-        })
+        // gsap.from('#home-works', {
+        //     scrollTrigger: {
+        //         trigger: '#home-works',
+        //         start: 'top 85%',
+        //         end: '180% 70%',
+        //         scrub: true,
+        //     },
+        //     opacity: 0
+        // })
 
-        gsap.from('.blending-text', {
-            scrollTrigger: {
-                trigger: '.blending-text',
-                start: '500% 85%',
-            },
-            duration: .5,
-            x: 100,
-            opacity: 0,
-            stagger: .1,
-        })
+        // gsap.from('#blending-title', {
+        //     scrollTrigger: {
+        //         trigger: '#blending-title',
+        //         start: '-180% 40%',
+        //         end: '100% 20%',
+        //         scrub: true,
+        //     },
+        //     opacity: 0
+        // })
+
+        // gsap.from('.blending-text', {
+        //     scrollTrigger: {
+        //         trigger: '.blending-text',
+        //         start: '500% 85%',
+        //     },
+        //     duration: .5,
+        //     x: 100,
+        //     opacity: 0,
+        //     stagger: .1,
+        // })
 
         /*
         THREE JS
