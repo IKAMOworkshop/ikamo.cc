@@ -9,7 +9,7 @@
             </router-link>
             <div class="right-container">
                 <div class="local-time">
-                    <p id="local-time" class="caption-light text-light-gray">los angeles, {{ localTime }} (gmt -7)</p>
+                    <p id="local-time" class="caption-light text-light-gray">LOS ANGELES, {{ localTime.value }}</p>
                 </div>
                 <button id="menu-button" class="nav-menu-button">
                         <div class="menu-title-container">
@@ -97,18 +97,22 @@
 </template>
 
 <script setup>
-    import { onMounted } from 'vue';
+    import { onMounted, ref } from 'vue';
     import moment from 'moment'
     import gsap from 'gsap'
 
-    let localTime = moment().format('LTS')
+    let localTime = ref(moment().format('LTS'))
 
     onMounted(() => {
         const navMenu = document.getElementById('nav-menu')
         const navButton = document.getElementById('menu-button')
         const menuListItems = document.getElementsByClassName('nav-link')
         const homeButton = document.getElementById('home-button')
-        let openCheck = false
+        const openCheck = false
+
+        setInterval(() => {
+            localTime.value = ref(moment().format('LTS'))
+        }, 1000)
 
         // GSAP load in animation
         const tl = gsap.timeline()
