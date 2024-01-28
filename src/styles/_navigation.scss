@@ -209,6 +209,9 @@ footer{
     .footer-links{
         gap: 24px;
     }
+    .nav-router:hover > .nav-title-container > .gsap-move > .nav-title-move{
+        transform: translateY(-6rem);
+    }
 }
 
 @media screen and (max-width: 1024px){
@@ -248,6 +251,9 @@ footer{
     .footer-links{
         gap: 16px;
         text-align: right;
+    }
+    .nav-router:hover > .nav-title-container > .gsap-move > .nav-title-move{
+        transform: translateY(-4rem);
     }
 }
 

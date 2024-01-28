@@ -108,23 +108,27 @@
         // GSAP Animation
         const tl = gsap.timeline()
         tl
-        .to('.body-move', {
-            duration: 1.2,
-            y: -5,
+        .to('#not-found-three',{
+            duration: 1.5,
             opacity: 1,
-            ease: 'power2.in0ut',
         })
+        .to('.body-move', {
+            duration: 1,
+            y: -5,
+            opacity: 1,
+            ease: 'power2.in0ut',
+        }, '-=1')
         .to('.hero-text-overlay', {
-            duration: 1.2,
+            duration: 1,
             opacity: 1,
             y: -5,
             ease: 'power2.in0ut',
-        },'-=1.2')
+        },'-=1')
         .to('#not-found', {
-            duration: 1.2,
+            duration: 1,
             opacity: 1,
             ease: 'power2.in0ut',
-        }, '-=1.2')
+        }, '-=1')
 
         /*
         THREE JS
@@ -195,10 +199,14 @@
             duration: .8,
             opacity: 0,
             ease: 'power2.in0ut',
+        },'-=.8')
+        .to('#not-found-three',{
+            duration: 1.2,
+            opacity: 0,
             onComplete: () => {
                 next()
             },
-        },'-=.8')
+        },'-=1.4')
     })
 
 </script>
