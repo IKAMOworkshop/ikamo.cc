@@ -41,6 +41,11 @@ const routes =[
         name: 'arcane',
         component: () => import('@/pages/Arcane.vue')
     },
+    {
+        path: '/:pathName(.*)',
+        name: 'notFound',
+        component: () => import('@/pages/NotFound.vue')
+    },
 ]
 
 const router = createRouter({

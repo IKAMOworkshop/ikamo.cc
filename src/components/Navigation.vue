@@ -12,7 +12,7 @@
                     <p id="local-time" class="caption-light text-light-gray">LOS ANGELES, {{ localTime.value }}</p>
                 </div>
                 <button id="menu-button" class="nav-menu-button">
-                        <div class="menu-title-container">
+                    <div class="menu-title-container">
                         <div class="menu-title-move">
                             <h1 class="caption-bold text-light-gray">open menu.</h1>
                             <h1 class="caption-bold text-light-gray">open menu.</h1>
@@ -108,7 +108,7 @@
         const navButton = document.getElementById('menu-button')
         const menuListItems = document.getElementsByClassName('nav-link')
         const homeButton = document.getElementById('home-button')
-        const openCheck = false
+        let openCheck = false
 
         setInterval(() => {
             localTime.value = ref(moment().format('LTS'))

@@ -17,7 +17,7 @@
             </div>
             <div class="large-title-container">
                 <div class="large-title-move hero-text-normal about-title-normal">
-                    <h2 class="large-title text-light">and build</h2>
+                    <h2 class="large-title text-light">and build.</h2>
                 </div>
             </div>
         </div>
