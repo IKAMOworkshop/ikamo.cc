@@ -17,6 +17,6 @@ This is a personal portfolio project compiling all my front-end projects (includ
 -  Before you load in the models, please orient each model to the origin and face the y-axis correctly in Blender. You'll have an easier time when transforming in code.
 - If the polygon on your model is simple and you do not need high quality shadows, you can consider directly exporting the model with materials to use dynamic lighting in Three.js. However, if it's a big model or scene, see if you can bake the texture and export it to apply with code.
 - To render separate sections in different divs, use the setScissors() function and reference the different divs to render.
-- When using setScissors(), you can blend it with direct render on canvas. To solve that, create a div that takes up the whole viewport just like the canvas and references that div.
+- When using setScissors(), you can't blend it with direct render on canvas. To solve that, create a div that takes up the whole viewport just like the canvas and references that div.
 - Code can become very messy as the scene becomes more complicated.
 - **I really need to practice using JS modules and classes to clean my code.**
