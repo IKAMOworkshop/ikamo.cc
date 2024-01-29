@@ -1215,21 +1215,12 @@ footer {
   top: 0;
   left: 0;
   pointer-events: none;
-  z-index: -100;
-}
-
-.cursor-gradient-overlay {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -99;
-  -webkit-backdrop-filter: blur(8vmax);
-          backdrop-filter: blur(8vmax);
+  z-index: -1;
 }
 
 .cursor-gradient {
   position: absolute;
-  z-index: -100;
+  z-index: -1001;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -1239,6 +1230,7 @@ footer {
   background: linear-gradient(to right, #5AFFE1 30%, #654BFF);
   opacity: 0.8;
   animation: rotate 20s infinite;
+  filter: blur(8vmax);
 }
 
 .nav-cursor-gradient {
@@ -1747,7 +1739,7 @@ span {
 }
 
 .text-light-gray {
-  color: rgb(124, 141, 159);
+  color: rgb(151, 176, 202);
 }
 
 .text-light {
@@ -1775,7 +1767,7 @@ span {
 }
 
 .light-gray {
-  background-color: rgb(124, 141, 159);
+  background-color: rgb(151, 176, 202);
 }
 
 .light {
