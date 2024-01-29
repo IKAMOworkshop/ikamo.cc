@@ -47,9 +47,9 @@
                 </div>
                 <div class="col-40 section-description">
                     <p class="caption-light text-light-gray">
-                        To create an experience with different levels of engagement, I utilized the strength of moving media, contrasting scale, and micro-animations to capture the attention of visitors. To offer a different experience for different type of viewers, the content is classified into three main categories - first glance, quick digest, and deep dive.
+                        To create an experience with different levels of engagement, I utilized the strength of moving media, contrasting scales, and micro-animations to capture visitors' attention. The content is classified into three main categories to offer a different experience for different viewers: first glance, quick digest, and deep dive.
                         <br />
-                        <br />To capture the essence of each project, the design of the portfolio itself is toned down, which allows the project media to shine. Each micro-interactions were added with care and purpose to ensure the website can still present some personality without distracting the users.
+                        <br />To capture the essence of each project, the website's design is toned down, which allows the project media to shine. Each micro-interactions were added with care and purpose to ensure the website can still present some personality without distracting the users.
                     </p>
                 </div>
             </div>
@@ -105,9 +105,9 @@
                 </div>
                 <div class="col-40 section-description">
                     <p class="caption-light text-light-gray">
-                        The main reason that most developers prefer to start a project with a JavaScript framework even if there’re only two page is mainly due to the limitation of developing in vanilla JS. Although it does simplify many things and reduce the performance issue, we will eventually end up with just another crappy framework that we wrote to suit our needs, which is essentially what happened here.
+                        The main reason most developers prefer to start a project with a framework, is mainly due to the limitation of developing in vanilla JS. Although it does simplify many things and reduce the performance issue, we will eventually end up with just another framework that we wrote to suit our needs.
                         <br />
-                        <br />To accommodate for the limitation of the rough page-transition, I wrote a function that essentially delays the page load when a hyperlink is click, which allowed me to add transition in between to hide the roughness of page load.
+                        <br />To accommodate the rough page transition, I wrote a function that essentially delays the page load when hyperlinks are clicked, which allows a transition in between to hide the roughness of the page load.
                     </p>
                 </div>
             </div>
@@ -135,9 +135,9 @@
                 </div>
                 <div class="col-40 section-description">
                     <p class="caption-light text-light-gray">
-                        One of the most common issue with portfolio sites is the overwhelming of media that the browser has to load. Especially in my case where media is the center of attention, and to add salt to injury, the network speed at the convention center for Gradshow was also not the greatest.
+                        One of the most common issues with portfolio sites is the overwhelming media the browser has to load. Especially in my case, where media is the center of attention, and to add salt to injury, the network speed at the convention center for Gradshow are not the greatest.
                         <br />
-                        <br />To ensure the best browsing experience, I went through all my images and video and convert and compress them to the desire result. It was a tedious process as it requires me to go back and forth between devices and platforms to check the file size, load speed, and quality output.
+                        <br />To ensure the best browsing experience, I went through all my images and videos and converted and compressed them to the desired result. It was a tedious process, requiring me to go back and forth between devices and platforms to check the file size, load speed, and quality output.
                     </p>
                 </div>
             </div>

@@ -24,7 +24,7 @@
                 {
                 cover: './src/assets/landing/arcane.png',
                 name: 'arcane.',
-                description: 'A frontend portfolio showcasing website that I designed and developed.',
+                description: 'An immersive and lighthearted 3D site to display frontend projects.',
                 tags: '#web-design #vue #three-js',
                 path: 'arcane'
                 },
@@ -45,7 +45,7 @@
                 {
                 cover: './src/assets/landing/arcane.png',
                 name: 'arcane.',
-                description: 'A frontend portfolio showcasing website that I designed and developed.',
+                description: 'An immersive and lighthearted 3D site to display frontend projects.',
                 tags: '#web-design #vue #three-js',
                 path: 'arcane'
                 },

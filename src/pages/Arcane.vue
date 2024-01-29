@@ -47,9 +47,9 @@
                 </div>
                 <div class="col-40 section-description">
                     <p class="caption-light text-light-gray">
-                        The most important aspect of building a “personal” portfolio is to demonstrate your capabilities, but also personalities. To achieve that, instead of using primitive shapes, I decided to design and model out my own models that represents my traits and interests.
+                        The most important aspect of building a “personal” portfolio is demonstrating your capabilities and personality. To achieve that, instead of using primitive shapes, I decided to design and model my own models that represent my traits and interests.
                         <br />
-                        <br />To create engagement with my models, I integrated them with web interactions like scrolling and hovering to trigger various behaviors in the 3D scene. I bind the camera position with page scroll to create a parallax effect, and took advantage of mouse hovers to trigger animations.
+                        <br />To create engagement with my models, I integrated them with web interactions like scrolling and hovering to trigger various behaviors in the 3D scene. I bound the camera position with page scroll to create a parallax effect and used mouse hovers to trigger animations.
                     </p>
                 </div>
             </div>
@@ -105,9 +105,9 @@
                 </div>
                 <div class="col-40 section-description">
                     <p class="caption-light text-light-gray">
-                        To personalized the 3D experience, I opt to design and build my own models. The modeling process was very straight-forward. I began by planning and sketching out models for different pages, and try to optimize it by reusing them for different pages.  Once everything was planned out, I head over to Blender to model everything.
+                        To personalize the 3D experience, I design and build my models. The modeling process was very straightforward. I began by planning and sketching models for different pages and tried to optimize them by reusing them for other pages. Once the models were planned, I headed to Blender to model everything.
                         <br />
-                        <br />Integrating Three.js and Vue took a little bit of trial and error as I need to figure out which life cycle hook to use to complete different task. Vue 3’s compositional API made it much more easier to integrate as we no longer need to follow the Vue object format from Vue 2. Once everything is figured out, it’s all just ordinary Three.js code from here.
+                        <br />Integrating Three.js and Vue took some trial and error as I needed to figure out which life cycle hook to use to complete different tasks. Vue 3’s compositional API made integrating it much easier as we no longer need to follow the traditional Vue format. Once everything is figured out, it’s all just ordinary Three.js code from here.
                     </p>
                 </div>
             </div>
@@ -136,9 +136,9 @@
                 </div>
                 <div class="col-40 section-description">
                     <p class="caption-light text-light-gray">
-                        Although most pages are rendered directly on the canvas object, I need to sperate the scene to create multiple sections on the about page. To create the effect, I created a function to help initialize multiple scene, camera, and lights, which is stored in a variables to reference from. Next, I created another function to store information about the scene objects like meshes and renderer settings. Once everything is ready, I then use them as references to to render in a looped function, and utilized the setScissor() function from Three.js to achieve the separation.
+                        Although most pages are rendered directly on the canvas object, I needed to separate the scenes to create multiple sections on the About page. To create the effect, I made a function to help initialize multiple scenes, cameras, and lights, which are stored in a variable to reference from. Next, I created another function to store information about the scene objects like meshes and renderer settings. Once everything is ready, I use them as references to render in a looped function and utilize the setScissor() function from Three.js to achieve the separation.
                         <br />
-                        <br />At first, the concept was difficult to grasp as it’s quite different from your usual Three.js code where there’s a set of things to do. My biggest takeaway from this learning experience is that I need to practice more on modular and object oriented coding.
+                        <br />At first, the concept was difficult to grasp as it’s pretty different from your usual Three.js code, where there’s a set of things to do. This learning experience made me realize I need more modular and object-oriented coding practice.
                     </p>
                 </div>
             </div>
@@ -218,9 +218,9 @@
                         <div class="next-project-details">
                             <div class="case-titles">
                                 <h2 class="title-bold text-light">up next.</h2>
-                                <p class="caption text-primary-blue">arcane | #web-design #astro #cms</p>
+                                <p class="caption text-primary-blue">charm | #web-design #vanillaJS</p>
                             </div>
-                            <p class="case-overview text-light">A personal archive to document highlighted events from my life.</p>
+                            <p class="case-overview text-light">Building an engaging portfolio website for ArtCenter Spring 2023 Gradshow.</p>
                         </div>
                     </router-link>
 
