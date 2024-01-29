@@ -26,8 +26,6 @@ import { onMounted } from 'vue'
 onMounted(() => {
     const cursor = document.getElementById('cursor')
     const cursorGradient = document.getElementById('cursor-gradient')
-    const cursorBar = document.getElementsByClassName('cursor-bar')
-    const mainFooter = document.getElementById('footer')
 
     const mousePos = {
         x: 0,
@@ -48,18 +46,6 @@ onMounted(() => {
                 top: `${mousePos.y}px`
             }, {duration: 16000, fill: 'forwards'})
         })
-
-        // mainFooter.addEventListener('mouseover', ()=> {
-        //     for(let i = 0; i < cursorBar.length; i++){
-        //         cursorBar[i].style.backgroundColor = 'rgba(41, 47, 53, 1)'
-        //     }
-        // })
-
-        // mainFooter.addEventListener('mouseout', ()=> {
-        //     for(let i = 0; i < cursorBar.length; i++){
-        //         cursorBar[i].style.backgroundColor = 'rgba(255, 255, 255, 1)'
-        //     }
-        // })
 
     })
 

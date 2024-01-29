@@ -18,5 +18,5 @@
 
     setTimeout(() =>{
         routerDisplay.value = true
-    }, 3500)
+    }, 2500)
 </script>

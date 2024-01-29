@@ -11,6 +11,14 @@
     z-index: 9001;
 }
 
+#home-button{
+    mix-blend-mode: normal;
+}
+
+.nav-overlay{
+    mix-blend-mode: overlay;
+}
+
 .right-container{
     width: 45%;
     display: flex;
@@ -50,6 +58,7 @@
 
 .nav-menu-button > svg > .icon{
     transition: all .5s ease;
+    fill: rgba(246, 250, 255, 1);
 }
 
 .nav-menu-button:hover svg > .icon{

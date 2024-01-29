@@ -143,7 +143,7 @@
             </div>
 
             <div class="section-container content-hidden">
-                <img src="@/assets/charm/image/file-format.webp" alt="" class="image">
+                <img src="@/assets/charm/image/file-format.png" alt="" class="image">
             </div>
 
             <div class="about-section-container section-container">

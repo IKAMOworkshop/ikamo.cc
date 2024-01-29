@@ -66,11 +66,27 @@
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    width: 20%;
-    height: 30%;
+    width: 30%;
+    height: 40%;
     border-radius: 100%;
-    background: linear-gradient(to right, #5AFFE1 30%, #2400FF);
+    background: linear-gradient(to right, #5AFFE1 30%, #654BFF);
+    opacity: .8;
     animation: rotate 20s infinite;
+}
+
+.nav-cursor-gradient{
+    position: absolute;
+    z-index: -100;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 30%;
+    height: 40%;
+    border-radius: 100%;
+    background: linear-gradient(to right, #5AFFE1 30%, #654BFF);
+    opacity: .8;
+    animation: rotate 20s infinite;
+    filter: blur(8vmax);
 }
 
 // Animation
