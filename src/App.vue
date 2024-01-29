@@ -1,12 +1,22 @@
 <template>
     <div>
-        <!-- <Cursor /> -->
+        <Loader />
+        <Cursor />
         <Navigation />
-        <router-view></router-view>
+        <router-view v-if="routerDisplay"></router-view>
     </div>
 </template>
 
 <script setup>
+    import {ref} from 'vue'
+
     import Navigation from '@/components/Navigation.vue'
     import Cursor from '@/components/interaction/Cursor.vue'
+    import Loader from '@/components/Loader.vue'
+
+    let routerDisplay = ref(false)
+
+    setTimeout(() =>{
+        routerDisplay.value = true
+    }, 3500)
 </script>

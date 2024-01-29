@@ -296,6 +296,7 @@ footer {
 
 .scroll-icon {
   mix-blend-mode: overlay;
+  margin-bottom: 24px;
 }
 
 .hero-col-lg {
@@ -1242,6 +1243,48 @@ footer {
     display: none;
   }
 }
+.loader {
+  transition: all 1s ease;
+}
+
+.loader-container {
+  position: fixed;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(41, 47, 53);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
+.loader-progress {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: rgb(125, 247, 255);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  transition: height 0.2s;
+}
+
+.progress-numbers {
+  display: flex;
+  gap: 36px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 * {
   box-sizing: border-box;
 }
