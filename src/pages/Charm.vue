@@ -78,7 +78,7 @@
                     </video>
                 </div>
 
-                <img src="@/assets/charm/image/screens.webp" alt="" class="image content-hidden">
+                <img src="@/assets/charm/image/screens.webp" alt="A collection of screen design for the Charm portfolio project." class="image content-hidden">
             </div>
 
             <div class="about-section-container section-container">
@@ -114,10 +114,10 @@
 
             <div class="section-container col content-hidden">
                 <div class="col-50 image-container">
-                    <img src="@/assets/charm/image/router-code.webp" alt="" class="contained-image">
+                    <img src="@/assets/charm/image/router-code.webp" alt="A code snippet showing the code of the self-coded page router." class="contained-image">
                 </div>
                 <div class="col-50 image-container">
-                    <img src="@/assets/charm/image/router-image.webp" alt="" class="contained-image">
+                    <img src="@/assets/charm/image/router-image.webp" alt=" A screenshot of the website's navigation menu." class="contained-image">
                 </div>
             </div>
 
@@ -126,7 +126,7 @@
             </div>
 
             <div class="section-container content-hidden">
-                <img src="@/assets/charm/image/modular-code.webp" alt="" class="image">
+                <img src="@/assets/charm/image/modular-code.webp" alt="A code snippet highlighting the different JavaScript file of the modular code structure." class="image">
             </div>
 
             <div class="section-container col content-hidden">
@@ -143,7 +143,7 @@
             </div>
 
             <div class="section-container content-hidden">
-                <img src="@/assets/charm/image/file-format.png" alt="" class="image">
+                <img src="@/assets/charm/image/file-format.png" alt="A collection of different file formats for image and videos, which include SVG, PNG, WEBP, MOV, and MP4." class="image">
             </div>
 
             <div class="about-section-container section-container">

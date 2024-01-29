@@ -78,7 +78,7 @@
                     </video>
                 </div>
 
-                <img src="@/assets/bright/image/screen.webp" alt="" class="image content-hidden">
+                <img src="@/assets/bright/image/screen.webp" alt="A collection of screen design for the Bright personal archive project." class="image content-hidden">
             </div>
             
             <div class="about-section-container section-container">
@@ -115,13 +115,13 @@
             <div class="section-container">
                 <div class="col margin-separator content-hidden">
                     <div class="col-50 image-container">
-                        <img src="@/assets/bright/image/sanity-files.webp" alt="" class="contained-image">
+                        <img src="@/assets/bright/image/sanity-files.webp" alt="The utility JavaScript files to fetch data from Sanity Studio." class="contained-image">
                     </div>
                     <div class="col-50 image-container">
-                        <img src="@/assets/bright/image/sanity-code.webp" alt="" class="contained-image">
+                        <img src="@/assets/bright/image/sanity-code.webp" alt="The schema code for setting up a personalized CMS fields." class="contained-image">
                     </div>
                 </div>
-                <img src="@/assets/bright/image/sanity-ui.webp" alt="" class="image content-hidden">
+                <img src="@/assets/bright/image/sanity-ui.webp" alt="The GUI of Sanity Studio once launched from terminal." class="image content-hidden">
             </div>
 
             <div class="section-container content-hidden">
@@ -130,10 +130,10 @@
 
             <div class="section-container col content-hidden">
                 <div class="col-50 image-container">
-                    <img src="@/assets/bright/image/date-format.webp" alt="" class="contained-image">
+                    <img src="@/assets/bright/image/date-format.webp" alt="A code snippet of formatting the date to the desire result." class="contained-image">
                 </div>
                 <div class="col-50 image-container">
-                    <img src="@/assets/bright/image/sorting-code.webp" alt="" class="contained-image">
+                    <img src="@/assets/bright/image/sorting-code.webp" alt="A code snippet showing the sorting function used to sort each log by date." class="contained-image">
                 </div>
             </div>
 
@@ -151,13 +151,13 @@
             </div>
 
             <div class="section-container">
-                <img src="@/assets/bright/image/light-dark-screen.webp" alt="" class="image margin-separator content-hidden">
+                <img src="@/assets/bright/image/light-dark-screen.webp" alt="An image showing a comparison between light and dark mode of the homepage." class="image margin-separator content-hidden">
                 <div class="col content-hidden">
                     <div class="col-50 image-container">
-                        <img src="@/assets/bright/image/light-dark-switch.webp" alt="" class="contained-image">
+                        <img src="@/assets/bright/image/light-dark-switch.webp" alt="The theme switch to toggle between light and dark." class="contained-image">
                     </div>
                     <div class="col-50 image-container">
-                        <img src="@/assets/bright/image/light-dark-code.webp" alt="" class="contained-image">
+                        <img src="@/assets/bright/image/light-dark-code.webp" alt="A code snippet showing the use of local storage to bulid a light and dark theme that maintain state." class="contained-image">
                     </div>
                 </div>
             </div>
@@ -176,10 +176,10 @@
                 
                 <div class="col content-hidden">
                     <div class="col-50 image-container">
-                        <img src="@/assets/bright/image/gsap-code-1.webp" alt="" class="contained-image">
+                        <img src="@/assets/bright/image/gsap-code-1.webp" alt="A code snippet demostrating GSAP's usage to animate images." class="contained-image">
                     </div>
                     <div class="col-50 image-container">
-                        <img src="@/assets/bright/image/gsap-code-2.webp" alt="" class="contained-image">
+                        <img src="@/assets/bright/image/gsap-code-2.webp" alt="A code snippet showing the GSAP code for animating the page title." class="contained-image">
                     </div>
                 </div>
             </div>

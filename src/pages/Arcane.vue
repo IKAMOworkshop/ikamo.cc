@@ -78,7 +78,7 @@
 
                 </div>
 
-                <img src="@/assets/arcane/images/screen_showcase.png" alt="" class="image content-hidden">
+                <img src="@/assets/arcane/images/screen_showcase.png" alt="A collection of screen design for the Arcane portfolio project." class="image content-hidden">
             </div>
             
             <div class="about-section-container section-container">
@@ -113,13 +113,13 @@
             </div>
 
             <div class="section-container">
-                <img src="@/assets/arcane/images/modeling.png" alt="" class="image margin-separator content-hidden">
+                <img src="@/assets/arcane/images/modeling.png" alt="The blender project file for a robot model." class="image margin-separator content-hidden">
                 <div class="col margin-separator content-hidden">
                     <div class="col-50 image-container">
-                        <img src="@/assets/arcane/images/three_js_1.png" alt="" class="contained-image">
+                        <img src="@/assets/arcane/images/three_js_1.png" alt="A code snippet showing the Three.js code of loading different models." class="contained-image">
                     </div>
                     <div class="col-50 image-container">
-                        <img src="@/assets/arcane/images/three_js_2.png" alt="" class="contained-image">
+                        <img src="@/assets/arcane/images/three_js_2.png" alt="A code snippet showing the Three.js code of animating the different models." class="contained-image">
                     </div>
                 </div>
                 <div class="video-wrapper content-hidden">
@@ -146,13 +146,13 @@
             <div class="section-container">
                 <div class="col margin-separator content-hidden">
                     <div class="col-50 image-container">
-                        <img src="@/assets/arcane/images/scene_function.png" alt="" class="contained-image">
+                        <img src="@/assets/arcane/images/scene_function.png" alt="A code snippet showing the scene creation function." class="contained-image">
                     </div>
                     <div class="col-50 image-container">
-                        <img src="@/assets/arcane/images/render_function.png" alt="" class="contained-image">
+                        <img src="@/assets/arcane/images/render_function.png" alt="A code snippet showing the render function that reference the scene information previously created by the scene creation function." class="contained-image">
                     </div>
                 </div>
-                <img src="@/assets/arcane/images/model_sections.png" alt="" class="image margin-separator content-hidden">
+                <img src="@/assets/arcane/images/model_sections.png" alt="A screen design of the different sections that contains the different models." class="image margin-separator content-hidden">
             </div>
 
             <div class="section-container content-hidden">
@@ -168,10 +168,10 @@
                 </div>
                 <div class="col content-hidden">
                     <div class="col-50 image-container">
-                        <img src="@/assets/arcane/images/transition_code_1.png" alt="" class="contained-image">
+                        <img src="@/assets/arcane/images/transition_code_1.png" alt="A code snippet showing the GSAP code of setting up transition using Vue router's on before router leave function." class="contained-image">
                     </div>
                     <div class="col-50 image-container">
-                        <img src="@/assets/arcane/images/transition_code_2.png" alt="" class="contained-image">
+                        <img src="@/assets/arcane/images/transition_code_2.png" alt="A code snippet showing the GSAP code of setting up the landing animation." class="contained-image">
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
             </div>
 
             <div class="section-container">
-                <img src="@/assets/arcane/images/infinite_scroll.png" alt="" class="image margin-separator content-hidden">
+                <img src="@/assets/arcane/images/infinite_scroll.png" alt="The screen design for the projects page that integrate infinite scrolling." class="image margin-separator content-hidden">
             </div>
 
             <div class="about-section-container section-container">
