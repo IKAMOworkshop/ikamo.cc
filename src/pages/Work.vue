@@ -103,18 +103,18 @@
         name: 'Processes',
         data (){
             return {
-                imageURL: './src/assets/landing/charm.png',
+                imageURL: '@/assets/landing/charm.png',
             }
         },
         methods: {
             updateToCharm(){
-                this.imageURL = './src/assets/landing/charm.png'
+                this.imageURL = '@/assets/landing/charm.png'
             },
             updateToBright(){
-                this.imageURL = './src/assets/landing/bright.png'
+                this.imageURL = '@/assets/landing/bright.png'
             },
             updateToArcane(){
-                this.imageURL = './src/assets/landing/arcane.png'
+                this.imageURL = '@/assets/landing/arcane.png'
             }
         }
     }
