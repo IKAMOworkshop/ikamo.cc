@@ -26,14 +26,14 @@
             setTimeout(() => {
                 progressNumber.value += 1
                 loadProgress.style.height = `${progressNumber.value}%`
-            }, i * 40)
+            }, i * 50)
         }
         setTimeout(() => {
             loader.style.opacity = '0'
-        }, 4500)
+        }, 5500)
         setTimeout(() => {
             loader.style.display = 'none'
-        }, 5501)
+        }, 6501)
         
     })
 </script>
