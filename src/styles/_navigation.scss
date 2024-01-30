@@ -1,6 +1,6 @@
 // Nav Bar
 .nav{
-    width: 100%;
+    width: 100vw;
     padding: 60px;
     display: flex;
     justify-content: space-between;
@@ -79,7 +79,7 @@
 
 // Nav Menu
 .nav-menu{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -237,10 +237,10 @@ footer{
         transform: translateY(-1rem);
     }
     .nav-title-container{
-        max-height: 4rem;
+        max-height: 3rem;
     }
     .nav-router:hover > .nav-title-container > .nav-title-move{
-        transform: translateY(-4rem);
+        transform: translateY(-3rem);
     }
     footer{
         padding: 80px 36px;

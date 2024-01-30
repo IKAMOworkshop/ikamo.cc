@@ -6,12 +6,12 @@
         <div class="section-container data-top">
             <div class="large-title-container">
                 <div class="large-title-move hero-text-overlay data-title-overlay">
-                    <h2 class="large-title text-light">it's all about data!</h2>
+                    <h2 class="large-title text-light">it's all data!</h2>
                 </div>
             </div>
             <div class="large-title-container">
                 <div class="large-title-move hero-text-normal data-title-normal">
-                    <h2 class="large-title text-light">here's about me</h2>
+                    <h2 class="large-title text-light">here's me</h2>
                 </div>
             </div>
             <div class="large-title-container">

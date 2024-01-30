@@ -1,3 +1,7 @@
+.project-container{
+    overflow-x: hidden;
+}
+
 .project-top{
     padding: 0px 60px;
     margin: 160px 0px 100px 0px;
@@ -145,6 +149,7 @@
     }
     .next-project-container{
         margin-bottom: 200px;
+        margin-top: 400px;
     }
     .margin-separator{
         margin-bottom: 36px;
@@ -163,6 +168,7 @@
     }
     .next-project-container{
         margin-bottom: 0px;
+        margin-top: 360px;
         padding: 100px 24px 0px 24px;
     }
     .next-project-details{
@@ -182,9 +188,10 @@
     }
     .next-project-container{
         margin-bottom: -100px;
+        margin-top: 240px;
         padding: 100px 24px 0px 24px;
     }
     .next-project-details{
-        width: 400px;
+        width: 360px;
     }
 }

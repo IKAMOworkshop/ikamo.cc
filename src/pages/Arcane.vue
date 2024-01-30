@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="project-container">
         
         <div class="project-top">
             <div class="col project-title-container">
@@ -206,7 +206,7 @@
             <div class="next-project-container">
                 <div class="next-project-links over">
             
-                    <router-link class="next-project-links over" to="/arcane">
+                    <router-link class="next-project-links over" to="/charm">
                         
                         <div class="next-video-wrapper">
                             <!-- Video -->
@@ -296,13 +296,13 @@
         .to('.arcane-title-overlay', {
             duration: 1.2,
             opacity: 1,
-            y: -20,
+            y: -10,
             ease: 'power2.in0ut',
         },)
         .to('.arcane-title-normal', {
             duration: 1.2,
             opacity: 1,
-            y: -20,
+            y: -10,
             ease: 'power2.in0ut',
         },'-=1.2')
         .to('.project-description', {

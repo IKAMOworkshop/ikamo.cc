@@ -7,7 +7,7 @@
     z-index: 9997;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background-color: rgba(41, 47, 53, 1);
     display: flex;
@@ -21,7 +21,7 @@
     z-index: 9998;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 0%;
     background-color: rgba(125, 247, 255, 1);
     display: grid;
@@ -33,7 +33,7 @@
 .progress-numbers{
     display: flex;
     gap: 36px;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;

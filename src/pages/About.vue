@@ -273,7 +273,7 @@
         },'-=1.2')
         .to('.body-move', {
             duration: 1.2,
-            y: -5,
+            y: 0,
             opacity: 1,
             ease: 'power2.in0ut',
         },'-=1.2')

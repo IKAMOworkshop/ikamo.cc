@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="project-container">
         
         <div class="project-top">
             <div class="col project-title-container">
@@ -258,13 +258,13 @@
         .to('.charm-title-overlay', {
             duration: 1.2,
             opacity: 1,
-            y: -20,
+            y: 0,
             ease: 'power2.in0ut',
         },)
         .to('.charm-title-normal', {
             duration: 1.2,
             opacity: 1,
-            y: -20,
+            y: 0,
             ease: 'power2.in0ut',
         },'-=1.2')
         .to('.project-description', {
