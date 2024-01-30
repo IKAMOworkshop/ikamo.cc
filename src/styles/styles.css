@@ -1352,6 +1352,10 @@ span {
   display: inline-block;
 }
 
+.page-container {
+  overflow-x: hidden;
+}
+
 ::-moz-selection {
   background: rgb(125, 247, 255);
   color: rgb(41, 47, 53);

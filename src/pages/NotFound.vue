@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-container">
         <canvas id="not-found-three"></canvas>
 
         <div class="not-found-container">

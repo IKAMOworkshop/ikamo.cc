@@ -47,6 +47,10 @@ span{
     display: inline-block;
 }
 
+.page-container{
+    overflow-x: hidden;
+}
+
 ::selection{
     background: rgba(125, 247, 255, 1);
     color: rgba(41, 47, 53, 1);

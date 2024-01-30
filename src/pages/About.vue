@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-container">
 
         <canvas id="about-three"></canvas>
         <div id="about-main" class="about-main"></div>

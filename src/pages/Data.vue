@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-container">
 
         <canvas id="data-three"></canvas>
         
