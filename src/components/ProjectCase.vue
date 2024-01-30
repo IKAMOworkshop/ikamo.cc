@@ -22,42 +22,42 @@
             return {
             projects: [
                 {
-                cover: '@/assets/landing/arcane.png',
+                cover: './assets/landing/arcane.png',
                 name: 'arcane.',
                 description: 'An immersive and lighthearted 3D site to display frontend projects.',
                 tags: '#web-design #vue #three-js',
                 path: 'arcane'
                 },
                 {
-                cover: '@/assets/landing/charm.png',
+                cover: './assets/landing/charm.png',
                 name: 'charm.',
                 description: 'Building an engaging portfolio website for ArtCenter Spring 2023 Gradshow.',
                 tags: '#web-design #vanillaJS',
                 path: 'charm'
                 },
                 {
-                cover: '@/assets/landing/bright.png',
+                cover: './assets/landing/bright.png',
                 name: 'bright',
                 description: 'A personal archive to document highlighted events from my life.',
                 tags: '#web-design #astro #cms',
                 path: 'bright'
                 },
                 {
-                cover: '@/assets/landing/arcane.png',
+                cover: './assets/landing/arcane.png',
                 name: 'arcane.',
                 description: 'An immersive and lighthearted 3D site to display frontend projects.',
                 tags: '#web-design #vue #three-js',
                 path: 'arcane'
                 },
                 {
-                cover: '@/assets/landing/charm.png',
+                cover: './assets/landing/charm.png',
                 name: 'charm.',
                 description: 'Building an engaging portfolio website for ArtCenter Spring 2023 Gradshow.',
                 tags: '#web-design #vanillaJS<',
                 path: 'charm'
                 },
                 {
-                cover: '@/assets/landing/bright.png',
+                cover: './assets/landing/bright.png',
                 name: 'bright',
                 description: 'A personal archive to document highlighted events from my life.',
                 tags: '#web-design #astro #cms',
