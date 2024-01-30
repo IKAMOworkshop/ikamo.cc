@@ -1727,7 +1727,10 @@ span {
   .col-60 {
     width: 100%;
   }
-  body, a, button {
+  body {
+    cursor: default;
+  }
+  a, button {
     cursor: pointer;
   }
 }
