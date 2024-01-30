@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container">
+    <div class="scroll-stopper">
         <canvas id="not-found-three"></canvas>
 
         <div class="not-found-container">

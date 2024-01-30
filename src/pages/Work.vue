@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container">
+    <div class="scroll-stopper">
         
         <!-- <div class="vingnette"></div> -->
 

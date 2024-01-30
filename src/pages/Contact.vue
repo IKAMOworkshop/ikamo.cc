@@ -1,5 +1,5 @@
 <template>
-    <div class="page-container contact-container">
+    <div class="page-container contact-container scroll-stopper">
 
         <canvas id="contact-three"></canvas>
 
