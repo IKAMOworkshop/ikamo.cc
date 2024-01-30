@@ -13,22 +13,22 @@
             return {
             aboutImages: [
                 {
-                url: './src/assets/about/aida.webp',
+                url: '/about/aida.webp',
                 },
                 {
-                url: './src/assets/about/cup.webp',
+                url: '/about/cup.webp',
                 },
                 {
-                url: './src/assets/about/polygon.webp',
+                url: '/about/polygon.webp',
                 },
                 {
-                url: './src/assets/about/prisma.webp',
+                url: '/about/prisma.webp',
                 },
                 {
-                url: './src/assets/about/unity.webp',
+                url: '/about/unity.webp',
                 },
                 {
-                url: './src/assets/about/unreal.webp',
+                url: '/about/unreal.webp',
                 },
             ]
             }
