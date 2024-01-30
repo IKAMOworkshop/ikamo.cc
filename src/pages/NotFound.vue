@@ -37,11 +37,38 @@
 
 <script setup>
     import {onMounted} from 'vue'
+    import {useHead} from '@vueuse/head'
     import { onBeforeRouteLeave} from 'vue-router';
 
     import * as THREE from 'three'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
     import gsap from 'gsap'
+
+    useHead({
+        title: 'IKAMOdev | 404',
+        meta: [
+            {
+                name: 'description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+            {
+                name: 'og:title',
+                content: 'IKAMOdev | 404',
+            },
+            {
+                name: 'og:description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+            {
+                name: 'twitter:title',
+                content: 'IKAMOdev | 404',
+            },
+            {
+                name: 'twitter:description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+        ]
+    })
 
     /*
     THREE JS

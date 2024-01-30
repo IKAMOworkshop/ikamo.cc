@@ -122,10 +122,37 @@
 
 <script setup>
     import { onMounted, onUnmounted } from 'vue'
+    import {useHead} from '@vueuse/head'
     import { onBeforeRouteLeave } from 'vue-router'
 
     import Lenis from '@studio-freight/lenis'
     import gsap from 'gsap'
+
+    useHead({
+        title: 'IKAMOdev | Works',
+        meta: [
+            {
+                name: 'description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+            {
+                name: 'og:title',
+                content: 'IKAMOdev | Works',
+            },
+            {
+                name: 'og:description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+            {
+                name: 'twitter:title',
+                content: 'IKAMOdev | Works',
+            },
+            {
+                name: 'twitter:description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+        ]
+    })
 
     const lenis = new Lenis({
     smooth: true,

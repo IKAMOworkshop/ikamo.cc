@@ -99,13 +99,40 @@
     import MainFooter from '@/components/MainFooter.vue'
 
     import { onMounted, onUnmounted } from 'vue'
+    import {useHead} from '@vueuse/head'
     import { onBeforeRouteLeave } from 'vue-router' 
 
     import * as THREE from 'three'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
     import Lenis from '@studio-freight/lenis'
     import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+    useHead({
+        title: 'IKAMOdev',
+        meta: [
+            {
+                name: 'description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+            {
+                name: 'og:title',
+                content: 'IKAMOdev',
+            },
+            {
+                name: 'og:description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+            {
+                name: 'twitter:title',
+                content: 'IKAMOdev',
+            },
+            {
+                name: 'twitter:description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+        ]
+    })
 
     gsap.registerPlugin(ScrollTrigger);
 

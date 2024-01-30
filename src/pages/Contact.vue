@@ -74,11 +74,39 @@
 
 <script setup>
     import {onMounted} from 'vue'
+    import {useHead} from '@vueuse/head'
+
     import { onBeforeRouteLeave } from 'vue-router'
 
     import gsap from 'gsap'
     import * as THREE from 'three'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+
+    useHead({
+        title: 'IKAMOdev | Contact',
+        meta: [
+            {
+                name: 'description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+            {
+                name: 'og:title',
+                content: 'IKAMOdev | Contact',
+            },
+            {
+                name: 'og:description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+            {
+                name: 'twitter:title',
+                content: 'IKAMOdev | Contact',
+            },
+            {
+                name: 'twitter:description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+        ]
+    })
 
     /*
     THREE JS
@@ -97,7 +125,7 @@
             planeModel = gltf.scene
             planeModel.scale.set(3, 2, 2)
             planeModel.rotation.set(1.3, 2.3, -.8)
-            planeModel.position.set(2.3, .5, 0)
+            planeModel.position.set(2, .5, 0)
             scene.add(planeModel)
         }
     )

@@ -239,13 +239,40 @@
     import MainFooter from '@/components/MainFooter.vue'
 
     import { onUnmounted, onMounted } from 'vue'
+    import {useHead} from '@vueuse/head'
     import { onBeforeRouteLeave } from 'vue-router'
 
     import Lenis from '@studio-freight/lenis'
     import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-    gsap.registerPlugin(ScrollTrigger);
+    useHead({
+        title: 'IKAMOdev | Bright',
+        meta: [
+            {
+                name: 'description',
+                content: 'A personal archive to document highlighted events from my life.',
+            },
+            {
+                name: 'og:title',
+                content: 'IKAMOdev | Bright',
+            },
+            {
+                name: 'og:description',
+                content: 'A personal archive to document highlighted events from my life.',
+            },
+            {
+                name: 'twitter:title',
+                content: 'IKAMOdev | Bright',
+            },
+            {
+                name: 'twitter:description',
+                content: 'A personal archive to document highlighted events from my life.',
+            },
+        ]
+    })
+
+    gsap.registerPlugin(ScrollTrigger)
 
     const lenis = new Lenis({
         smooth: true,
