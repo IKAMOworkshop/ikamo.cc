@@ -1260,6 +1260,12 @@ footer {
   .cursor {
     display: none;
   }
+  .cursor-gradient {
+    display: none;
+  }
+  .nav-cursor-gradient {
+    display: none;
+  }
 }
 .loader {
   transition: all 1s ease;
@@ -1720,6 +1726,9 @@ span {
   }
   .col-60 {
     width: 100%;
+  }
+  body, a, button {
+    cursor: pointer;
   }
 }
 .text-strong-blue {

@@ -29,7 +29,7 @@
                 path: 'arcane'
                 },
                 {
-                cover: '/landing/charmpng',
+                cover: '/landing/charm.png',
                 name: 'charm',
                 description: 'Building an engaging portfolio website for ArtCenter Spring 2023 Gradshow',
                 tags: '#web-design #vanillaJS',
