@@ -28,6 +28,7 @@
                 loadProgress.style.height = `${progressNumber.value}%`
             }, i * 50)
         }
+
         setTimeout(() => {
             loader.style.opacity = '0'
         }, 5500)
