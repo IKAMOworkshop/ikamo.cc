@@ -50,6 +50,8 @@
                         The most important aspect of building a “personal” portfolio is demonstrating your capabilities and personality. To achieve that, instead of using primitive shapes, I decided to design and model my own models that represent my traits and interests.
                         <br />
                         <br />To create engagement with my models, I integrated them with web interactions like scrolling and hovering to trigger various behaviors in the 3D scene. I bound the camera position with page scroll to create a parallax effect and used mouse hovers to trigger animations.
+                        <br />
+                        <br />ポートフォリオサイトには自分の能力が表現して、個性も大事です。それために、自分で3Dモデルをデザインして、作っていました。それに、モデルとウェブAPIを混ざって、面白いアニメーションとインタラクションをクラフトしていました。
                     </p>
                 </div>
             </div>
@@ -108,6 +110,8 @@
                         To personalize the 3D experience, I design and build my models. The modeling process was very straightforward. I began by planning and sketching models for different pages and tried to optimize them by reusing them for other pages. Once the models were planned, I headed to Blender to model everything.
                         <br />
                         <br />Integrating Three.js and Vue took some trial and error as I needed to figure out which life cycle hook to use to complete different tasks. Vue 3’s compositional API made integrating it much easier as we no longer need to follow the traditional Vue format. Once everything is figured out, it’s all just ordinary Three.js code from here.
+                        <br />
+                        <br />Three.jsでVueサイトに利用するプロセスは色んな試験をやっていました。Vueの構成APIには正しいのLifecycle Hookを見分けて、Three.jsのコードを入れていました。
                     </p>
                 </div>
             </div>
@@ -139,6 +143,8 @@
                         Although most pages are rendered directly on the canvas object, I needed to separate the scenes to create multiple sections on the About page. To create the effect, I made a function to help initialize multiple scenes, cameras, and lights, which are stored in a variable to reference from. Next, I created another function to store information about the scene objects like meshes and renderer settings. Once everything is ready, I use them as references to render in a looped function and utilize the setScissor() function from Three.js to achieve the separation.
                         <br />
                         <br />At first, the concept was difficult to grasp as it’s pretty different from your usual Three.js code, where there’s a set of things to do. This learning experience made me realize I need more modular and object-oriented coding practice.
+                        <br />
+                        <br />Three.jsのsetScissor()を利用して、レンダーのエリアを分かれました。まずはシーンとカメラとライトをセットして、モデルをインポートして、その情報をThree.jsのレンダラーでレンダーしていました。
                     </p>
                 </div>
             </div>

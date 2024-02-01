@@ -50,6 +50,8 @@
                         This site contains all my cherished memories. As a result, visual language and interaction are designed to allow visitors to focus on the moments. For example, everything becomes blurred and dimmed when hovering over a moment so that visitors can focus on the hovered moment. The same could be said with the type and copywriting, as everything is straight to the point with large text calling out what to focus on.
                         <br />
                         <br />The visual language also reflects the same as colors are reduced to a minimum; only a slight accent of blue can be seen to highlight the logo and navigation. Moreover, the cursor is deliberately set as a highly saturated blue as it is the one thing I want the user not to lose focus on.
+                        <br />
+                        <br />このサイトは自分が大切なイベントを写真で記録しようと思います。各々瞬間をフォーカスしようために、ミュート的な色と最小限のビジュアルデザインが使っていました。
                     </p>
                 </div>
             </div>
@@ -108,6 +110,10 @@
                         To make the CMS database accessible at all times, I included a frontend folder and a backend folder, each containing files for Astro and Sanity Studio. Doing so allows me to easily use the terminal to navigate between folders to run and launch the projects when needed.
                         <br />
                         <br />Sanity’s API tool is powerful as it only requires a few lines to connect to the correct database and fetch the data from it. The process becomes streamlined by binding it with the map function, as everything will immediately populate the interface.
+                        <br />
+                        <br />CMSのアクセスが便利になるために、プロジェクトのフォルダにフロントエンドとバックエンド作りました。フロントのフォルダがAstroのファイルが持っていて、バックにはCMSのファイルがおります。
+                        <br />
+                        <br />CMSはSanity Studioでセットしています。Sanityが強いAPIツールがあって、プロジェクトの設定とデータの取得は簡単になります。
                     </p>
                 </div>
             </div>
@@ -146,6 +152,8 @@
                         I built a light and dark switching, which is quite tricky as Astro is a static-site generator. As a result, it's hard to maintain states across different pages like other frameworks such as React, Vue, etc. I mainly relied on SCSS nesting and local storage to build the theme switch and maintain its states across pages and multiple visits.
                         <br />
                         <br />Although it probably isn’t the best practice, I created a local storage variable and asked JavaScript to check to see the current state of the variable. Once that is done, I switch out the content and classes for the page, which will carry across when users navigate.
+                        <br />
+                        <br />他のフレームワークが違って、AstroはSSGを利用して、ライトとダークモードの作りプロセスが難しいになります。サイトの状態を維持しようために、ウェブAPIのローカルストレージを利用して、毎回ページロードが起きたら、サイトの状態をチェックちて、元のモードを戻ります。
                     </p>
                 </div>
             </div>

@@ -50,6 +50,10 @@
                         To create an experience with different levels of engagement, I utilized the strength of moving media, contrasting scales, and micro-animations to capture visitors' attention. The content is classified into three main categories to offer a different experience for different viewers: first glance, quick digest, and deep dive.
                         <br />
                         <br />To capture the essence of each project, the website's design is toned down, which allows the project media to shine. Each micro-interactions were added with care and purpose to ensure the website can still present some personality without distracting the users.
+                        <br />
+                        <br />魅力的なサイトを作ろうために、色んなモーション素材と様々なビジュアルを利用していました。多樣なの経験をクラフトしようために、サイトの内容が三つグループを片付けました。
+                        <br />
+                        <br />プロジェクトの個性を表示しようために、最小限のデザインを適用していました。反面に、素材が元のディテールを全部表現できます。
                     </p>
                 </div>
             </div>
@@ -108,6 +112,8 @@
                         The main reason most developers prefer to start a project with a framework, is mainly due to the limitation of developing in vanilla JS. Although it does simplify many things and reduce the performance issue, we will eventually end up with just another framework that we wrote to suit our needs.
                         <br />
                         <br />To accommodate the rough page transition, I wrote a function that essentially delays the page load when hyperlinks are clicked, which allows a transition in between to hide the roughness of the page load.
+                        <br />
+                        <br />バニラJavaScriptで、ページの変更はすぐなので、遷移アニメーションが普通に粗いになります。その問題を解決しようために、自分のページルーターを作って、スムーズ的な遷移をデザインしていました。
                     </p>
                 </div>
             </div>
@@ -138,6 +144,8 @@
                         One of the most common issues with portfolio sites is the overwhelming media the browser has to load. Especially in my case, where media is the center of attention, and to add salt to injury, the network speed at the convention center for Gradshow are not the greatest.
                         <br />
                         <br />To ensure the best browsing experience, I went through all my images and videos and converted and compressed them to the desired result. It was a tedious process, requiring me to go back and forth between devices and platforms to check the file size, load speed, and quality output.
+                        <br />
+                        <br />良いサイトの経験は速いロードスピード。プロセスの一部は全部の素材サイズが最小化にします。
                     </p>
                 </div>
             </div>
