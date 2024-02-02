@@ -7,7 +7,7 @@
         <div class="about-section-container section-container about-hero-title">
             <div class="large-title-container">
                 <div class="large-title-move hero-text-overlay about-title-overlay">
-                    <h2 class="large-title text-light">everyday</h2>
+                    <h2 class="large-title text-light">everyday,</h2>
                 </div>
             </div>
             <div class="large-title-container">
@@ -31,7 +31,7 @@
                 </div>
                 <div class="body-container">
                     <div class="body-move">
-                        <p class="body-bold text-light-gray">and immersive experience by</p>
+                        <p class="body-bold text-light-gray">and immersive experiences by</p>
                     </div>
                 </div>
                 <div class="body-container">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-60 about-design-text">
                     <h4 class="body-bold text-light-gray">rapid-learning.</h4>
-                    <p id="rapid-learning" class="subtitle-light text-light">I strives in a fast-pace learning environment, as constant improvement motivates me.</p>
+                    <p id="rapid-learning" class="subtitle-light text-light">I strive in fast-pace learning environments, as constant improvement motivates me.</p>
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-60 about-design-text">
                     <h4 class="body-bold text-light-gray">mix and match.</h4>
-                    <p id="mix-match" class="subtitle-light text-light">I enjoy blending different skills and things to craft the unexpected.</p>
+                    <p id="mix-match" class="subtitle-light text-light">I enjoy blending different skills to craft the unexpected.</p>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-60 about-design-text">
                     <h4 class="body-bold text-light-gray">beyond just design.</h4>
-                    <p id="beyond-design" class="subtitle-light text-light">I value being able of building out the things I designed. The process is enjoyable and eye-opening.</p>
+                    <p id="beyond-design" class="subtitle-light text-light">I value being able to build out the things I've designed. The process is enjoyable and eye-opening.</p>
                 </div>
             </div>
         </div>
