@@ -7,12 +7,12 @@
         <div class="about-section-container section-container about-hero-title">
             <div class="large-title-container">
                 <div class="large-title-move hero-text-overlay about-title-overlay">
-                    <h2 class="large-title text-light">everyday, i</h2>
+                    <h2 class="large-title text-light">everyday</h2>
                 </div>
             </div>
             <div class="large-title-container">
                 <div class="large-title-move hero-text-normal about-title-normal">
-                    <h2 class="large-title text-light">learn, design,</h2>
+                    <h2 class="large-title text-light">i learn, design,</h2>
                 </div>
             </div>
             <div class="large-title-container">
