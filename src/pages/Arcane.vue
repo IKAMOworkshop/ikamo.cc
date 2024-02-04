@@ -27,6 +27,9 @@
                             <p class="caption-light text-light-gray">Nov 2023 & Jan 2024</p>
                         </div>
                     </div>
+                    <div class="project-external-links">
+                        <a href="https://github.com/IKAMOworkshop/ikamo.cc" class="project-external-link caption-light" target="_blank" rel="noopener noreferrer">github.</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -322,6 +325,13 @@
             ease: 'power2.in0ut',
             stagger: .2,
         },'-=1.2')
+        .to('.project-external-links', {
+            duration: 1.5,
+            opacity: 1,
+            mixBlendMode:'overlay',
+            ease: 'power2.in0ut',
+            stagger: .2,
+        },'-=1.2')
         .to('.hero-video', {
             duration: 1.5,
             opacity: 1,
@@ -383,6 +393,12 @@
         .to('.project-detail', {
             duration: .8,
             opacity: 0,
+            ease: 'power2.in0ut',
+        },'-=.8')
+        .to('.project-external-links', {
+            duration: .8,
+            opacity: 0,
+            mixBlendMode:'overlay',
             ease: 'power2.in0ut',
         },'-=.8')
         .to('.hero-video', {
