@@ -135,6 +135,26 @@
     transform: scale(1.1);
 }
 
+.project-external-links{
+    display: flex;
+    gap: 24px;
+    opacity: 0;
+}
+
+.project-external-link{
+    padding: 4px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(246, 250, 255, 1);
+    color: rgba(246, 250, 255, 1);
+    mix-blend-mode: overlay;
+    transition: all .5s ease;
+}
+
+.project-external-link:hover{
+    background-color: rgba(246, 250, 255, 1);
+    color: rgba(41, 47, 53, 1);
+}
+
 // Responsive
 @media screen and (max-width: 1280px){
     .video-wrapper{

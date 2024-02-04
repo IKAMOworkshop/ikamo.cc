@@ -1049,6 +1049,26 @@ footer {
   transform: scale(1.1);
 }
 
+.project-external-links {
+  display: flex;
+  gap: 24px;
+  opacity: 0;
+}
+
+.project-external-link {
+  padding: 4px 16px;
+  border-radius: 20px;
+  border: 1px solid rgb(246, 250, 255);
+  color: rgb(246, 250, 255);
+  mix-blend-mode: overlay;
+  transition: all 0.5s ease;
+}
+
+.project-external-link:hover {
+  background-color: rgb(246, 250, 255);
+  color: rgb(41, 47, 53);
+}
+
 @media screen and (max-width: 1280px) {
   .video-wrapper {
     height: 640px;
