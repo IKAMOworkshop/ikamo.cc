@@ -39,7 +39,7 @@ onMounted(() => {
             cursor.animate({
                 left: `${mousePos.x}px`,
                 top: `${mousePos.y}px`
-            }, {duration: 300, fill: 'forwards'})
+            }, {duration: 100, fill: 'forwards'})
 
             cursorGradient.animate({
                 left: `${mousePos.x}px`,
