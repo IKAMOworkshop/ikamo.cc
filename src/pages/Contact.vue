@@ -88,23 +88,7 @@
             {
                 name: 'description',
                 content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
-            },
-            {
-                name: 'og:title',
-                content: 'IKAMOdev | Contact',
-            },
-            {
-                name: 'og:description',
-                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
-            },
-            {
-                name: 'twitter:title',
-                content: 'IKAMOdev | Contact',
-            },
-            {
-                name: 'twitter:description',
-                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
-            },
+            }
         ]
     })
 

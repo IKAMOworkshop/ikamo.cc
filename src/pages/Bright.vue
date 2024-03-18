@@ -264,23 +264,7 @@
             {
                 name: 'description',
                 content: 'A personal archive to document highlighted events from my life.',
-            },
-            {
-                name: 'og:title',
-                content: 'IKAMOdev | Bright',
-            },
-            {
-                name: 'og:description',
-                content: 'A personal archive to document highlighted events from my life.',
-            },
-            {
-                name: 'twitter:title',
-                content: 'IKAMOdev | Bright',
-            },
-            {
-                name: 'twitter:description',
-                content: 'A personal archive to document highlighted events from my life.',
-            },
+            }
         ]
     })
 

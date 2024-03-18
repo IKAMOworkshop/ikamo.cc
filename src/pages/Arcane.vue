@@ -261,23 +261,7 @@
             {
                 name: 'description',
                 content: 'An immersive and lighthearted 3D site to display frontend projects.',
-            },
-            {
-                name: 'og:title',
-                content: 'IKAMOdev | Arcane',
-            },
-            {
-                name: 'og:description',
-                content: 'An immersive and lighthearted 3D site to display frontend projects.',
-            },
-            {
-                name: 'twitter:title',
-                content: 'IKAMOdev | Arcane',
-            },
-            {
-                name: 'twitter:description',
-                content: 'An immersive and lighthearted 3D site to display frontend projects.',
-            },
+            }
         ]
     })
 

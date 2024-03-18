@@ -226,23 +226,7 @@
             {
                 name: 'description',
                 content: 'Building an engaging portfolio website for ArtCenter Gradshow.',
-            },
-            {
-                name: 'og:title',
-                content: 'IKAMOdev | Charm',
-            },
-            {
-                name: 'og:description',
-                content: 'Building an engaging portfolio website for ArtCenter Gradshow.',
-            },
-            {
-                name: 'twitter:title',
-                content: 'IKAMOdev | Charm',
-            },
-            {
-                name: 'twitter:description',
-                content: 'Building an engaging portfolio website for ArtCenter Gradshow.',
-            },
+            }
         ]
     })
 

@@ -108,35 +108,15 @@
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-    // useHead({
-    //     title: 'IKAMOdev',
-    //     meta: [
-    //         {
-    //             name: 'description',
-    //             content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
-    //         },
-    //         {
-    //             name: 'og:title',
-    //             property: 'og:title',
-    //             content: 'IKAMOdev',
-    //         },
-    //         {
-    //             name: 'og:description',
-    //             property: 'og:description',
-    //             content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
-    //         },
-    //         {
-    //             name: 'twitter:title',
-    //             property: 'twitter:title',
-    //             content: 'IKAMOdev',
-    //         },
-    //         {
-    //             name: 'twitter:description',
-    //             property: 'twitter:description',
-    //             content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
-    //         },
-    //     ]
-    // })
+    useHead({
+        title: 'IKAMOdev',
+        meta: [
+            {
+                name: 'description',
+                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
+            },
+        ]
+    })
 
     gsap.registerPlugin(ScrollTrigger);
 

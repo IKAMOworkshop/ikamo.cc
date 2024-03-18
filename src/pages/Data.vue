@@ -142,27 +142,7 @@
             {
                 name: 'description',
                 content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
-            },
-            {
-                name: 'og:title',
-                property: 'og:title',
-                content: 'IKAMOdev | Data',
-            },
-            {
-                name: 'og:description',
-                property: 'og:description',
-                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
-            },
-            {
-                name: 'twitter:title',
-                property: 'twitter:title',
-                content: 'IKAMOdev | Data',
-            },
-            {
-                name: 'twitter:description',
-                property: 'twitter:description',
-                content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
-            },
+            }
         ]
     })
 
