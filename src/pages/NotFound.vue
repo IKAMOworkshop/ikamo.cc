@@ -49,6 +49,7 @@
         meta: [
             {
                 name: 'description',
+                property: 'description',
                 content: 'An aspiring creative developer who enjoys crafting transformative and immersive experience.',
             },
             {
